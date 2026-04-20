@@ -46,6 +46,7 @@ class Geometrie:
         e_balkon:     Balkonausladung / Seitenflaechenlaenge [m]
         h_abschluss:  Hoehe des Abschlusselements [m]
         s_verankerung: Achsabstand Verankerungen [m]
+        b_auflager_rand: Abstand Ecke bis Auflage b [m] fuer vereinfachte Reaktionsabschaetzung
     """
     h: float
     d: float
@@ -54,6 +55,7 @@ class Geometrie:
     e_balkon: float
     h_abschluss: float
     s_verankerung: float
+    b_auflager_rand: float = 0.0
 
     @property
     def h_d(self) -> float:
@@ -130,6 +132,25 @@ class Ergebnisse:
     zone_massgebend: str
     cpi_unguenstig_sog: float
     cpi_unguenstig_druck: float
+
+
+    # Vereinfachte statische Reaktionsabschaetzung in Draufsicht
+    q_seite_1: float = 0.0
+    q_seite_2: float = 0.0
+    q_vorne: float = 0.0
+    auflagerabstand: float = 0.0
+    Hx_k: float = 0.0
+    Hx_Ed: float = 0.0
+    Hy_1_k: float = 0.0
+    Hy_1_Ed: float = 0.0
+    Hy_2_k: float = 0.0
+    Hy_2_Ed: float = 0.0
+    M_A_k: float = 0.0
+    gamma_Q_reaktionen: float = 1.5
+    reaktionsmodell_hinweis: str = (
+        "Vereinfachte statische Reaktionsabschaetzung in Draufsicht; "
+        "keine exakte Lagerreaktionsberechnung eines vollstaendigen Tragmodells."
+    )
 
 
 __all__ = ["Projekt", "Standort", "Geometrie", "Ergebnisse"]
