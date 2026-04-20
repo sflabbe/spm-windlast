@@ -275,6 +275,7 @@ with tab_calc:
             e_balkon = st.number_input("Ausladung Balkon [m]", 0.1, 10.0, 1.425, 0.05)
             h_abschl = st.number_input("Höhe Abschlusselement [m]", 0.5, 10.0, 3.00, 0.05)
         s_verank = st.number_input("Achsabstand Verankerungen / Isokörbe [m]", 0.1, 20.0, 4.93, 0.01)
+        b_auflager_rand = st.number_input("Abstand Ecke bis Auflage b [m]", 0.0, 10.0, 0.30, 0.01)
         A_ref = s_verank * h_abschl
         h_d_eff = max(h_gebaeude/d_gebaeude, h_gebaeude/b_gebaeude)
         st.caption(f"h/d = max(h/d, h/b) = {h_d_eff:.3f} · Aref = {A_ref:.2f} m²")
@@ -292,7 +293,7 @@ with tab_calc:
                 wb = WindlastBerechnung(
                     Projekt(proj_bez, proj_nr, bearbeiter, datum.strftime("%d.%m.%Y")),
                     Standort(standort_bez, windzone, gelaende, hoehe_uNN),
-                    Geometrie(h_gebaeude, d_gebaeude, b_gebaeude, z_balkon, e_balkon, h_abschl, s_verank),
+                    Geometrie(h_gebaeude, d_gebaeude, b_gebaeude, z_balkon, e_balkon, h_abschl, s_verank, b_auflager_rand),
                 )
                 e = wb.berechnen()
 
@@ -354,6 +355,31 @@ with tab_calc:
             st.caption(f"Formel qp: {e.qp_formel}")
             st.caption(f"Auswertung qp: {e.qp_auswertung}")
             st.caption(f"Ansatz qp: {e.qp_abschnitt} · {e.qp_normstelle}")
+
+        st.markdown("### Balkonsystem / vereinfachte Reaktionsabschätzung")
+        rrx1, rrx2, rrx3, rrx4 = st.columns(4)
+        rrx1.metric("q_seite_1 [kN/m]", f"{e.q_seite_1:.3f}")
+        rrx2.metric("q_seite_2 [kN/m]", f"{e.q_seite_2:.3f}")
+        rrx3.metric("q_vorne [kN/m]", f"{e.q_vorne:.3f}")
+        rrx4.metric("Auflagerabstand s [m]", f"{e.auflagerabstand:.3f}")
+
+        rry1, rry2, rry3, rry4, rry5 = st.columns(5)
+        rry1.metric("Hx_k [kN]", f"{e.Hx_k:.2f}")
+        rry2.metric("Hx_Ed [kN]", f"{e.Hx_Ed:.2f}")
+        rry3.metric("Hy_1_k [kN]", f"{e.Hy_1_k:.2f}")
+        rry4.metric("Hy_1_Ed [kN]", f"{e.Hy_1_Ed:.2f}")
+        rry5.metric("M_A_k [kNm]", f"{e.M_A_k:.2f}")
+
+        rrz1, rrz2 = st.columns(2)
+        rrz1.metric("Hy_2_k [kN]", f"{e.Hy_2_k:.2f}")
+        rrz2.metric("Hy_2_Ed [kN]", f"{e.Hy_2_Ed:.2f}")
+
+        st.info(
+            "• ein Auflager als Festlager in x\n"
+            "• ein Auflager als Gleitlager in x\n"
+            "• Reaktionen in y aus Gleichgewicht in Draufsicht\n"
+            "• vereinfachte Abschätzung für Vorbemessung"
+        )
 
         st.success("PDF erfolgreich erzeugt.")
         st.download_button(

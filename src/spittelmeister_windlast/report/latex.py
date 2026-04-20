@@ -176,6 +176,38 @@ $M_{{k,\mathrm{{Fusspunkt}}}}$ & {e.Mk:.2f} & $\mathrm{{kNm}}$ \\
 }}
 \end{{center}}
 
+\section*{{6 \quad Balkonsystem / vereinfachte Reaktionsabschaetzung}}
+\textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
+
+\begin{{align*}}
+q_{{seite,1}} &= |w_{{e,seite,druck}}| \cdot h_{{w,yz}} = |{e.we_side_pressure:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_1:.3f}~\mathrm{{kN/m}} \\
+q_{{seite,2}} &= |w_{{e,seite,sog}}| \cdot h_{{w,yz}} = |{e.we_side_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_2:.3f}~\mathrm{{kN/m}} \\
+q_{{vorne}} &= |w_{{e,front,sog}}| \cdot h_{{w,xz}} = |{e.we_front_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_vorne:.3f}~\mathrm{{kN/m}}
+\end{{align*}}
+
+\begin{{align*}}
+H_{{x,k}} &= T \cdot (q_{{seite,1}}+q_{{seite,2}}) = {geo.e_balkon:.3f} \cdot ({e.q_seite_1:.3f}+{e.q_seite_2:.3f}) = {e.Hx_k:.2f}~\mathrm{{kN}} \\
+M_{{A,k}} &= \frac{{T^2}}{{2}}(q_{{seite,1}}+q_{{seite,2}}) + q_{{vorne}} \cdot B \cdot (B/2-b) = {e.M_A_k:.2f}~\mathrm{{kNm}} \\
+s &= B - 2b = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {e.auflagerabstand:.3f}~\mathrm{{m}} \\
+H_{{y,2,k}} &= M_{{A,k}}/s = {e.Hy_2_k:.2f}~\mathrm{{kN}} \\
+H_{{y,1,k}} &= q_{{vorne}}\cdot B - H_{{y,2,k}} = {e.Hy_1_k:.2f}~\mathrm{{kN}}
+\end{{align*}}
+
+\begin{{center}}
+\begin{{tabular}}{{lrr}}
+\toprule
+\textbf{{Groesse}} & \textbf{{k-Wert}} & \textbf{{Ed-Wert}} \\
+\midrule
+$H_x$ & {e.Hx_k:.2f}~kN & {e.Hx_Ed:.2f}~kN \\
+$H_{{y,1}}$ & {e.Hy_1_k:.2f}~kN & {e.Hy_1_Ed:.2f}~kN \\
+$H_{{y,2}}$ & {e.Hy_2_k:.2f}~kN & {e.Hy_2_Ed:.2f}~kN \\
+\bottomrule
+\end{{tabular}}
+\end{{center}}
+
+\noindent\textit{{Hinweis:}} ein Auflager als Festlager in x, ein Auflager als Gleitlager in x; Reaktionen in y aus Gleichgewicht in Draufsicht; vereinfachte Abschaetzung fuer Vorbemessung.\\
+\noindent\textit{{Einordnung:}} {latex_escape(e.reaktionsmodell_hinweis)}
+
 \end{{document}}
 """
 
