@@ -15,8 +15,9 @@ from .peak_pressure import berechne_qp
 _METHODIK = "Detaillierter Richtungsansatz nach Excel-Vorlage 27.02.2026"
 _GAMMA_Q_REAKTIONEN = 1.5
 _REAKTIONSMODELL_HINWEIS = (
-    "Vereinfachte statische Reaktionsabschaetzung in Draufsicht; "
-    "keine exakte Lagerreaktionsberechnung eines vollstaendigen Tragmodells."
+    "Die nachfolgenden Auflagerreaktionen stellen eine vereinfachte statische "
+    "Abschätzung in Draufsicht dar. Sie dienen der Vorbemessung und ersetzen "
+    "kein vollständiges Tragwerksmodell mit exakter Lagerreaktionsbestimmung."
 )
 
 
@@ -47,8 +48,8 @@ def _berechne_reaktionen_vereinfacht(
     if b < 0:
         raise ValueError("Abstand Ecke bis Auflage b muss >= 0 sein.")
 
-    auflagerabstand = B - 2.0 * b
-    if auflagerabstand <= 0:
+    s = B - 2.0 * b
+    if s <= 0:
         raise ValueError("Ungueltige Geometrie: B - 2*b muss > 0 sein (Auflagerabstand s).")
 
     q_seite_1 = abs(we_side_pressure) * hw_yz
@@ -58,7 +59,7 @@ def _berechne_reaktionen_vereinfacht(
     Hx_k = T * (q_seite_1 + q_seite_2)
     M_A_k = (T**2 / 2.0) * (q_seite_1 + q_seite_2) + q_vorne * B * (B / 2.0 - b)
 
-    Hy_2_k = M_A_k / auflagerabstand
+    Hy_2_k = M_A_k / s
     Hy_1_k = q_vorne * B - Hy_2_k
 
     Hx_Ed = _GAMMA_Q_REAKTIONEN * Hx_k
@@ -66,10 +67,11 @@ def _berechne_reaktionen_vereinfacht(
     Hy_2_Ed = _GAMMA_Q_REAKTIONEN * Hy_2_k
 
     return {
+        "s": s,
         "q_seite_1": q_seite_1,
         "q_seite_2": q_seite_2,
         "q_vorne": q_vorne,
-        "auflagerabstand": auflagerabstand,
+        "auflagerabstand": s,
         "Hx_k": Hx_k,
         "Hx_Ed": Hx_Ed,
         "Hy_1_k": Hy_1_k,
@@ -229,6 +231,7 @@ class WindlastBerechnung:
             q_seite_1=reaktionswerte["q_seite_1"],
             q_seite_2=reaktionswerte["q_seite_2"],
             q_vorne=reaktionswerte["q_vorne"],
+            s=reaktionswerte["s"],
             auflagerabstand=reaktionswerte["auflagerabstand"],
             Hx_k=reaktionswerte["Hx_k"],
             Hx_Ed=reaktionswerte["Hx_Ed"],

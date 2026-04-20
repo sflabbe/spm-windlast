@@ -390,7 +390,7 @@ with tab_calc:
         rrx1.metric("q_seite_1 [kN/m]", f"{e.q_seite_1:.3f}")
         rrx2.metric("q_seite_2 [kN/m]", f"{e.q_seite_2:.3f}")
         rrx3.metric("q_vorne [kN/m]", f"{e.q_vorne:.3f}")
-        rrx4.metric("Auflagerabstand s [m]", f"{e.auflagerabstand:.3f}")
+        rrx4.metric("Auflagerabstand s = B - 2b [m]", f"{e.s:.3f}")
 
         rry1, rry2, rry3, rry4, rry5 = st.columns(5)
         rry1.metric("Hx_k [kN]", f"{e.Hx_k:.2f}")
@@ -409,6 +409,7 @@ with tab_calc:
             "• Reaktionen in y aus Gleichgewicht in Draufsicht\n"
             "• vereinfachte Abschätzung für Vorbemessung"
         )
+        st.caption(e.reaktionsmodell_hinweis)
 
         st.markdown("### Systemskizzen / Lastabtragung")
         _render_svg_asset(

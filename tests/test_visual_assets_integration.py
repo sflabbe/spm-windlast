@@ -64,5 +64,8 @@ def test_render_latex_references_visual_subsections():
     assert "Geometrie des Balkonsystems" in src
     assert "Lastansatz in Draufsicht" in src
     assert "Vereinfachte Reaktionsabschaetzung" in src
+    assert "Formelansatz und Herleitung (Vorbemessung)" in src
+    assert "Die nachfolgenden Auflagerreaktionen stellen eine vereinfachte statische Abschätzung in Draufsicht dar." in src
+    assert "s = B - 2b" in src
     assert "assets/building_geometry_zoning.tex" in src
     assert "assets/load_scheme.tex" in src

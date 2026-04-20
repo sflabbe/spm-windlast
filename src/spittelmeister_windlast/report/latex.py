@@ -219,16 +219,21 @@ $M_{{k,\mathrm{{Fusspunkt}}}}$ & {e.Mk:.2f} & $\mathrm{{kNm}}$ \\
 
 \textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
 
+\subsection*{{7.3 \quad Formelansatz und Herleitung (Vorbemessung)}}
+Die Winddruckbeiwerte aus Abschnitt~4 werden als Flaechenlasten $w_e$ angesetzt und ueber die wirksamen
+Windflaechenhoehen in Linienlasten umgerechnet:
+
 \begin{{align*}}
 q_{{seite,1}} &= |w_{{e,seite,druck}}| \cdot h_{{w,yz}} = |{e.we_side_pressure:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_1:.3f}~\mathrm{{kN/m}} \\
 q_{{seite,2}} &= |w_{{e,seite,sog}}| \cdot h_{{w,yz}} = |{e.we_side_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_2:.3f}~\mathrm{{kN/m}} \\
 q_{{vorne}} &= |w_{{e,front,sog}}| \cdot h_{{w,xz}} = |{e.we_front_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_vorne:.3f}~\mathrm{{kN/m}}
 \end{{align*}}
 
+Mit dem Auflagerabstand $s = B - 2b$ ergibt sich aus Kraefte- und Momentengleichgewicht in Draufsicht:
 \begin{{align*}}
 H_{{x,k}} &= T \cdot (q_{{seite,1}}+q_{{seite,2}}) = {geo.e_balkon:.3f} \cdot ({e.q_seite_1:.3f}+{e.q_seite_2:.3f}) = {e.Hx_k:.2f}~\mathrm{{kN}} \\
 M_{{A,k}} &= \frac{{T^2}}{{2}}(q_{{seite,1}}+q_{{seite,2}}) + q_{{vorne}} \cdot B \cdot (B/2-b) = {e.M_A_k:.2f}~\mathrm{{kNm}} \\
-s &= B - 2b = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {e.auflagerabstand:.3f}~\mathrm{{m}} \\
+s &= B - 2b = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {e.s:.3f}~\mathrm{{m}} \\
 H_{{y,2,k}} &= M_{{A,k}}/s = {e.Hy_2_k:.2f}~\mathrm{{kN}} \\
 H_{{y,1,k}} &= q_{{vorne}}\cdot B - H_{{y,2,k}} = {e.Hy_1_k:.2f}~\mathrm{{kN}}
 \end{{align*}}
@@ -245,8 +250,8 @@ $H_{{y,2}}$ & {e.Hy_2_k:.2f}~kN & {e.Hy_2_Ed:.2f}~kN \\
 \end{{tabular}}
 \end{{center}}
 
-\noindent\textit{{Hinweis:}} ein Auflager als Festlager in x, ein Auflager als Gleitlager in x; Reaktionen in y aus Gleichgewicht in Draufsicht; vereinfachte Abschaetzung fuer Vorbemessung.\\
-\noindent\textit{{Einordnung:}} {latex_escape(e.reaktionsmodell_hinweis)}
+\noindent\textit{{Strukturelle Hypothesen:}} ein Auflager als Festlager in x, ein Auflager als Gleitlager in x; Reaktionen in y rein aus Gleichgewicht in Draufsicht; keine Verformungskompatibilitaet und keine Torsionsumlagerung im Gesamttragwerk.\\
+\noindent\textit{{Technische Einordnung:}} {latex_escape(e.reaktionsmodell_hinweis)}
 
 \end{{document}}
 """
