@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "spittelmeister-windlast"
-version = "2.0.0"
+version = "2.3.0"
 description = "Windlastermittlung fuer Balkonabschluesse nach DIN EN 1991-1-4 / NA:2010-12"
 readme = "README.md"
 requires-python = ">=3.10"

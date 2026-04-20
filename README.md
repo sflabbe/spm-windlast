@@ -237,5 +237,35 @@ sind als Re-Exports verfuegbar und geben dieselben Werte wie zuvor zurueck.
 
 ---
 
-*Statik-Abteilung Spittelmeister GmbH · v2.0*
+*Statik-Abteilung Spittelmeister GmbH · v2.1*
 # spm-windlast
+
+
+## Amtliche Gebietscodes / future-proof registry
+
+Zusatzlich zu den normativen Wind- und Schneetabellen enthaelt das Paket jetzt eine hazard-neutrale Verwaltungsschicht auf Basis amtlicher Destatis-Kreiscodes. Damit koennen Lookups robuster ueber 5-stellige Kreisschluessel oder 8-stellige AGS/Gemeindeschluessel laufen und spaeter auch weitere Kartenwerke (z. B. Seismik) auf derselben Verwaltungseinheit aufsetzen.
+
+
+## Verwaltungs- und Erdbeben-Datenschicht (Vorbereitung fuer Seismik)
+
+Zusätzlich zu Wind- und Schneelasttabellen enthält die Repo jetzt eine
+gefahrdungsneutrale Verwaltungsschicht über amtliche Kreis-/Gemeindeschlüssel
+und ein integriertes Erdbeben-Dataset aus dem bereitgestellten Excel-
+Tabellenwerk.
+
+Neu:
+- `daten/erdbebenzonen_dataset.json`
+- `geo.get_erdbeben_coverage(...)`
+- `geo.get_erdbeben_records(...)`
+
+Wichtige Besonderheit:
+- Baden-Württemberg (`BW`) ist im gelieferten Tabellenwerk **explizit** als
+  Verweisfall geführt und nicht tabellarisch aufgelöst. Die Repo speichert
+  diesen Status bewusst als `external_map_only`, statt stillschweigend „keine
+  Daten“ zu melden. Dadurch bleibt die Datenbasis auch für zukünftige
+  Seismik-Lookups ehrlich und belastbar.
+
+Kurz gesagt:
+- `BW` -> expliziter Kartenverweis / kein stilles Loch in der Datenbank
+- `NW` -> externer Kartenverweis laut Tabellenwerk
+- `BY`, `HE`, `RP`, `TH`, `SN`, `ST` -> tabellarische Datensätze integriert

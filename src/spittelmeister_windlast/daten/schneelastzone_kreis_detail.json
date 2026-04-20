@@ -1,0 +1,8259 @@
+{
+  "metadata": {
+    "source": "Schneelastzonen nach Verwaltungsgrenzen",
+    "stand": "2022-06-02",
+    "norm": "DIN EN 1991-1-3/NA",
+    "generated": "2026-04-20",
+    "zonen": [
+      "1",
+      "1a",
+      "2",
+      "2a",
+      "3"
+    ],
+    "n_kreise": 390,
+    "n_records": 3783,
+    "hinweis_dominant": "slz_dominant = hoechste im Kreis vorkommende Schneelastzone mit Ordnung 1 < 1a < 2 < 2a < 3 (konservativ). Fuer Gemeinde-Praezision siehe 'varianten' und Originaltabelle.",
+    "hinweis_ambige_namen": "Orte, die sowohl als kreisfreie Stadt als auch als Landkreis unter demselben Namen existieren (z. B. Muenchen, Karlsruhe), werden ueber 'name <typ>' disambiguiert, z. B. 'muenchen stadt' und 'muenchen landkreis'."
+  },
+  "kreise": {
+    "aachen": {
+      "name": "Aachen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Baesweiler"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aachen, Stadt",
+            "Alsdorf",
+            "Eschweiler",
+            "Herzogenrath",
+            "Monschau",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": []
+    },
+    "ahrweiler": {
+      "name": "Ahrweiler",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bad Breisig",
+            "Bad Neuenahr-Ahrweiler",
+            "Brohl-Lützing",
+            "Gönnersdorf",
+            "Königsfeld",
+            "... (7 weitere)"
+          ],
+          "n_gemeinden": 12
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Adenau",
+            "Ahrbrück",
+            "Altenahr",
+            "Antweiler",
+            "Aremberg",
+            "... (57 weitere)"
+          ],
+          "n_gemeinden": 62
+        }
+      ],
+      "fussnoten": []
+    },
+    "aichach friedberg": {
+      "name": "Aichach-Friedberg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "alb donau": {
+      "name": "Alb-Donau-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 1a oder 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Asselfingen, Beimerstetten, Berghülen, Bernstadt, Blaubeuren, Blaustein, Börslingen, Breitingen, Dornstadt, Holzkirch, Langenau, Neenstetten, Nerenstetten, Öllingen, Rammingen, Setzingen, Westerstetten"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altheim (Alb), Amstetten, Ballendorf, Laichingen, Lonsee, Merklingen, Nellingen, Weidenstetten, Westerheim"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "altenburger land": {
+      "name": "Altenburger Land",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "altenkirchen westerwald": {
+      "name": "Altenkirchen (Westerwald)",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Eulenberg",
+            "Krunkel",
+            "Obersteinebach"
+          ],
+          "n_gemeinden": 3
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Almersbach",
+            "Bachenberg",
+            "Berzhausen",
+            "Birkenbeul",
+            "Birnbach",
+            "... (70 weitere)"
+          ],
+          "n_gemeinden": 75
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Alsdorf",
+            "Betzdorf",
+            "Birken-Honigsessen",
+            "Bitzen",
+            "Mittelhof",
+            "... (36 weitere)"
+          ],
+          "n_gemeinden": 41
+        }
+      ],
+      "fussnoten": []
+    },
+    "altmark salzwedel": {
+      "name": "Altmarkkreis\nSalzwedel",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld."
+      ]
+    },
+    "altoetting": {
+      "name": "Altötting",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altötting",
+            "Feichten a.d. Alz",
+            "Garching a.d. Alz",
+            "Halsbach",
+            "Kastl",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Burghausen",
+            "Burgkirchen a.d. Alz",
+            "Emmerting",
+            "Erlbach",
+            "Haiming",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "alzey worms": {
+      "name": "Alzey-Worms",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Albig",
+            "Alsheim",
+            "Armsheim",
+            "Bechtheim",
+            "Bechtolsheim",
+            "... (37 weitere)"
+          ],
+          "n_gemeinden": 42
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alzey",
+            "Bechenheim",
+            "Bornheim",
+            "Dintesheim",
+            "Eckelsheim",
+            "... (22 weitere)"
+          ],
+          "n_gemeinden": 27
+        }
+      ],
+      "fussnoten": []
+    },
+    "amberg": {
+      "name": "Amberg",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Amberg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "amberg sulzbach": {
+      "name": "Amberg-Sulzbach",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "ammerland": {
+      "name": "Ammerland",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "anhalt bitterfeld": {
+      "name": "Anhalt-Bitterfeld",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld.  von Zerbst/Anhalt die Ortsteile Buhlendorf, Deetz, Dobritz, Gehrden, Grimme, Lindau, Moritz, Nedlitz, Polenzko, Reuden, Straguth, und Zernitz"
+      ]
+    },
+    "ansbach landkreis": {
+      "name": "Ansbach (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Adelshofen",
+            "Bruckberg",
+            "Diebach",
+            "Dietenhofen",
+            "Flachslanden",
+            "... (18 weitere)"
+          ],
+          "n_gemeinden": 23
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Arberg",
+            "Aurach",
+            "Bechhofen",
+            "Buch a. Wald",
+            "Burgoberbach",
+            "... (31 weitere)"
+          ],
+          "n_gemeinden": 36
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "ansbach stadt": {
+      "name": "Ansbach (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Ansbach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "aschaffenburg landkreis": {
+      "name": "Aschaffenburg (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alzenau i. UFr.",
+            "Bessenbach",
+            "Blankenbach",
+            "Karlstein a. Main",
+            "Geiselbach",
+            "... (23 weitere)"
+          ],
+          "n_gemeinden": 28
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Heigenbrücken",
+            "Heimbuchenthal",
+            "Heinrichsthal",
+            "Mespelbrunn",
+            "Rothenbuch",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "aschaffenburg stadt": {
+      "name": "Aschaffenburg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Aschaffenburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "augsburg": {
+      "name": "Augsburg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "augsburg stadt": {
+      "name": "Augsburg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Augsburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "aurich": {
+      "name": "Aurich",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "bad duerkheim": {
+      "name": "Bad Dürkheim",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Dirmstein",
+            "Ellerstadt",
+            "Gerolsheim",
+            "Gönnheim",
+            "Haßloch",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altleiningen",
+            "Bad Dürkheim",
+            "Battenberg (Pfalz)",
+            "Bissersheim",
+            "Bobenheim am Berg",
+            "... (35 weitere)"
+          ],
+          "n_gemeinden": 40
+        }
+      ],
+      "fussnoten": [
+        "2 (Exklaven in SLZ 2)"
+      ]
+    },
+    "bad kissingen": {
+      "name": "Bad Kissingen",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Aura a.d. Saale",
+            "Bad Kissingen",
+            "Elfershausen",
+            "Euerdorf",
+            "Fuchsstadt",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Bocklet",
+            "Bad Brückenau",
+            "Burkardroth",
+            "Geroda",
+            "Hammelburg",
+            "... (21 weitere)"
+          ],
+          "n_gemeinden": 26
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Motten",
+            "Wildflecken"
+          ],
+          "n_gemeinden": 2
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "bad kreuznach": {
+      "name": "Bad Kreuznach",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bad toelz wolfratshausen": {
+      "name": "Bad Tölz-Wolfratshausen",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Egling",
+            "Icking",
+            "Münsing",
+            "Wolfratshausen",
+            "Pupplinger Au"
+          ],
+          "n_gemeinden": 5
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Bad Heilbrunn",
+            "Bad Tölz",
+            "Benediktbeuern",
+            "Bichl",
+            "Dietramszell",
+            "... (13 weitere)"
+          ],
+          "n_gemeinden": 18
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "baden baden": {
+      "name": "Baden-Baden",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bamberg": {
+      "name": "Bamberg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\nEbrach, Ebracher Forst, Steinachsrangen, Winkelhofer Forst  SLZ =  1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "bamberg stadt": {
+      "name": "Bamberg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bamberg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "barnim": {
+      "name": "Barnim",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "bautzen": {
+      "name": "Bautzen",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Arnsdorf",
+            "Bernsdorf, Stadt",
+            "Bischofswerda, Stadt",
+            "Bretnig-Hauswalde",
+            "Burkau",
+            "... (54 weitere)"
+          ],
+          "n_gemeinden": 59
+        }
+      ],
+      "fussnoten": []
+    },
+    "bayreuth landkreis": {
+      "name": "Bayreuth (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Ahorntal",
+            "Aufseß",
+            "Bad Berneck i. Fichtelgebirge",
+            "Betzenstein",
+            "Bindlach",
+            "... (38 weitere)"
+          ],
+          "n_gemeinden": 43
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Bischofsgrün",
+            "Fichtelberg",
+            "Gefrees",
+            "Mehlmeisel",
+            "Bischofsgrüner Forst",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "bayreuth stadt": {
+      "name": "Bayreuth (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bayreuth"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "berchtesgadener land": {
+      "name": "Berchtesgadener Land",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3a",
+          "gemeinden_beispiele": [
+            "Schneizlreuth"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Ainring",
+            "Anger",
+            "Freilassing",
+            "Laufen",
+            "Piding",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Bad Reichenhall",
+            "Bayerisch Gmain",
+            "Berchtesgaden",
+            "Bischofswiesen",
+            "Bischofswiesener Forst",
+            "... (7 weitere)"
+          ],
+          "n_gemeinden": 12
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "bergstrasse": {
+      "name": "Bergstraße",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bensheim",
+            "Biblis",
+            "Bürstadt",
+            "Einhausen",
+            "Groß-Rohrheim",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Abtsteinach",
+            "Birkenau",
+            "Fürth",
+            "Gorxheimertal",
+            "Grasellenbach",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": []
+    },
+    "berlin": {
+      "name": "Berlin",
+      "typ": "stadt",
+      "bundesland": "BE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Berlin"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "bernkastel wittlich": {
+      "name": "Bernkastel-Wittlich",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "biberach": {
+      "name": "Biberach",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden und Gemeindeteile, sofern nicht in Zone 1a"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Rot a. d. Rot, Steinhausen a. d. Rottum (nur Gemeindeteile Steinhausen und Bellamont), Eberhardzell (nur Gemeindeteile Füramoos und Mühlhausen)"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bielefeld": {
+      "name": "Bielefeld",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bielefeld"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "birkenfeld": {
+      "name": "Birkenfeld",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bitburg pruem": {
+      "name": "Bitburg-Prüm",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bochum": {
+      "name": "Bochum",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bochum"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bodensee": {
+      "name": "Bodenseekreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2",
+            "Bodensee"
+          ],
+          "n_gemeinden": 2
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kressbronn, Langenargen, Neukirch, Tettnang"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "boeblingen": {
+      "name": "Böblingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "boerde": {
+      "name": "Börde",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld. alle, außer Gröningen, Kroppenstedt, sowie die südlichen Teile von Oschersleben (Bode) und Sülzetal"
+      ]
+    },
+    "bonn": {
+      "name": "Bonn",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bonn"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "borken": {
+      "name": "Borken",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bottrop": {
+      "name": "Bottrop",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bottrop"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "brandenburg an der havel": {
+      "name": "Brandenburg an der Havel",
+      "typ": "stadt",
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Brandenburg an der Havel"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "braunschweig": {
+      "name": "Braunschweig",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "breisgau hochschwarzwald": {
+      "name": "Breisgau-Hochschwarzwald",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Au, Auggen, Badenweiler, Bad Krozingen, Ballrechten-Dottingen, Bötzingen, Breisach a.\nRhein, Buggingen, Ebringen, Ehrenkirchen, Eichstetten a. Kaiserstuhl, Eschbach,\nGottenheim, Gundelfingen, Hartheim, Heitersheim, Ihringen, March, Merdingen,\nMerzhausen, Müllheim, Neuenburg a. Rhein, Pfaffenweiler, Schallstadt, Staufen i. Breisgau,\nSulzburg, Umkirch, Vogtsburg i. KaiserstuhlAlle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "bremen": {
+      "name": "Bremen",
+      "typ": "stadt",
+      "bundesland": "HB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bremen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "bremerhaven": {
+      "name": "Bremerhaven",
+      "typ": "stadt",
+      "bundesland": "HB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bremerhaven"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "burgen": {
+      "name": "Burgenlandkreis",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "calw": {
+      "name": "Calw",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "celle": {
+      "name": "Celle",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "cham": {
+      "name": "Cham",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Cham",
+            "Falkenstein",
+            "Michelsneukirchen",
+            "Pemfling",
+            "Pösing",
+            "... (11 weitere)"
+          ],
+          "n_gemeinden": 16
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Arnschwang",
+            "Arrach",
+            "Blaibach",
+            "Chamerau",
+            "Eschlkam",
+            "... (18 weitere)"
+          ],
+          "n_gemeinden": 23
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "chemnitz": {
+      "name": "Chemnitz",
+      "typ": "stadt",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "cloppenburg": {
+      "name": "Cloppenburg",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "coburg": {
+      "name": "Coburg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "coburg stadt": {
+      "name": "Coburg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Coburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "cochem zell": {
+      "name": "Cochem-Zell",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "coesfeld": {
+      "name": "Coesfeld",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "cottbus": {
+      "name": "Cottbus",
+      "typ": "stadt",
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Cottbus"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "cuxhaven": {
+      "name": "Cuxhaven",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "dachau": {
+      "name": "Dachau",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "dahme spreewald": {
+      "name": "Dahme-Spreewald",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "darm": {
+      "name": "Darmstadt",
+      "typ": "stadt",
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Darmstadt"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "darm dieburg": {
+      "name": "Darmstadt-Dieburg",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alsbach-Hähnlein",
+            "Babenhausen",
+            "Bickenbach",
+            "Eppertshausen",
+            "Erzhausen",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Dieburg",
+            "Fischbachtal",
+            "Groß-Bieberau",
+            "Groß-Umstadt",
+            "Groß-Zimmern",
+            "... (7 weitere)"
+          ],
+          "n_gemeinden": 12
+        }
+      ],
+      "fussnoten": []
+    },
+    "deggendorf": {
+      "name": "Deggendorf",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aholming",
+            "Außernzell",
+            "Buchhofen",
+            "Iggensbach",
+            "Künzing",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Auerbach",
+            "Bernried",
+            "Deggendorf",
+            "Grafling",
+            "Grattersdorf",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "delmenhorst": {
+      "name": "Delmenhorst",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "diepholz": {
+      "name": "Diepholz",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "dillingen a d donau": {
+      "name": "Dillingen a.d. Donau",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Aislingen",
+            "Bächingen a.d. Brenz",
+            "Binswangen",
+            "Blindheim",
+            "Buttenwiesen",
+            "... (14 weitere)"
+          ],
+          "n_gemeinden": 19
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bachhagel",
+            "Bissingen",
+            "Lutzingen",
+            "Mödingen",
+            "Finningen",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "dingolfing landau": {
+      "name": "Dingolfing-Landau",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Dingolfing",
+            "Frontenhausen",
+            "Gottfrieding",
+            "Loiching",
+            "Marklkofen",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Eichendorf",
+            "Landau a.d. Isar",
+            "Mamming",
+            "Pilsting",
+            "Reisbach",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "dithmarschen": {
+      "name": "Dithmarschen",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "donau ries": {
+      "name": "Donau-Ries",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Asbach-Bäumenheim",
+            "Buchdorf",
+            "Daiting",
+            "Donauwörth",
+            "Genderkingen",
+            "... (12 weitere)"
+          ],
+          "n_gemeinden": 17
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alerheim",
+            "Amerdingen",
+            "Auhausen",
+            "Deiningen",
+            "Ederheim",
+            "... (25 weitere)"
+          ],
+          "n_gemeinden": 30
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "donnersberg": {
+      "name": "Donnersbergkreis",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "dortmund": {
+      "name": "Dortmund",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Dortmund"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "dresden": {
+      "name": "Dresden",
+      "typ": "stadt",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "dueren": {
+      "name": "Düren",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Aldenhoven",
+            "Inden",
+            "Jülich",
+            "Linnich",
+            "Merzenich",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Düren",
+            "Heimbach",
+            "Hürtgenwald",
+            "Kreuzau",
+            "Langerwehe",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        }
+      ],
+      "fussnoten": []
+    },
+    "duesseldorf": {
+      "name": "Düsseldorf",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Düsseldorf"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "duisburg": {
+      "name": "Duisburg",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Duisburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ebersberg": {
+      "name": "Ebersberg",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Anzing",
+            "Forstinning",
+            "Hohenlinden",
+            "Markt Schwaben",
+            "Vaterstetten",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aßling",
+            "Baiern",
+            "Bruck",
+            "Ebersberg",
+            "Egmating",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "eichsfeld": {
+      "name": "Eichsfeld",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Arenshausen",
+            "Berlingerode",
+            "Bernterode (bei Heilbad Heiligenstadt)",
+            "Bernterode (bei Worbis)",
+            "Birkenfelde",
+            "... (64 weitere)"
+          ],
+          "n_gemeinden": 69
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Asbach-Sickenberg",
+            "Bornhagen",
+            "Dieterode",
+            "Dietzenrode/Vatterode",
+            "Eichstruth",
+            "... (16 weitere)"
+          ],
+          "n_gemeinden": 21
+        }
+      ],
+      "fussnoten": []
+    },
+    "eichstaett": {
+      "name": "Eichstätt",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "eisenach": {
+      "name": "Eisenach",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Eisenach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "elbe elster": {
+      "name": "Elbe-Elster",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "emden": {
+      "name": "Emden",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "emmendingen": {
+      "name": "Emmendingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "emsland": {
+      "name": "Emsland",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "ennepe ruhr": {
+      "name": "Ennepe-Ruhr-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Gevelsberg",
+            "Hattingen",
+            "Herdecke",
+            "Schwelm",
+            "Sprockhövel",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Breckerfeld",
+            "Ennepetal"
+          ],
+          "n_gemeinden": 2
+        }
+      ],
+      "fussnoten": []
+    },
+    "enz": {
+      "name": "Enzkreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "erding": {
+      "name": "Erding",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "erfurt": {
+      "name": "Erfurt",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Erfurt"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "erlangen hoech": {
+      "name": "Erlangen-Höchstadt",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Aurachtal",
+            "Baiersdorf",
+            "Bubenreuth",
+            "Buckenhof",
+            "Eckental",
+            "... (22 weitere)"
+          ],
+          "n_gemeinden": 27
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle",
+            "Adelsdorf",
+            "Gremsdorf",
+            "Höchstadt a.d. Aisch",
+            "Lonnerstadt",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "erlangen stadt": {
+      "name": "Erlangen (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Erlangen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "erzgebirgs": {
+      "name": "Erzgebirgskreis",
+      "typ": null,
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "essen": {
+      "name": "Essen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Essen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "esslingen": {
+      "name": "Esslingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "euskirchen": {
+      "name": "Euskirchen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "flensburg": {
+      "name": "Flensburg",
+      "typ": "stadt",
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Flensburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "forchheim": {
+      "name": "Forchheim",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Dormitz",
+            "Effeltrich",
+            "Gräfenberg",
+            "Hausen",
+            "Heroldsbach",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Ebermannstadt",
+            "Eggolsheim",
+            "Egloffstein",
+            "Forchheim",
+            "Gößweinstein",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "frankenthal pfalz": {
+      "name": "Frankenthal (Pfalz)",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Frankenthal (Pfalz)"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "frankfurt am main": {
+      "name": "Frankfurt am Main",
+      "typ": "stadt",
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Frankfurt am Main"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "frankfurt oder": {
+      "name": "Frankfurt (Oder)",
+      "typ": "stadt",
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Frankfurt (Oder)"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "freiburg im breisgau": {
+      "name": "Freiburg im Breisgau",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "freising": {
+      "name": "Freising",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "freuden": {
+      "name": "Freudenstadt",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2a"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bad Rippoldsau-Schapbach, Baiersbronn, Freudenstadt, Loßburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "freyung grafenau": {
+      "name": "Freyung-Grafenau",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "friesland": {
+      "name": "Friesland",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "fuerstenfeldbruck": {
+      "name": "Fürstenfeldbruck",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "fuerth": {
+      "name": "Fürth",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "fuerth stadt": {
+      "name": "Fürth (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Fürth"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "fulda": {
+      "name": "Fulda",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "alle außer:\nBurghaun, Eiterfeld und Rasdorf = SLZ 2"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "garmisch partenkirchen": {
+      "name": "Garmisch-Partenkirchen",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Bayersoien",
+            "Bad Kohlgrub",
+            "Eschenlohe",
+            "Großweil",
+            "Murnau a. Staffelsee",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Ettal",
+            "Ettaler Forst",
+            "Farchant",
+            "Garmisch-Partenkirchen",
+            "Grainau",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "gelsenkirchen": {
+      "name": "Gelsenkirchen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Gelsenkirchen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "gera": {
+      "name": "Gera",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Gera"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "germersheim": {
+      "name": "Germersheim",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "giessen": {
+      "name": "Gießen",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "gifhorn": {
+      "name": "Gifhorn",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "goeppingen": {
+      "name": "Göppingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "goerlitz": {
+      "name": "Görlitz",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Muskau, Stadt/Mužakow",
+            "Boxberg/O.L./Hamor",
+            "alle Gemeinden",
+            "Gablenz/Jabłońc",
+            "Groß Düben/Dźĕwin",
+            "... (50 weitere)"
+          ],
+          "n_gemeinden": 55
+        }
+      ],
+      "fussnoten": []
+    },
+    "goettingen": {
+      "name": "Göttingen",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "2)"
+      ]
+    },
+    "goslar": {
+      "name": "Goslar",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "gotha": {
+      "name": "Gotha",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Apfelstädt",
+            "Ballstädt",
+            "Bienstädt",
+            "Bufleben",
+            "Dachwig",
+            "... (19 weitere)"
+          ],
+          "n_gemeinden": 24
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Aspach",
+            "Brüheim",
+            "Crawinkel",
+            "Ebenheim",
+            "Emleben",
+            "... (36 weitere)"
+          ],
+          "n_gemeinden": 41
+        }
+      ],
+      "fussnoten": []
+    },
+    "grafschaft bentheim": {
+      "name": "Grafschaft Bentheim",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "greiz": {
+      "name": "Greiz",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "gross gerau": {
+      "name": "Groß-Gerau",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "guenzburg": {
+      "name": "Günzburg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "guetersloh": {
+      "name": "Gütersloh",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hagen": {
+      "name": "Hagen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Hagen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hamburg": {
+      "name": "Hamburg",
+      "typ": "stadt",
+      "bundesland": "HH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Hamburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "hameln pyrmont": {
+      "name": "Hameln-Pyrmont",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hamm": {
+      "name": "Hamm",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Hamm"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "harburg": {
+      "name": "Harburg",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "harz": {
+      "name": "Harz",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle",
+            "Ilsenburg (Harz), Ortsteil Darlingerode"
+          ],
+          "n_gemeinden": 2
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Ilsenburg(Harz)",
+            "Oberharz am Brocken",
+            "Wernigerode"
+          ],
+          "n_gemeinden": 3
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld. die nördlichen Teile von Osterwieck und Huy"
+      ]
+    },
+    "hassberge": {
+      "name": "Haßberge",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Aidhausen",
+            "Bundorf",
+            "Burgpreppach",
+            "Gädheim",
+            "Haßfurt",
+            "... (13 weitere)"
+          ],
+          "n_gemeinden": 18
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Breitbrunn",
+            "Ebelsbach",
+            "Ebern",
+            "Eltmann",
+            "Oberaurach",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "havelland": {
+      "name": "Havelland",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "heide": {
+      "name": "Heidekreis",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "heidelberg": {
+      "name": "Heidelberg",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "heidenheim": {
+      "name": "Heidenheim",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Niederstotzingen, Sontheim an der Brenz"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Zone 1a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "heilbronn landkreis": {
+      "name": "Heilbronn (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "heilbronn stadt": {
+      "name": "Heilbronn (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "heinsberg": {
+      "name": "Heinsberg",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "helmstedt": {
+      "name": "Helmstedt",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "herford": {
+      "name": "Herford",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "herne": {
+      "name": "Herne",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Herne"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hersfeld rotenburg": {
+      "name": "Hersfeld-Rotenburg",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "herzogtum lauenburg": {
+      "name": "Herzogtum Lauenburg",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "hildburghausen": {
+      "name": "Hildburghausen",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hildesheim": {
+      "name": "Hildesheim",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hochsauer": {
+      "name": "Hochsauerlandkreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Arnsberg"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bestwig",
+            "Brilon",
+            "Eslohe (Sauerland)",
+            "Hallenberg",
+            "Marsberg",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Winterberg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hochtaunus": {
+      "name": "Hochtaunuskreis",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Kronberg im Taunus",
+            "Steinbach (Taunus)"
+          ],
+          "n_gemeinden": 2
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Homburg v.d. Höhe",
+            "Friedrichsdorf",
+            "Glashütten",
+            "Grävenwiesbach",
+            "Königstein im Taunus",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        }
+      ],
+      "fussnoten": []
+    },
+    "hoexter": {
+      "name": "Höxter",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "hof": {
+      "name": "Hof",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "hof stadt": {
+      "name": "Hof (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Hof"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "hohenlohe": {
+      "name": "Hohenlohekreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bretzfeld, Neuenstein, Öhringen, Pfedelbach, Waldenburg, Zweiflingen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "holzminden": {
+      "name": "Holzminden",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ilm": {
+      "name": "Ilm-Kreis",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alkersleben",
+            "Bösleben-Wüllersleben",
+            "Elleben",
+            "Elxleben",
+            "Ichtershausen",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Altenfeld",
+            "Angelroda",
+            "Arnstadt",
+            "Böhlen",
+            "Dornheim",
+            "... (30 weitere)"
+          ],
+          "n_gemeinden": 35
+        }
+      ],
+      "fussnoten": []
+    },
+    "ingol": {
+      "name": "Ingolstadt",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Ingolstadt"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "jena": {
+      "name": "Jena",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Jena"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "jerichower land": {
+      "name": "Jerichower Land",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld."
+      ]
+    },
+    "kaiserslautern": {
+      "name": "Kaiserslautern",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "kaiserslautern stadt": {
+      "name": "Kaiserslautern (Stadt)",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kaiserslautern"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "karlsruhe landkreis": {
+      "name": "Karlsruhe (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bretten, Karlsbad, Kürnbach, Marxzell, Oberderdingen, Sulzfeld, Zaisenhausen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "karlsruhe stadt": {
+      "name": "Karlsruhe (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "kassel": {
+      "name": "Kassel",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer \nGrebenstein und \nHofgeismar= SLZ 2a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "kaufbeuren stadt": {
+      "name": "Kaufbeuren (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kaufbeuren"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kelheim": {
+      "name": "Kelheim",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kempten allgaeu": {
+      "name": "Kempten (Allgäu)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Kempten (Allgäu)"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kiel": {
+      "name": "Kiel",
+      "typ": "stadt",
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kiel"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "kitzingen": {
+      "name": "Kitzingen",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kleve": {
+      "name": "Kleve",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "koblenz": {
+      "name": "Koblenz",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Koblenz"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "koeln": {
+      "name": "Köln",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Köln"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "konstanz": {
+      "name": "Konstanz",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "krefeld": {
+      "name": "Krefeld",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Krefeld"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "kronach": {
+      "name": "Kronach",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kronach",
+            "Küps",
+            "Mitwitz",
+            "Schneckenlohe",
+            "Stockheim",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Ludwigsstadt",
+            "Nordhalben",
+            "Pressig",
+            "Reichenbach",
+            "Steinbach a. Wald",
+            "... (11 weitere)"
+          ],
+          "n_gemeinden": 16
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kulmbach": {
+      "name": "Kulmbach",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Harsdorf",
+            "Himmelkron",
+            "Kasendorf",
+            "Ködnitz",
+            "Kulmbach",
+            "... (13 weitere)"
+          ],
+          "n_gemeinden": 18
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Grafengehaig",
+            "Guttenberg",
+            "Marktleugast",
+            "Presseck"
+          ],
+          "n_gemeinden": 4
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "kusel": {
+      "name": "Kusel",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "kyffhaeuser": {
+      "name": "Kyffhäuserkreis",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "lahn dill": {
+      "name": "Lahn-Dill-Kreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\nDietzhölztal, Dillenburg, Eschenburg und Haiger =  SLZ 2a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "landau in der pfalz": {
+      "name": "Landau in der Pfalz",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Landau in der Pfalz"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "landsberg a lech": {
+      "name": "Landsberg a. Lech",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Eching a. Ammersee",
+            "Egling a.d. Paar",
+            "Eresing",
+            "Finning",
+            "Geltendorf",
+            "... (14 weitere)"
+          ],
+          "n_gemeinden": 19
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Apfeldorf",
+            "Denklingen",
+            "Dießen a. Ammersee",
+            "Fuchstal",
+            "Hofstetten",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "landshut": {
+      "name": "Landshut",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "landshut stadt": {
+      "name": "Landshut (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Landshut"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "leer": {
+      "name": "Leer",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "leipzig landkreis": {
+      "name": "Leipzig (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "leipzig stadt": {
+      "name": "Leipzig (Stadt)",
+      "typ": "stadt",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "leverkusen": {
+      "name": "Leverkusen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Leverkusen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "lichtenfels": {
+      "name": "Lichtenfels",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "limburg weilburg": {
+      "name": "Limburg-Weilburg",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "lindau bodensee": {
+      "name": "Lindau (Bodensee)",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle außer\nBodolz, Lindau (Bodensee), Nonnenhorn, Wasserburg (Bodensee), Weißensberg = SLZ 2"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "lippe": {
+      "name": "Lippe",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "loerrach": {
+      "name": "Lörrach",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ludwigsburg": {
+      "name": "Ludwigsburg",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ludwigshafen am rhein": {
+      "name": "Ludwigshafen am Rhein",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Ludwigshafen am Rhein"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ludwigslust parchim": {
+      "name": "Ludwigslust-Parchim, Mecklenburgische Seenplatte, Nordwestmecklenburg",
+      "typ": null,
+      "bundesland": "MV",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "luebeck": {
+      "name": "Lübeck",
+      "typ": "stadt",
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Lübeck"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "luechow dannenberg": {
+      "name": "Lüchow-Dannenberg",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "lueneburg": {
+      "name": "Lüneburg",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "maerkisch oderland": {
+      "name": "Märkisch-Oderland",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "maerkischer": {
+      "name": "Märkischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Iserlohn",
+            "Menden (Sauerland)"
+          ],
+          "n_gemeinden": 2
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Altena",
+            "Balve",
+            "Halver",
+            "Hemer",
+            "Herscheid",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": []
+    },
+    "main kinzig": {
+      "name": "Main-Kinzig-Kreis",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bruchköbel",
+            "Erlensee",
+            "Freigericht",
+            "Großkrotzenburg",
+            "Hammersbach",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Orb",
+            "Bad Soden-Salmünster",
+            "Biebergemünd",
+            "Brachttal",
+            "Flörsbachtal",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Birstein",
+            "Schlüchtern",
+            "Sinntal",
+            "Steinau an der Straße"
+          ],
+          "n_gemeinden": 4
+        }
+      ],
+      "fussnoten": []
+    },
+    "main spessart": {
+      "name": "Main-Spessart",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\n Arnstein, Retzstadt, Thüngen =  SLZ 1;"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "main tauber": {
+      "name": "Main-Tauber-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Freudenberg, Königheim, Külsheim, Wertheim"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "main taunus": {
+      "name": "Main-Taunus-Kreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mainz": {
+      "name": "Mainz",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Mainz"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mainz bingen": {
+      "name": "Mainz-Bingen",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Appenheim",
+            "Aspisheim",
+            "Bingen am Rhein",
+            "Bodenheim",
+            "Bubenheim",
+            "... (47 weitere)"
+          ],
+          "n_gemeinden": 52
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bacharach",
+            "Badenheim",
+            "Breitscheid",
+            "Gensingen",
+            "Grolsheim",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": []
+    },
+    "mannheim": {
+      "name": "Mannheim",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mansfeld suedharz": {
+      "name": "Mansfeld-Südharz",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "marburg biedenkopf": {
+      "name": "Marburg-Biedenkopf",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\nBiedenkopf, Breidenbach und\nMünchhausen= SLZ 2a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mayen koblenz": {
+      "name": "Mayen-Koblenz",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Andernach",
+            "Kretz",
+            "Nickenich",
+            "Plaidt",
+            "Saffig",
+            "... (19 weitere)"
+          ],
+          "n_gemeinden": 24
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Acht",
+            "Anschau",
+            "Arft",
+            "Baar",
+            "Bell",
+            "... (58 weitere)"
+          ],
+          "n_gemeinden": 63
+        }
+      ],
+      "fussnoten": []
+    },
+    "meissen": {
+      "name": "Meißen",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "memmingen stadt": {
+      "name": "Memmingen (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Memmingen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "merzig wadern": {
+      "name": "Merzig-Wadern",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mettmann": {
+      "name": "Mettmann",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "miesbach": {
+      "name": "Miesbach",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3a",
+          "gemeinden_beispiele": [
+            "Bad Wiessee",
+            "Bayrischzell",
+            "Kreuth"
+          ],
+          "n_gemeinden": 3
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Fischbachau",
+            "Hausham",
+            "Irschenberg",
+            "Miesbach",
+            "Otterfing",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Gmund a. Tegernsee",
+            "Holzkirchen",
+            "Schliersee",
+            "Tegernsee",
+            "Valley",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Rottach-Egern"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "miltenberg": {
+      "name": "Miltenberg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer \nGroßwallstadt, Niedernberg, Sulzbach a. Main  = SLZ 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "minden luebbecke": {
+      "name": "Minden-Lübbecke",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "mittelsachsen": {
+      "name": "Mittelsachsen",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altmittweida",
+            "Burgstädt, Stadt",
+            "Claußnitz",
+            "Döbeln, Stadt",
+            "Erlau",
+            "... (49 weitere)"
+          ],
+          "n_gemeinden": 54
+        }
+      ],
+      "fussnoten": []
+    },
+    "moenchengladbach": {
+      "name": "Mönchengladbach",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Mönchengladbach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "muehldorf a inn": {
+      "name": "Mühldorf a. Inn",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Buchbach",
+            "Egglkofen",
+            "Oberbergkirchen",
+            "Obertaufkirchen",
+            "Schönberg",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Ampfing",
+            "Aschau a. Inn",
+            "Erharting",
+            "Gars a. Inn",
+            "Haag i. OB.",
+            "... (21 weitere)"
+          ],
+          "n_gemeinden": 26
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "muelheim an der ruhr": {
+      "name": "Mülheim an der Ruhr",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Mülheim an der Ruhr"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "muenchen landkreis": {
+      "name": "München (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Aschheim",
+            "Feldkirchen",
+            "Garching b. München",
+            "Gräfelfing",
+            "Grasbrunn",
+            "... (17 weitere)"
+          ],
+          "n_gemeinden": 22
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Baierbrunn",
+            "Brunnthal",
+            "Höhenkirchen-Siegertsbrunn",
+            "Hohenbrunn",
+            "Oberhaching",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "muenchen stadt": {
+      "name": "München (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "München"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "muenster": {
+      "name": "Münster",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Münster"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "neckar odenwald": {
+      "name": "Neckar-Odenwald-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Ravenstein"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "neu a d aisch bad windsheim": {
+      "name": "Neustadt a.d. Aisch-Bad Windsheim",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "neu a d waldnaab": {
+      "name": "Neustadt a.d. Waldnaab",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altenstadt a.d. Waldnaab",
+            "Eschenbach i.d. OPf.",
+            "Etzenricht",
+            "Grafenwöhr",
+            "Irchenrieth",
+            "... (26 weitere)"
+          ],
+          "n_gemeinden": 31
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Eslarn",
+            "Floß",
+            "Flossenbürg",
+            "Georgenberg",
+            "Moosbach",
+            "... (7 weitere)"
+          ],
+          "n_gemeinden": 12
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "neu an der weinstrasse": {
+      "name": "Neustadt an der Weinstraße",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Neustadt an der Weinstraße"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "neu ulm": {
+      "name": "Neu-Ulm",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Altenstadt",
+            "Bellenberg",
+            "Illertissen",
+            "Kellmünz a.d. Iller",
+            "Neu-Ulm",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Buch",
+            "Holzheim",
+            "Nersingen",
+            "Elchingen",
+            "Oberroth",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "neuburg schrobenhausen": {
+      "name": "Neuburg-Schrobenhausen",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "neumarkt i d opf": {
+      "name": "Neumarkt i.d. OPf.",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Berngau",
+            "Freystadt",
+            "Mühlhausen",
+            "Postbauer-Heng",
+            "Pyrbaum",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Berching",
+            "Breitenbrunn",
+            "Dietfurt a.d. Altmühl",
+            "Seubersdorf i.d. OPf."
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Berg b. Neumarkt i.d. OPf.",
+            "Deining",
+            "Hohenfels",
+            "Lauterhofen",
+            "Lupburg",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "neumuenster": {
+      "name": "Neumünster",
+      "typ": "stadt",
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Neumünster"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "neunkirchen": {
+      "name": "Neunkirchen",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "neuwied": {
+      "name": "Neuwied",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Anhausen",
+            "Bad Hönningen",
+            "Bonefeld",
+            "Breitscheid",
+            "Hausen (Wied)",
+            "... (34 weitere)"
+          ],
+          "n_gemeinden": 39
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Asbach",
+            "Dernbach",
+            "Dierdorf",
+            "Döttesfeld",
+            "Dürrholz",
+            "... (18 weitere)"
+          ],
+          "n_gemeinden": 23
+        }
+      ],
+      "fussnoten": []
+    },
+    "nienburg weser": {
+      "name": "Nienburg (Weser)",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "nordfriesland": {
+      "name": "Nordfriesland",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "nordhausen": {
+      "name": "Nordhausen",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Auleben",
+            "Bleicherode",
+            "Etzelsrode",
+            "Friedrichsthal",
+            "Görsbach",
+            "... (22 weitere)"
+          ],
+          "n_gemeinden": 27
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Buchholz",
+            "Ellrich",
+            "Harzungen",
+            "Herrmannsacker",
+            "Ilfeld",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        }
+      ],
+      "fussnoten": []
+    },
+    "nordsachsen": {
+      "name": "Nordsachsen",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "northeim": {
+      "name": "Northeim",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "nuernberg stadt": {
+      "name": "Nürnberg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Nürnberg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "nuernberger land": {
+      "name": "Nürnberger Land",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Altdorf b. Nürnberg",
+            "Burgthann",
+            "Engelthal",
+            "Feucht",
+            "Henfenfeld",
+            "... (24 weitere)"
+          ],
+          "n_gemeinden": 29
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alfeld",
+            "Happurg",
+            "Hartenstein",
+            "Hersbruck",
+            "Kirchensittenbach",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "oberallgaeu": {
+      "name": "Oberallgäu",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Dietmannsried",
+            "Haldenwang",
+            "Lauben",
+            "Wildpoldsried"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Altusried",
+            "Betzigau",
+            "Blaichach",
+            "Bolsterlang",
+            "Buchenberg",
+            "... (13 weitere)"
+          ],
+          "n_gemeinden": 18
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Balderschwang",
+            "Hindelang",
+            "Immenstadt i. Allgäu",
+            "Missen-Wilhams",
+            "Oberstaufen",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "oberbergischer": {
+      "name": "Oberbergischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Engelskirchen",
+            "Hückeswagen",
+            "Lindlar",
+            "Radevormwald"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bergneustadt",
+            "Gummersbach",
+            "Marienheide",
+            "Morsbach",
+            "Nümbrecht",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": []
+    },
+    "oberhausen": {
+      "name": "Oberhausen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Oberhausen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "oberhavel": {
+      "name": "Oberhavel",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "oberspreewald lausitz": {
+      "name": "Oberspreewald-Lausitz",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "odenwald": {
+      "name": "Odenwaldkreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "oder spree": {
+      "name": "Oder-Spree",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "offenbach": {
+      "name": "Offenbach",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "offenbach am main": {
+      "name": "Offenbach am Main",
+      "typ": "stadt",
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Offenbach am Main"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "oldenburg landkreis": {
+      "name": "Oldenburg (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "oldenburg oldenburg": {
+      "name": "Oldenburg (Oldenburg)",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "olpe": {
+      "name": "Olpe",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ortenau": {
+      "name": "Ortenaukreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Achern, Appenweier, Friesenheim, Hohberg, Kappel-Grafenhausen, Kappelrodeck, Kehl,\nKippenheim, Lahr, Lauf, Mahlberg, Meißenheim, Neuried, Offenburg, Ortenberg, Renchen,\nRheinau, Ringsheim, Rust, Sasbach, Schutterwald, Schwanau, Willstätt,\ngemeindefreier Grundbesitz (Rheinauer Wald)"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "osnabrueck landkreis": {
+      "name": "Osnabrück (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "osnabrueck stadt": {
+      "name": "Osnabrück (Stadt)",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ostalb": {
+      "name": "Ostalbkreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2a"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Essingen, Heubach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ostallgaeu": {
+      "name": "Ostallgäu",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Buchloe",
+            "Lamerdingen"
+          ],
+          "n_gemeinden": 2
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aitrang",
+            "Biessenhofen",
+            "Baisweil",
+            "Bidingen",
+            "Eggenthal",
+            "... (27 weitere)"
+          ],
+          "n_gemeinden": 32
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Eisenberg",
+            "Füssen",
+            "Görisried",
+            "Hopferau",
+            "Nesselwang",
+            "... (6 weitere)"
+          ],
+          "n_gemeinden": 11
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "osterholz": {
+      "name": "Osterholz",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "ostholstein": {
+      "name": "Ostholstein",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "ostprignitz ruppin": {
+      "name": "Ostprignitz-Ruppin",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "paderborn": {
+      "name": "Paderborn",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "passau landkreis": {
+      "name": "Passau (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3a",
+          "gemeinden_beispiele": [
+            "Büchlberg",
+            "Fürstenstein",
+            "Hauzenberg",
+            "Hutthurm",
+            "Neukirchen vorm Wald",
+            "... (7 weitere)"
+          ],
+          "n_gemeinden": 12
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aidenbach",
+            "Aldersbach",
+            "Bad Griesbach i. Rottal",
+            "Beutelsbach",
+            "Haarbach",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bad Füssing",
+            "Fürstenzell",
+            "Kirchham",
+            "Neuburg a. Inn",
+            "Ortenburg",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Hofkirchen",
+            "Neuhaus a. Inn",
+            "Obernzell",
+            "Thyrnau",
+            "Untergriesbach",
+            "... (1 weitere)"
+          ],
+          "n_gemeinden": 6
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "passau stadt": {
+      "name": "Passau (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "3a",
+      "varianten": [
+        {
+          "slz": "3a",
+          "gemeinden_beispiele": [
+            "Passau"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "peine": {
+      "name": "Peine",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "pfaffenhofen a d ilm": {
+      "name": "Pfaffenhofen a.d. Ilm",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "pforzheim": {
+      "name": "Pforzheim",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "pinneberg": {
+      "name": "Pinneberg",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer Helgoland= SLZ 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "pirmasens": {
+      "name": "Pirmasens",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Pirmasens"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ploen": {
+      "name": "Plön",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "potsdam": {
+      "name": "Potsdam",
+      "typ": "stadt",
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Potsdam"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "potsdam mittelmark": {
+      "name": "Potsdam-Mittelmark",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "prignitz": {
+      "name": "Prignitz",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "rastatt": {
+      "name": "Rastatt",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Forbach, Gaggenau, Gernsbach, Loffenau, Weisenbach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "ravensburg": {
+      "name": "Ravensburg",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2 oder 3"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Achberg, Aichstetten, Aitrach, Amtzell, Bad Wurzach, Bodnegg, Grünkraut, Schlier, Vogt, Waldburg, Wolfegg"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Argenbühl, Isny, Kißleg, Leutkirch i. Allgäu, Wangen i. Allgäu"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "recklinghausen": {
+      "name": "Recklinghausen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "regen": {
+      "name": "Regen",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Achslach",
+            "Arnbruck",
+            "Bayerisch Eisenstein",
+            "Bischofsmais",
+            "Bodenmais",
+            "... (19 weitere)"
+          ],
+          "n_gemeinden": 24
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "regensburg landkreis": {
+      "name": "Regensburg (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Alteglofsheim",
+            "Aufhausen",
+            "Barbing",
+            "Deuerling",
+            "Hagelstadt",
+            "... (17 weitere)"
+          ],
+          "n_gemeinden": 22
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altenthann",
+            "Bach a.d. Donau",
+            "Beratzhausen",
+            "Bernhardswald",
+            "Brennberg",
+            "... (18 weitere)"
+          ],
+          "n_gemeinden": 23
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "regensburg stadt": {
+      "name": "Regensburg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1a",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Regensburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "region hannover": {
+      "name": "Region Hannover",
+      "typ": null,
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rems murr": {
+      "name": "Rems-Murr-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "remscheid": {
+      "name": "Remscheid",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Remscheid"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rendsburg eckernfoerde": {
+      "name": "Rendsburg-Eckernförde",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "reutlingen": {
+      "name": "Reutlingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Gomadingen, Hayingen, Hohenstein, Mehrstetten, Münsingen, Pfronstetten, Trochtelfingen, Zwiefalten"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein erft": {
+      "name": "Rhein-Erft-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein hunsrueck": {
+      "name": "Rhein-Hunsrück-Kreis",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer \nUrbar= SLZ 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein lahn": {
+      "name": "Rhein-Lahn-Kreis",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Auel",
+            "Bad Ems",
+            "Becheln",
+            "Berg",
+            "Bettendorf",
+            "... (70 weitere)"
+          ],
+          "n_gemeinden": 75
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Allendorf",
+            "Altendiez",
+            "Attenhausen",
+            "Aull",
+            "Berghausen",
+            "... (57 weitere)"
+          ],
+          "n_gemeinden": 62
+        }
+      ],
+      "fussnoten": [
+        "1 (Exklave in SLZ 2)"
+      ]
+    },
+    "rhein neckar": {
+      "name": "Rhein-Neckar-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Angelbachtal, Bammental, Dielheim, Eberbach, Epfenbach, Eschelbronn, Heddesbach,\nHeiligkreuzsteinach, Helmstadt-Bargen, Lobbach, Mauer, Meckesheim,\nNeckarbischofsheim, Neckargemünd, Neidenstein, Reichartshausen, Schönau,\nSchönbrunn, Sinsheim, Spechbach, Waibstadt, Wiesenbach, Wilhelmsfeld, Zuzenhausen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein neuss": {
+      "name": "Rhein-Kreis Neuss",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein pfalz": {
+      "name": "Rhein-Pfalz",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhein sieg": {
+      "name": "Rhein-Sieg-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alfter",
+            "Bad Honnef",
+            "Bornheim",
+            "Hennef (Sieg)",
+            "Königswinter",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Eitorf",
+            "Much",
+            "Neunkirchen-Seelscheid",
+            "Ruppichteroth",
+            "Windeck"
+          ],
+          "n_gemeinden": 5
+        }
+      ],
+      "fussnoten": []
+    },
+    "rheingau taunus": {
+      "name": "Rheingau-Taunus-Kreis",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Geisenheim",
+            "Lorch",
+            "Rüdesheim am Rhein",
+            "Walluf"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aarbergen",
+            "Bad Schwalbach",
+            "Eltville am Rhein",
+            "Heidenrod",
+            "Hohenstein",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": []
+    },
+    "rheinisch bergischer": {
+      "name": "Rheinisch-Bergischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bergisch Gladbach",
+            "Burscheid",
+            "Leichlingen (Rhld.)",
+            "Odenthal",
+            "Rösrath"
+          ],
+          "n_gemeinden": 5
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Kürten",
+            "Overath",
+            "Wermelskirchen"
+          ],
+          "n_gemeinden": 3
+        }
+      ],
+      "fussnoten": []
+    },
+    "rhoen grabfeld": {
+      "name": "Rhön-Grabfeld",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Großbardorf",
+            "Großeibstadt",
+            "Bad Königshofen i. Grabfeld",
+            "Strahlungen",
+            "Sulzdorf a.d. Lederhecke",
+            "... (5 weitere)"
+          ],
+          "n_gemeinden": 10
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aubstadt",
+            "Bad Neustadt a.d. Saale",
+            "Bastheim",
+            "Hendungen",
+            "Herbstadt",
+            "... (23 weitere)"
+          ],
+          "n_gemeinden": 28
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bischofsheim a.d. Rhön",
+            "Fladungen",
+            "Hausen",
+            "Nordheim v.d. Rhön",
+            "Oberelsbach",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "rosenheim landkreis": {
+      "name": "Rosenheim (Landkreis)",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Amerang",
+            "Babensham",
+            "Bad Aibling",
+            "Breitbrunn a. Chiemsee",
+            "Bruckmühl",
+            "... (30 weitere)"
+          ],
+          "n_gemeinden": 35
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Aschau i. Chiemgau",
+            "Bernau a. Chiemsee",
+            "Brannenburg",
+            "Bad Feilnbach",
+            "Flintsbach a. Inn",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "rosenheim stadt": {
+      "name": "Rosenheim (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Rosenheim"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "rostock": {
+      "name": "Rostock",
+      "typ": "landkreis",
+      "bundesland": "MV",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "rotenburg wuemme": {
+      "name": "Rotenburg (Wümme)",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "roth": {
+      "name": "Roth",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle außer:\n Hilpoltstein, Röttenbach, Spalt, Greding, Heideck, Thalmässing = SLZ 1a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "rottal inn": {
+      "name": "Rottal-Inn",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Arnstorf",
+            "Bad Birnbach",
+            "Bayerbach",
+            "Dietersburg",
+            "Eggenfelden",
+            "... (26 weitere)"
+          ],
+          "n_gemeinden": 31
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "rottweil": {
+      "name": "Rottweil",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "saale": {
+      "name": "Saalekreis",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "saale holzland": {
+      "name": "Saale-Holzland-Kreis",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "saale orla": {
+      "name": "Saale-Orla-Kreis",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bodelwitz",
+            "Breitenhain",
+            "Chursdorf",
+            "Dittersdorf",
+            "Döbritz",
+            "... (35 weitere)"
+          ],
+          "n_gemeinden": 40
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Birkenhügel",
+            "Blankenberg",
+            "Blankenstein",
+            "Bucha",
+            "Burgk",
+            "... (31 weitere)"
+          ],
+          "n_gemeinden": 36
+        }
+      ],
+      "fussnoten": []
+    },
+    "saalfeld rudol": {
+      "name": "Saalfeld-Rudolstadt",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Großkochberg",
+            "Heilingen",
+            "Uhlstädt-Kirchhasel",
+            "Remda-Teichel"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Allendorf",
+            "Altenbeuthen",
+            "Arnsgereuth",
+            "Bad Blankenburg",
+            "Bechstedt",
+            "... (38 weitere)"
+          ],
+          "n_gemeinden": 43
+        }
+      ],
+      "fussnoten": []
+    },
+    "saarlouis": {
+      "name": "Saarlouis",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "saarpfalz": {
+      "name": "Saarpfalz-Kreis",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "saechsische schweiz osterzgebirge": {
+      "name": "Sächsische Schweiz-Osterzgebirge",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Schandau, Stadt",
+            "Bannewitz",
+            "Dürrröhrsdorf-Dittersbach",
+            "Freital, Stadt",
+            "Heidenau, Stadt",
+            "... (32 weitere)"
+          ],
+          "n_gemeinden": 37
+        }
+      ],
+      "fussnoten": []
+    },
+    "salz": {
+      "name": "Salzlandkreis",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld. von Barby der Ortsteil Glinde sowie Schönebeck (Elbe) und von Bördeland der Ortsteil Welsleben"
+      ]
+    },
+    "salzgitter": {
+      "name": "Salzgitter",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "schaumburg": {
+      "name": "Schaumburg",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "schleswig flensburg": {
+      "name": "Schleswig-Flensburg",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "schmalkalden meiningen": {
+      "name": "Schmalkalden-Meiningen",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aschenhausen",
+            "Bauerbach",
+            "Behrungen",
+            "Belrieth",
+            "Benshausen",
+            "... (54 weitere)"
+          ],
+          "n_gemeinden": 59
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Birx",
+            "Erbenhausen",
+            "Frankenheim/Rhön",
+            "Melpers"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Altersbach",
+            "Brotterode",
+            "Floh-Seligenthal",
+            "Heßles",
+            "Kleinschmalkalden",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": []
+    },
+    "schwabach stadt": {
+      "name": "Schwabach (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Schwabach"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "schwaebisch hall": {
+      "name": "Schwäbisch Hall",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Blaufelden, Braunsbach, Gerabronn, Kirchberg an der Jagst, Langenburg, Rot am See, Schrozberg"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "schwalm eder": {
+      "name": "Schwalm-Eder-Kreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "schwandorf": {
+      "name": "Schwandorf",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer\nSchönsee, Stadlern, Weiding, Oberviechtach, Winklarn = SLZ 3"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "schwarzwald baar": {
+      "name": "Schwarzwald-Baar-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2a"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Schönwald, Schonach, Triberg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "schweinfurt": {
+      "name": "Schweinfurt",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "schweinfurt stadt": {
+      "name": "Schweinfurt (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Schweinfurt"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "segeberg": {
+      "name": "Segeberg",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "siegen wittgenstein": {
+      "name": "Siegen-Wittgenstein",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "alle, bis auf Bad Berleburg und Erndtebrück = SLZ3"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "sigmaringen": {
+      "name": "Sigmaringen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "soemmerda": {
+      "name": "Sömmerda",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "soest": {
+      "name": "Soest",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Lippetal"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Anröchte",
+            "Bad Sassendorf",
+            "Ense",
+            "Erwitte",
+            "Geseke",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": []
+    },
+    "solingen": {
+      "name": "Solingen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Solingen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "sonneberg": {
+      "name": "Sonneberg",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bachfeld",
+            "Effelder-Rauenstein",
+            "Föritz",
+            "Mengersgereuth-Hämmern",
+            "Neuhaus-Schierschnitz",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Goldisthal",
+            "Judenbach",
+            "Lauscha",
+            "Neuhaus am Rennweg",
+            "Scheibe-Alsbach",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        }
+      ],
+      "fussnoten": []
+    },
+    "speyer": {
+      "name": "Speyer",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Speyer"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "spree neisse": {
+      "name": "Spree-Neiße",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "st wendel": {
+      "name": "St.Wendel",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "stade": {
+      "name": "Stade",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "starnberg": {
+      "name": "Starnberg",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Gauting",
+            "Gilching",
+            "Inning a. Ammersee",
+            "Krailling",
+            "Seefeld",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Berg",
+            "Andechs",
+            "Feldafing",
+            "Herrsching a. Ammersee",
+            "Pöcking",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "steinburg": {
+      "name": "Steinburg",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "steinfurt": {
+      "name": "Steinfurt",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Altenberge",
+            "Emsdetten",
+            "Greven",
+            "Hörstel",
+            "Hopsten",
+            "... (17 weitere)"
+          ],
+          "n_gemeinden": 22
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Lienen",
+            "Lotte"
+          ],
+          "n_gemeinden": 2
+        }
+      ],
+      "fussnoten": []
+    },
+    "stendal": {
+      "name": "Stendal",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld."
+      ]
+    },
+    "stormarn": {
+      "name": "Stormarn",
+      "typ": null,
+      "bundesland": "SH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nord. Tiefld"
+      ]
+    },
+    "straubing bogen": {
+      "name": "Straubing-Bogen",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\nLaberweinting, Mallersdorf-Pfaffenberg, Geiselhöring, Leiblfing, Perkam  = SLZ 1a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "straubing stadt": {
+      "name": "Straubing (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Straubing"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "stuttgart": {
+      "name": "Stuttgart",
+      "typ": "stadt",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "suedliche weinstrasse": {
+      "name": "Südliche Weinstraße",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Altdorf",
+            "Barbelroth",
+            "Böbingen",
+            "Bornheim",
+            "Dierbach",
+            "... (13 weitere)"
+          ],
+          "n_gemeinden": 18
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Albersweiler",
+            "Bad Bergzabern",
+            "Billigheim-Ingenheim",
+            "Birkenhördt",
+            "Birkweiler",
+            "... (52 weitere)"
+          ],
+          "n_gemeinden": 57
+        }
+      ],
+      "fussnoten": [
+        "3 (Exklaven in SLZ 2)",
+        "4 (Exklaven in SLZ 2)",
+        "5 Exklaven in SLZ 2)"
+      ]
+    },
+    "suedwestpfalz": {
+      "name": "Südwestpfalz",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "suhl": {
+      "name": "Suhl",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Suhl"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "teltow flaeming": {
+      "name": "Teltow-Fläming",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "tirschenreuth": {
+      "name": "Tirschenreuth",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Brand",
+            "Ebnath",
+            "Erbendorf",
+            "Immenreuth",
+            "Kastl",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Bärnau",
+            "Falkenberg",
+            "Friedenfels",
+            "Fuchsmühl",
+            "Konnersreuth",
+            "... (11 weitere)"
+          ],
+          "n_gemeinden": 16
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "traunstein": {
+      "name": "Traunstein",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3a",
+          "gemeinden_beispiele": [
+            "Reit im Winkl",
+            "Ruhpolding",
+            "Schleching",
+            "Unterwössen"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altenmarkt a.d. Alz",
+            "Chieming",
+            "Chiemsee (See)",
+            "Engelsberg",
+            "Kienberg",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Bergen",
+            "Fridolfing",
+            "Grabenstätt",
+            "Grassau",
+            "Kirchanschöring",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Inzell",
+            "Siegsdorf",
+            "Surberg",
+            "Traunstein",
+            "Vachendorf"
+          ],
+          "n_gemeinden": 5
+        }
+      ],
+      "fussnoten": [
+        "neue Schneelastzone aus dem Forschungsprojekt1) (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "trier saarburg": {
+      "name": "Trier-Saarburg",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "trier stadt": {
+      "name": "Trier (Stadt)",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Trier"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "tuebingen": {
+      "name": "Tübingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "tuttlingen": {
+      "name": "Tuttlingen",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden, sofern nicht in Schneelastzone 2"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Aldingen, Deilingen, Denkingen, Durchhausen, Frittlingen, Gosheim, Gunningen, Spaichingen, Talheim, Trossingen, Wehingen"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "uckermark": {
+      "name": "Uckermark",
+      "typ": null,
+      "bundesland": "BB",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefl."
+      ]
+    },
+    "uelzen": {
+      "name": "Uelzen",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "unna": {
+      "name": "Unna",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bergkamen",
+            "Bönen",
+            "Holzwickede",
+            "Kamen",
+            "Lünen",
+            "... (3 weitere)"
+          ],
+          "n_gemeinden": 8
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Fröndenberg",
+            "Schwerte"
+          ],
+          "n_gemeinden": 2
+        }
+      ],
+      "fussnoten": []
+    },
+    "unstrut hainich": {
+      "name": "Unstrut-Hainich-Kreis",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altengottern",
+            "Bad Langensalza",
+            "Bad Tennstedt",
+            "Ballhausen",
+            "Blankenburg",
+            "... (28 weitere)"
+          ],
+          "n_gemeinden": 33
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Flarchheim",
+            "Heyerode",
+            "Hildebrandshausen",
+            "Kammerforst",
+            "Langula",
+            "... (9 weitere)"
+          ],
+          "n_gemeinden": 14
+        }
+      ],
+      "fussnoten": []
+    },
+    "unterallgaeu": {
+      "name": "Unterallgäu",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Buxheim",
+            "Fellheim",
+            "Heimertingen",
+            "Memmingerberg",
+            "Niederrieden",
+            "... (2 weitere)"
+          ],
+          "n_gemeinden": 7
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Amberg",
+            "Apfeltrach",
+            "Babenhausen",
+            "Boos",
+            "Breitenbrunn",
+            "... (26 weitere)"
+          ],
+          "n_gemeinden": 31
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bad Wörishofen",
+            "Benningen",
+            "Böhen",
+            "Dirlewang",
+            "Bad Grönenbach",
+            "... (10 weitere)"
+          ],
+          "n_gemeinden": 15
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "vechta": {
+      "name": "Vechta",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "verband saarbruecken": {
+      "name": "Stadtverband Saarbrücken",
+      "typ": null,
+      "bundesland": "SL",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "verden": {
+      "name": "Verden",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "viersen": {
+      "name": "Viersen",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "vogelsberg": {
+      "name": "Vogelsbergkreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle außer:\nFreiensteinau, Grebenhain, Herbstein, Lauterbach (Hessen), Schlitz und Wartenberg = SLZ 2a"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "vogt": {
+      "name": "Vogtlandkreis",
+      "typ": null,
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Adorf/Vogtl., Stadt",
+            "Bad Brambach",
+            "Bad Elster, Stadt",
+            "Bergen",
+            "Elsterberg, Stadt",
+            "... (35 weitere)"
+          ],
+          "n_gemeinden": 40
+        }
+      ],
+      "fussnoten": []
+    },
+    "vulkaneifel": {
+      "name": "Vulkaneifel",
+      "typ": null,
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "waldeck frankenberg": {
+      "name": "Waldeck-Frankenberg",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "alle außer:\nBad Wildungen, Diemelstadt, Gemünden (Wohra), Haina (Kloster), Rosenthal, Volkmarsen = SLZ 2"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "waldshut": {
+      "name": "Waldshut",
+      "typ": "landkreis",
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "warendorf": {
+      "name": "Warendorf",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Ahlen",
+            "Beckum",
+            "Drensteinfurt",
+            "Ennigerloh",
+            "Everswinkel",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Beelen",
+            "Oelde",
+            "Sassenberg",
+            "Wadersloh"
+          ],
+          "n_gemeinden": 4
+        }
+      ],
+      "fussnoten": []
+    },
+    "wartburg": {
+      "name": "Wartburgkreis",
+      "typ": "landkreis",
+      "bundesland": "TH",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Andenhausen",
+            "Bad Salzungen",
+            "Barchfeld",
+            "Berka/Werra",
+            "Brunnhartshausen",
+            "... (34 weitere)"
+          ],
+          "n_gemeinden": 39
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Bad Liebenstein",
+            "Berka v.d.Hainich",
+            "Bischofroda",
+            "Creuzburg",
+            "Ebenshausen",
+            "... (19 weitere)"
+          ],
+          "n_gemeinden": 24
+        }
+      ],
+      "fussnoten": []
+    },
+    "weiden i d opf": {
+      "name": "Weiden i.d. OPf.",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Weiden i.d. OPf."
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "weilheim schongau": {
+      "name": "Weilheim-Schongau",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altenstadt",
+            "Bernbeuren",
+            "Bernried",
+            "Böbing",
+            "Burggen",
+            "... (20 weitere)"
+          ],
+          "n_gemeinden": 25
+        },
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "Antdorf",
+            "Eglfing",
+            "Habach",
+            "Iffeldorf",
+            "Obersöchering",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "weimar": {
+      "name": "Weimar",
+      "typ": "stadt",
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Weimar"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "weimarer land": {
+      "name": "Weimarer Land",
+      "typ": null,
+      "bundesland": "TH",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "weissenburg gunzenhausen": {
+      "name": "Weißenburg-Gunzenhausen",
+      "typ": "landkreis",
+      "bundesland": "BY",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Absberg"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "1a",
+          "gemeinden_beispiele": [
+            "Alesheim",
+            "Bergen",
+            "Burgsalach",
+            "Ellingen",
+            "Ettenstatt",
+            "... (12 weitere)"
+          ],
+          "n_gemeinden": 17
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Muhr a. See",
+            "Dittenheim",
+            "Gnotzheim",
+            "Gunzenhausen",
+            "Heidenheim",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "werra meissner": {
+      "name": "Werra-Meißner-Kreis",
+      "typ": null,
+      "bundesland": "HE",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle außer:\nGroßalmerode, Hessisch Lichtenau, Neu-Eichenberg, Sontra, Waldkappel und Gutsbezirk Kaufunger Wald = SLZ 2"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "wesel": {
+      "name": "Wesel",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "wesermarsch": {
+      "name": "Wesermarsch",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "westerwald": {
+      "name": "Westerwaldkreis",
+      "typ": "landkreis",
+      "bundesland": "RP",
+      "slz_dominant": "2a",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Caan",
+            "Eitelborn",
+            "Hillscheid",
+            "Höhr-Grenzhausen",
+            "Kadenbach",
+            "... (4 weitere)"
+          ],
+          "n_gemeinden": 9
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alsbach",
+            "Bannberscheid",
+            "Boden",
+            "Breitenau",
+            "Daubach",
+            "... (165 weitere)"
+          ],
+          "n_gemeinden": 170
+        },
+        {
+          "slz": "2a",
+          "gemeinden_beispiele": [
+            "Atzelgift",
+            "Bad Marienberg (Westerwald)",
+            "Bretthausen",
+            "Hof",
+            "Kirburg",
+            "... (8 weitere)"
+          ],
+          "n_gemeinden": 13
+        }
+      ],
+      "fussnoten": []
+    },
+    "wetterau": {
+      "name": "Wetteraukreis",
+      "typ": "landkreis",
+      "bundesland": "HE",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bad Vilbel",
+            "Karben",
+            "Limeshain",
+            "Niddatal"
+          ],
+          "n_gemeinden": 4
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Altenstadt",
+            "Bad Nauheim",
+            "Büdingen",
+            "Butzbach",
+            "Echzell",
+            "... (16 weitere)"
+          ],
+          "n_gemeinden": 21
+        }
+      ],
+      "fussnoten": []
+    },
+    "wiesbaden": {
+      "name": "Wiesbaden",
+      "typ": "stadt",
+      "bundesland": "HE",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Wiesbaden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "wilhelmshaven": {
+      "name": "Wilhelmshaven",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "wittenberg": {
+      "name": "Wittenberg",
+      "typ": null,
+      "bundesland": "ST",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "*Nordd. Tiefld. von Coswig (Anhalt) die Ortsteile Serno und Stackelitz"
+      ]
+    },
+    "wittmund": {
+      "name": "Wittmund",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "wolfenbuettel": {
+      "name": "Wolfenbüttel",
+      "typ": "landkreis",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "wolfsburg": {
+      "name": "Wolfsburg",
+      "typ": "stadt",
+      "bundesland": "NI",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "alle Gemeinden"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "1)"
+      ]
+    },
+    "worms": {
+      "name": "Worms",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Worms"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "wuerzburg": {
+      "name": "Würzburg",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "wuerzburg stadt": {
+      "name": "Würzburg (Stadt)",
+      "typ": "stadt",
+      "bundesland": "BY",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Würzburg"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "wunsiedel i fichtelgebirge": {
+      "name": "Wunsiedel i. Fichtelgebirge",
+      "typ": null,
+      "bundesland": "BY",
+      "slz_dominant": "3",
+      "varianten": [
+        {
+          "slz": "3",
+          "gemeinden_beispiele": [
+            "alle"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": [
+        "zusätzlich sind die Ergebnisse des Forschungsprojektes1) zu berücksichtigen (sh. Tabellenblatt \"Erläuterung\")"
+      ]
+    },
+    "wuppertal": {
+      "name": "Wuppertal",
+      "typ": null,
+      "bundesland": "NW",
+      "slz_dominant": "1",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Wuppertal"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "zollernalb": {
+      "name": "Zollernalbkreis",
+      "typ": null,
+      "bundesland": "BW",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "1",
+          "gemeinden_beispiele": [
+            "Bitz, Meßstetten (ohne Gemeindeteile Hossingen, Oberdigisheim und Tieringen), Nusplingen, Straßberg, Winterlingen"
+          ],
+          "n_gemeinden": 1
+        },
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Alle Gemeinden und Gemeindeteile, sofern nicht in Zone 1"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "zweibruecken": {
+      "name": "Zweibrücken",
+      "typ": "stadt",
+      "bundesland": "RP",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Zweibrücken"
+          ],
+          "n_gemeinden": 1
+        }
+      ],
+      "fussnoten": []
+    },
+    "zwickau": {
+      "name": "Zwickau",
+      "typ": "landkreis",
+      "bundesland": "SN",
+      "slz_dominant": "2",
+      "varianten": [
+        {
+          "slz": "2",
+          "gemeinden_beispiele": [
+            "Bernsdorf",
+            "Callenberg",
+            "Crimmitschau, Stadt",
+            "Dennheritz",
+            "Fraureuth",
+            "... (28 weitere)"
+          ],
+          "n_gemeinden": 33
+        }
+      ],
+      "fussnoten": []
+    }
+  }
+}

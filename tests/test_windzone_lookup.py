@@ -5,7 +5,7 @@ from __future__ import annotations
 import pytest
 
 from spittelmeister_windlast.geo._normalize import norm_kreis
-from spittelmeister_windlast.geo.windzone import get_windzone
+from spittelmeister_windlast.geo.windzone import get_windzone, get_windzone_detail
 
 
 class TestNormalisierung:
@@ -64,7 +64,7 @@ class TestHierarchy:
         TODO: Sollte zu word-boundary- oder exact-match umgestellt werden.
         """
         wz, quelle = get_windzone("Marsstadt", "Olympus Mons", "")
-        assert wz == 3  # Match auf 'dithmarschen'
+        assert wz == 4  # Match auf 'dithmarschen' in amtlicher 2022-Tabelle
         assert "Teiluebereinstimmung" in quelle
 
     def test_pforzheim_ist_wz1(self):
@@ -89,7 +89,7 @@ class TestDatenIntegritaet:
             windzone_plz_prefix,
         )
         assert qb0_table() == {1: 0.32, 2: 0.39, 3: 0.47, 4: 0.56}
-        assert len(windzone_kreis()) > 300
+        assert len(windzone_kreis()) > 400
         assert len(windzone_plz()) > 400
         assert len(windzone_plz_prefix()) > 40
         assert len(windzone_bundesland()) == 16
@@ -100,3 +100,36 @@ class TestDatenIntegritaet:
         a = windzone_kreis()
         b = windzone_kreis()
         assert a is b
+
+
+class TestAreaCodeDisambiguierung:
+    def test_muenchen_stadt_mit_ags_trifft_detail_eintrag(self):
+        detail = get_windzone_detail("München", area_code="09162000")
+        assert detail is not None
+        assert "München" in detail["name"]
+        assert "Landeshauptstadt" in detail["name"]
+
+    def test_muenchen_landkreis_mit_ags_trifft_landkreis_eintrag(self):
+        detail = get_windzone_detail("München", area_code="09184112")
+        assert detail is not None
+        assert detail["name"] == "München"
+
+    def test_muenchen_stadt_und_landkreis_liefern_windzone(self):
+        wz_city, quelle_city = get_windzone("München", "Bayern", area_code="09162000")
+        wz_lk, quelle_lk = get_windzone("München", "Bayern", area_code="09184112")
+        assert wz_city == 2
+        assert wz_lk == 2
+        assert "area_code 09162000" in quelle_city
+        assert "area_code 09184112" in quelle_lk
+
+
+class TestAreaCodeFiveDigit:
+    def test_muenchen_stadt_mit_5_stelligem_kreisschluessel(self):
+        wz, quelle = get_windzone("", "", area_code="09162")
+        assert wz == 2
+        assert "09162" in quelle
+
+    def test_muenchen_landkreis_mit_5_stelligem_kreisschluessel(self):
+        wz, quelle = get_windzone("", "", area_code="09184")
+        assert wz == 2
+        assert "09184" in quelle

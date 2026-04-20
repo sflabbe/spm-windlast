@@ -1,0 +1,2777 @@
+{
+  "metadata": {
+    "source": "Windzonen nach Verwaltungsgrenzen",
+    "stand": "2022-06-02",
+    "norm": "DIN EN 1991-1-4/NA:2010-12, Anhang NA.A",
+    "generated": "2026-04-20",
+    "n_kreise": 213,
+    "n_records": 288,
+    "hinweis_dominant": "windzone_dominant = max() aller im Kreis vorkommenden Windzonen (konservativ). Fuer Gemeinde-genaue Entscheidung siehe 'varianten' und ggf. die originale Tabelle.",
+    "hinweis_ambige_namen": "Orte, die sowohl als kreisfreie Stadt als auch als Landkreis unter demselben Namen existieren, werden ueber 'name <typ>' disambiguiert."
+  },
+  "kreise": {
+    "aachen": {
+      "name": "Aachen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "ahrweiler": {
+      "name": "Ahrweiler",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "aichach friedberg": {
+      "name": "Aichach-Friedberg",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "alb donau": {
+      "name": "Alb-Donau-Kreis",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Gemeinden Balzheim, Dietenheim, Hüttisheim, Illerkirchberg, Illerrieden, Schnürpflingen, Staig"
+        }
+      ]
+    },
+    "altenburger": {
+      "name": "Altenburger",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "altoetting": {
+      "name": "Altötting",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "ammerland": {
+      "name": "Ammerland",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "augsburg": {
+      "name": "Augsburg",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "aurich": {
+      "name": "Aurich",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "bad toelz wolfratshausen": {
+      "name": "Bad Tölz-Wolfratshausen",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Gemeinden Wolfratshausen, Icking, Münsing, Egling, Geretsried, Eurasburg, Königsdorf, Bad Tölz, Reichersbeuern, Dietramszell, Bad Heilbrunn, Sachsenkam"
+        }
+      ]
+    },
+    "berchtesgadener": {
+      "name": "Berchtesgadener",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "berlin": {
+      "name": "Berlin",
+      "typ": null,
+      "bundesland": "BE",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Stadt Berlin"
+        }
+      ]
+    },
+    "bernkastel wittlich": {
+      "name": "Bernkastel-Wittlich",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "biberach": {
+      "name": "Biberach",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "bielefeld": {
+      "name": "Bielefeld",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Bielefeld"
+        }
+      ]
+    },
+    "bitburg pruem": {
+      "name": "Bitburg-Prüm",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "bochum": {
+      "name": "Bochum",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Bochum"
+        }
+      ]
+    },
+    "bodensee": {
+      "name": "Bodenseekreis",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "bonn": {
+      "name": "Bonn",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Bonn"
+        }
+      ]
+    },
+    "borken": {
+      "name": "Borken",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "bottrop": {
+      "name": "Bottrop",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Bottrop"
+        }
+      ]
+    },
+    "brandenburg": {
+      "name": "Brandenburg",
+      "typ": null,
+      "bundesland": "BB",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "braunschweig": {
+      "name": "Braunschweig",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "bremen": {
+      "name": "Bremen",
+      "typ": null,
+      "bundesland": "HB",
+      "windzone_dominant": 3,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "Stadt Bremen"
+        }
+      ]
+    },
+    "bremerhaven": {
+      "name": "Bremerhaven",
+      "typ": null,
+      "bundesland": "HB",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "Stadt Bremerhaven"
+        }
+      ]
+    },
+    "celle": {
+      "name": "Celle",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "cloppenburg": {
+      "name": "Cloppenburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "cochem zell": {
+      "name": "Cochem-Zell",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "coesfeld": {
+      "name": "Coesfeld",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "cuxhaven": {
+      "name": "Cuxhaven",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "dachau": {
+      "name": "Dachau",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "delmenhorst": {
+      "name": "Delmenhorst",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "diepholz": {
+      "name": "Diepholz",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "dillingen a d donau": {
+      "name": "Dillingen a. d. Donau",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "dithmarschen": {
+      "name": "Dithmarschen",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "donau ries": {
+      "name": "Donau-Ries",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "dortmund": {
+      "name": "Dortmund",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Dortmund"
+        }
+      ]
+    },
+    "dueren": {
+      "name": "Düren",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "duesseldorf": {
+      "name": "Düsseldorf",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Düsseldorf"
+        }
+      ]
+    },
+    "duisburg": {
+      "name": "Duisburg",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Duisburg"
+        }
+      ]
+    },
+    "ebersberg": {
+      "name": "Ebersberg",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "eichsfeld": {
+      "name": "Eichsfeld",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "eichstaett": {
+      "name": "Eichstätt",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "eisenach": {
+      "name": "Eisenach",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "emsland": {
+      "name": "Emsland",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "ennepe ruhr": {
+      "name": "Ennepe-Ruhr-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "erding": {
+      "name": "Erding",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "essen": {
+      "name": "Essen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Essen"
+        }
+      ]
+    },
+    "euskirchen": {
+      "name": "Euskirchen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "flensburg": {
+      "name": "Flensburg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Amtsbereich Stapelholm mit den Gemeinden Wohlde, Bergenhusen, Norderstapel, Süderstapel, Erfde, Meggerdorf, Tielen"
+        }
+      ]
+    },
+    "freie staedte emden": {
+      "name": "kreisfreie Städte Emden",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freie staedte erfurt": {
+      "name": "kreisfreie Städte Erfurt",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freie staedte kiel": {
+      "name": "kreisfreie Städte Kiel",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freie staedte memmingen": {
+      "name": "kreisfreie Städte Memmingen",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freie staedte oldenburg oldenburg": {
+      "name": "kreisfreie Städte Oldenburg (Oldenburg)",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "freie staedte wolfsburg": {
+      "name": "kreisfreie Städte Wolfsburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freien staedte in rheinland pfalz": {
+      "name": "kreisfreien Städte in Rheinland-Pfalz",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "freising": {
+      "name": "Freising",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "friesland": {
+      "name": "Friesland",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "fuerstenfeldbruck": {
+      "name": "Fürstenfeldbruck",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "garmisch partenkirchen": {
+      "name": "Garmisch-Partenkirchen",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "gelsenkirchen": {
+      "name": "Gelsenkirchen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Gelsenkirchen"
+        }
+      ]
+    },
+    "gera": {
+      "name": "Gera",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "gifhorn": {
+      "name": "Gifhorn",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "goettingen": {
+      "name": "Göttingen",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Samtgemeinden/Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "die Gemeinden Bad Grund (Harz), Stadt Bad Lauterberg im Harz, Stadt Bad Sachsa, Stadt Herzberg am Harz, Stadt Osterode am Harz, Walkenried, Samtgemeinde Hattorf"
+        }
+      ]
+    },
+    "goslar": {
+      "name": "Goslar",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "gotha": {
+      "name": "Gotha",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "grafschaft bentheim": {
+      "name": "Grafschaft Bentheim",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "greiz": {
+      "name": "Greiz",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "guenzburg": {
+      "name": "Günzburg",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "guetersloh": {
+      "name": "Gütersloh",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": [
+            "Borgholzhausen",
+            "Halle",
+            "Herzebrock-Clarholz",
+            "Schloß Holte-Stukenbrock",
+            "Steinhagen",
+            "Werther"
+          ]
+        },
+        {
+          "windzone": 2,
+          "gemeinden": [
+            "Gütersloh",
+            "Harsewinkel",
+            "Langenberg",
+            "Rheda-Wiedenbrück",
+            "Rietberg",
+            "Verl",
+            "Versmold"
+          ]
+        }
+      ]
+    },
+    "hagen": {
+      "name": "Hagen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Hagen"
+        }
+      ]
+    },
+    "hamburg": {
+      "name": "Hamburg",
+      "typ": "stadt",
+      "bundesland": "HH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Stadtgebiet Hamburg"
+        }
+      ]
+    },
+    "hameln pyrmont": {
+      "name": "Hameln-Pyrmont",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "die Gemeinde Bad Münder"
+        }
+      ]
+    },
+    "hamm": {
+      "name": "Hamm",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Hamm"
+        }
+      ]
+    },
+    "harburg": {
+      "name": "Harburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "heide": {
+      "name": "Heidekreis",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "heinsberg": {
+      "name": "Heinsberg",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "helmstedt": {
+      "name": "Helmstedt",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "herford": {
+      "name": "Herford",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "herne": {
+      "name": "Herne",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Herne"
+        }
+      ]
+    },
+    "herzogtum lauenburg": {
+      "name": "Herzogtum Lauenburg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "hessen": {
+      "name": "Hessen",
+      "typ": null,
+      "bundesland": "HE",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "hildburghausen": {
+      "name": "Hildburghausen",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "hildesheim": {
+      "name": "Hildesheim",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "die Gemeinden Duingen, Stadt Alfeld (Leine), Freden (Leine)"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "hochsauer": {
+      "name": "Hochsauerlandkreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "hoexter": {
+      "name": "Höxter",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "holzminden": {
+      "name": "Holzminden",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Samtgemeinden/Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "die Gemeinden Bad Grund (Harz), Stadt Bad Lauterberg im Harz, Stadt Bad Sachsa, Stadt Herzberg am Harz, Stadt Osterode am Harz, Walkenried, Samtgemeinde Hattorf"
+        }
+      ]
+    },
+    "ilm": {
+      "name": "Ilmkreis",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "ingol": {
+      "name": "Ingolstadt",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "jena": {
+      "name": "Jena",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "kaufbeuren": {
+      "name": "Kaufbeuren",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "kempten": {
+      "name": "Kempten",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "kleve": {
+      "name": "Kleve",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "koblenz": {
+      "name": "Koblenz",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel und rechts des Rheins"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "koeln": {
+      "name": "Köln",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Köln"
+        }
+      ]
+    },
+    "krefeld": {
+      "name": "Krefeld",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Krefeld"
+        }
+      ]
+    },
+    "kyffhaeuser": {
+      "name": "Kyffhäuserkreis",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "landeshaupt muenchen": {
+      "name": "Landeshauptstadt München",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "landsberg am lech": {
+      "name": "Landsberg am Lech",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "leer": {
+      "name": "Leer",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "leverkusen": {
+      "name": "Leverkusen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Leverkusen"
+        }
+      ]
+    },
+    "lindau bodensee": {
+      "name": "Lindau (Bodensee)",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "lippe": {
+      "name": "Lippe",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "ludwigslust parchim": {
+      "name": "Ludwigslust-Parchim",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "jeweils alle Gemeinden"
+        }
+      ]
+    },
+    "luebeck": {
+      "name": "Lübeck",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "luechow dannenberg": {
+      "name": "Lüchow-Dannenberg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "lueneburg": {
+      "name": "Lüneburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "maerkischer": {
+      "name": "Märkischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "mayen koblenz": {
+      "name": "Mayen-Koblenz",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel und rechts des Rheins"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "mecklenburgische seenplatte": {
+      "name": "Mecklenburgische Seenplatte",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "jeweils alle Gemeinden"
+        }
+      ]
+    },
+    "mettmann": {
+      "name": "Mettmann",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "miesbach": {
+      "name": "Miesbach",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Gemeinden Holzkirchen, Otterfing, Warngau, Valley, Weyarn, Irschenberg, Miesbach, Gmund a. Tegernsee, Waakirchen, Hausham"
+        }
+      ]
+    },
+    "minden luebbecke": {
+      "name": "Minden-Lübbecke",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "mittelfranken": {
+      "name": "Mittelfranken",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "moenchengladbach": {
+      "name": "Mönchengladbach",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Mönchengladbach"
+        }
+      ]
+    },
+    "muehldorf am inn": {
+      "name": "Mühldorf am Inn",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "muelheim an der ruhr": {
+      "name": "Mülheim an der Ruhr",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Mülheim an der Ruhr"
+        }
+      ]
+    },
+    "muenchen": {
+      "name": "München",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "muenster": {
+      "name": "Münster",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "Münster"
+        }
+      ]
+    },
+    "neu ulm": {
+      "name": "Neu-Ulm",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "neuburg schrobenhausen": {
+      "name": "Neuburg-Schrobenhausen",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "neumuenster": {
+      "name": "Neumünster",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "niederbayern": {
+      "name": "Niederbayern",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "nienburg weser": {
+      "name": "Nienburg (Weser)",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "nordfriesland": {
+      "name": "Nordfriesland",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "nordhausen": {
+      "name": "Nordhausen",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "nordwestmecklenburg": {
+      "name": "Nordwestmecklenburg",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 3,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht Windzone 2"
+        }
+      ]
+    },
+    "northeim": {
+      "name": "Northeim",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Samtgemeinden/Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "die Gemeinden Bad Grund (Harz), Stadt Bad Lauterberg im Harz, Stadt Bad Sachsa, Stadt Herzberg am Harz, Stadt Osterode am Harz, Walkenried, Samtgemeinde Hattorf"
+        }
+      ]
+    },
+    "oberallgaeu": {
+      "name": "Oberallgäu",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Gemeinden Altusried, Dietmannsried, Haldenwang"
+        }
+      ]
+    },
+    "oberbergischer": {
+      "name": "Oberbergischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "oberfranken": {
+      "name": "Oberfranken",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "oberhausen": {
+      "name": "Oberhausen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Oberhausen"
+        }
+      ]
+    },
+    "oberpfalz": {
+      "name": "Oberpfalz",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "oldenburg": {
+      "name": "Oldenburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "olpe": {
+      "name": "Olpe",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "osnabrueck": {
+      "name": "Osnabrück",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "die Gemeinden Wallenhorst, Belm, Bissendorf, Stadt Melle, Stadt Dissen am Teutoburger Wald, Stadt Bad Iburg, Hilter am Teutoburger Wald, Stadt Georgsmarienhütte, Hagen am Teutoburger Wald, Hasbergen, Stadt Osnabrück"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "ostallgaeu": {
+      "name": "Ostallgäu",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Gemeinden Pfronten, Hopferau, Nesselwang, Füssen, Schwangau, Rieden am Forggensee, Roßhaupten, Seeg, Görisried, Wald, Lengenwang, Stötten a. Auerberg, Rückholz, Eisenberg, Lechbruck, Halblech"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "osterholz": {
+      "name": "Osterholz",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gemeinde Borkum"
+        }
+      ]
+    },
+    "ostholstein": {
+      "name": "Ostholstein",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 3 oder 4"
+        },
+        {
+          "windzone": 3,
+          "gemeinden": "Amtsbereich Oldenburg Land mit den Gemeinden Gremersdorf, Neukirchen, Heringsdorf, Göhl, Grube, Dahme, Kellenhusen, Riepsdorf, Stadt Großenbrode, Stadt Heiligenhafen"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Insel Fehmarn"
+        }
+      ]
+    },
+    "paderborn": {
+      "name": "Paderborn",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "peine": {
+      "name": "Peine",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "pfaffenhofen a d ilm": {
+      "name": "Pfaffenhofen a. d. Ilm",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "pinneberg": {
+      "name": "Pinneberg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Insel Helgoland"
+        }
+      ]
+    },
+    "ploen": {
+      "name": "Plön",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "ravensburg": {
+      "name": "Ravensburg",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "recklinghausen": {
+      "name": "Recklinghausen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Gladbeck"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle, außer Gladbeck"
+        }
+      ]
+    },
+    "regierungsbezirk freiburg": {
+      "name": "Regierungsbezirk Freiburg",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Gemeindenteile, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Bodensee, Bodenseeanrainergemeinden bis 3 km ins Landesinnere"
+        }
+      ]
+    },
+    "regierungsbezirk karlsruhe": {
+      "name": "Regierungsbezirk Karlsruhe",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "regierungsbezirk stuttgart": {
+      "name": "Regierungsbezirk Stuttgart",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "region hannover einschliesslich landeshaupt hannover": {
+      "name": "Region Hannover (einschließlich Landeshauptstadt Hannover)",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "remscheid": {
+      "name": "Remscheid",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Remscheid"
+        }
+      ]
+    },
+    "rendsburg eckernfoerde": {
+      "name": "Rendsburg-Eckernförde",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Insel Helgoland"
+        }
+      ]
+    },
+    "reutlingen": {
+      "name": "Reutlingen",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "rhein erft": {
+      "name": "Rhein-Erft-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "rhein neuss": {
+      "name": "Rhein-Kreis Neuss",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "rhein sieg": {
+      "name": "Rhein-Sieg-Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": [
+            "Bad Honnef",
+            "Eitorf",
+            "Hennef (Sieg)",
+            "Königswinter",
+            "Lohmar",
+            "Much",
+            "Neunkirchen-Seelscheid",
+            "Niederkassel",
+            "Ruppichteroth",
+            "Sankt Augustin",
+            "Siegburg",
+            "Troisdorf",
+            "Windeck"
+          ]
+        },
+        {
+          "windzone": 2,
+          "gemeinden": [
+            "Alfter",
+            "Bornheim",
+            "Meckenheim",
+            "Rheinbach",
+            "Swisttal",
+            "Wachtberg"
+          ]
+        }
+      ]
+    },
+    "rheinisch bergischer": {
+      "name": "Rheinisch-Bergischer Kreis",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "rosenheim": {
+      "name": "Rosenheim",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Gemeinden Kiefersfelden, Oberaudorf, Flintsbach a.Inn, Brannenburg, Nußdorf a.Inn, Samerberg, Aschau i.Chiemgau"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": [
+            "alle Gemeinden",
+            "alle Gemeinden, soweit nicht in Windzone 1"
+          ]
+        }
+      ]
+    },
+    "rostock": {
+      "name": "Rostock",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 3,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht Windzone 2"
+        }
+      ]
+    },
+    "rotenburg wuemme": {
+      "name": "Rotenburg (Wümme)",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 3,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Samtgemeinden/Gemeinden, soweit nicht in Windzone 3"
+        },
+        {
+          "windzone": 3,
+          "gemeinden": "die Samtgemeinden Geestequelle, Selsingen, Tarmstedt, die Gemeinden Stadt Bremervörde, Gnarrenburg, Stadt Zeven, Heeslingen"
+        }
+      ]
+    },
+    "saale holzland": {
+      "name": "Saale-Holzland-Kreis",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "saale orla": {
+      "name": "Saale-Orla-Kreis",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "saalfeld rudol": {
+      "name": "Saalfeld-Rudolstadt",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "saarland": {
+      "name": "Saarland",
+      "typ": null,
+      "bundesland": "SL",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "sachsen": {
+      "name": "Sachsen",
+      "typ": null,
+      "bundesland": "SN",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "sachsen anhalt": {
+      "name": "Sachsen-Anhalt",
+      "typ": null,
+      "bundesland": "ST",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "salzgitter": {
+      "name": "Salzgitter",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "schaumburg": {
+      "name": "Schaumburg",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "die Gemeinde Stadt Rinteln"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "schleswig flensburg": {
+      "name": "Schleswig-Flensburg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Amtsbereich Stapelholm mit den Gemeinden Wohlde, Bergenhusen, Norderstapel, Süderstapel, Erfde, Meggerdorf, Tielen"
+        }
+      ]
+    },
+    "schmalkalden meiningen": {
+      "name": "Schmalkalden-Meiningen",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "segeberg": {
+      "name": "Segeberg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "siegen wittgenstein": {
+      "name": "Siegen-Wittgenstein",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "sigmaringen": {
+      "name": "Sigmaringen",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "soemmerda": {
+      "name": "Sömmerda",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "soest": {
+      "name": "Soest",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "solingen": {
+      "name": "Solingen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Solingen"
+        }
+      ]
+    },
+    "sonneberg": {
+      "name": "Sonneberg",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "stade": {
+      "name": "Stade",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "das Gebiet Kehdingen mit den Gemeinden Freiburg, Balje, Krummendeich, Oederquart"
+        }
+      ]
+    },
+    "starnberg": {
+      "name": "Starnberg",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "steinburg": {
+      "name": "Steinburg",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "Insel Helgoland"
+        }
+      ]
+    },
+    "steinfurt": {
+      "name": "Steinfurt",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "stormarn": {
+      "name": "Stormarn",
+      "typ": null,
+      "bundesland": "SH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "suhl": {
+      "name": "Suhl",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "traunstein": {
+      "name": "Traunstein",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Gemeinden Grassau, Schleching, Staudach-Egerndach, Marquartstein, Unterwössen, Reit im Winkl, Ruhpolding, Bergen, Siegsdorf, Inzell, Surberg, Petting, Wonneberg, Waging a. See, Kirchanschöring, Fridolfing, Taching a. See, Palling, Tittmoning, Engelsberg, Tacherting"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "trier": {
+      "name": "Trier",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "trier saarburg": {
+      "name": "Trier-Saarburg",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden und Teile von Gemeinden rechts der Mosel"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "tuebingen": {
+      "name": "Tübingen",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "uebrige": {
+      "name": "Übrige",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "uelzen": {
+      "name": "Uelzen",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "ulm": {
+      "name": "Stadtkreis Ulm",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "unna": {
+      "name": "Unna",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "unstrut hainich": {
+      "name": "Unstrut-Hainich-Kreis",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "unterallgaeu": {
+      "name": "Unterallgäu",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "unterfranken": {
+      "name": "Unterfranken",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "vechta": {
+      "name": "Vechta",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "verden": {
+      "name": "Verden",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "viersen": {
+      "name": "Viersen",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "vorpommern greifswald": {
+      "name": "Vorpommern Greifswald",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "jeweils alle Gemeinden"
+        }
+      ]
+    },
+    "vorpommern ruegen": {
+      "name": "Vorpommern-Rügen",
+      "typ": null,
+      "bundesland": "MV",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden in den Amtsgebieten West-Rügen (einschließlich Insel Hiddensee), Nord-Rügen, Bergen mit Ausnahme der Gemeinden Gustow, Poseritz, Garz/Rügen"
+        }
+      ]
+    },
+    "vulkaneifel": {
+      "name": "Vulkaneifel",
+      "typ": null,
+      "bundesland": "RP",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "warendorf": {
+      "name": "Warendorf",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "wartburg": {
+      "name": "Wartburg",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 2"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "Behringen, Berka v.d. Hainich, Creuzburg (Stadt), Falken, Großenlipnitz, Ifta, Mihla, Nazza, Reichenbach, Ruhla (Stadt), Schnellmannshausen, Treffurt (Stadt), Tüngeda, Wutha-Farnroda"
+        }
+      ]
+    },
+    "weilheim schongau": {
+      "name": "Weilheim-Schongau",
+      "typ": null,
+      "bundesland": "BY",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Verwaltungsgemeinschaft Steingaden, Gemeinde Bernbeuren"
+        },
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 1"
+        }
+      ]
+    },
+    "weimar": {
+      "name": "Weimar",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "weimarer": {
+      "name": "Weimarer",
+      "typ": null,
+      "bundesland": "TH",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "wesel": {
+      "name": "Wesel",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle"
+        }
+      ]
+    },
+    "wesermarsch": {
+      "name": "Wesermarsch",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 3,
+          "gemeinden": "alle Gemeinden, soweit nicht in Windzone 4"
+        },
+        {
+          "windzone": 4,
+          "gemeinden": "die Gebiete Butjadingen, Stadland, Jader Marsch mit den Gemeinden Nordenham, Jade, Ovelgönne-Brake"
+        }
+      ]
+    },
+    "wilhelmshaven": {
+      "name": "Wilhelmshaven",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "wittmund": {
+      "name": "Wittmund",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 4,
+      "varianten": [
+        {
+          "windzone": 4,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "wolfenbuettel": {
+      "name": "Wolfenbüttel",
+      "typ": null,
+      "bundesland": "NI",
+      "windzone_dominant": 2,
+      "varianten": [
+        {
+          "windzone": 2,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    },
+    "wuppertal": {
+      "name": "Wuppertal",
+      "typ": null,
+      "bundesland": "NW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "Wuppertal"
+        }
+      ]
+    },
+    "zollernalb": {
+      "name": "Zollernalbkreis",
+      "typ": null,
+      "bundesland": "BW",
+      "windzone_dominant": 1,
+      "varianten": [
+        {
+          "windzone": 1,
+          "gemeinden": "alle Gemeinden"
+        }
+      ]
+    }
+  }
+}

@@ -45,7 +45,7 @@ Integration in andere Projekte (z. B. ``balkonsystem``)
 
 from __future__ import annotations
 
-__version__ = "2.0.0"
+__version__ = "2.3.0"
 
 # ── Rechenkern (immer verfuegbar) ──────────────────────────────────────────
 from .core import (
