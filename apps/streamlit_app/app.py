@@ -403,6 +403,27 @@ with tab_calc:
         rrz1.metric("Hy_2_k [kN]", f"{e.Hy_2_k:.2f}")
         rrz2.metric("Hy_2_Ed [kN]", f"{e.Hy_2_Ed:.2f}")
 
+        st.markdown("#### Formelansatz (Draufsicht, Vorbemessung)")
+        st.latex(r"H_{x,k}=T\cdot(q_{seite,1}+q_{seite,2})")
+        st.latex(
+            r"M_{A,k}=\frac{T^2}{2}\cdot(q_{seite,1}+q_{seite,2})+q_{vorne}\cdot B\cdot\left(\frac{B}{2}-b\right)"
+        )
+        st.latex(r"H_{y,2,k}=M_{A,k}/(B-2b)")
+        st.latex(r"H_{y,1,k}=q_{vorne}\cdot B-H_{y,2,k}")
+
+        force_residual = abs((e.Hy_1_k + e.Hy_2_k) - (e.q_vorne * s_verank))
+        moment_residual = abs(e.M_A_k - (e.Hy_2_k * e.s))
+        if force_residual <= 1e-9 and moment_residual <= 1e-9:
+            st.success(
+                "Gleichgewicht in Draufsicht geschlossen: "
+                f"ΔF_y={force_residual:.2e} kN, ΔM_A={moment_residual:.2e} kNm."
+            )
+        else:
+            st.warning(
+                "Gleichgewicht nur naeherungsweise geschlossen: "
+                f"ΔF_y={force_residual:.2e} kN, ΔM_A={moment_residual:.2e} kNm."
+            )
+
         st.info(
             "• ein Auflager als Festlager in x\n"
             "• ein Auflager als Gleitlager in x\n"

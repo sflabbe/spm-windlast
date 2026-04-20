@@ -79,3 +79,20 @@ def test_reaktions_validierung_auflagerabstand():
 
     with pytest.raises(ValueError, match=r"B - 2\*b muss > 0"):
         wb.berechnen()
+
+
+def test_beispielfall_schliesst_numerisch_im_gleichgewicht():
+    """Beispielfall fuer Plausibilitaet: Kraefte- und Momentengleichgewicht."""
+    werte = _berechne_reaktionen_vereinfacht(
+        B=3.94,
+        T=1.94,
+        b=0.3,
+        hw_yz=1.1,
+        hw_xz=1.1,
+        we_side_pressure=0.760,
+        we_side_suction=-0.369,
+        we_front_suction=-1.227,
+    )
+
+    assert (werte["Hy_1_k"] + werte["Hy_2_k"]) == pytest.approx(werte["q_vorne"] * 3.94, abs=1e-12)
+    assert werte["M_A_k"] == pytest.approx(werte["Hy_2_k"] * werte["s"], abs=1e-12)
