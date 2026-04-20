@@ -11,10 +11,13 @@ Voraussetzungen:
 """
 
 import streamlit as st
+import base64
 import tempfile
 import os
 import pandas as pd
 from datetime import date
+
+from spittelmeister_windlast.utils.assets import get_asset_path
 
 from spittelmeister_windlast import WindlastBerechnung, Projekt, Standort, Geometrie
 from spittelmeister_windlast.report import export_pdf
@@ -73,6 +76,22 @@ with st.sidebar:
 tab_geo, tab_calc, tab_ref = st.tabs(["📍 Standortsuche", "⚡ Berechnung & PDF", "📖 Referenztabellen"])
 
 QB0_REF = {1: 0.32, 2: 0.39, 3: 0.47, 4: 0.56}
+
+
+def _render_svg_asset(filename: str, caption: str) -> None:
+    """Zeigt ein SVG-Asset robust per Data-URI an."""
+    try:
+        svg_text = get_asset_path(filename).read_text(encoding="utf-8")
+        svg_b64 = base64.b64encode(svg_text.encode("utf-8")).decode("ascii")
+        st.markdown(
+            f'<div style="text-align:center"><img src="data:image/svg+xml;base64,{svg_b64}" '
+            f'style="max-width:100%;border:1px solid #d1d5db;border-radius:4px;"/></div>',
+            unsafe_allow_html=True,
+        )
+        st.caption(caption)
+    except FileNotFoundError:
+        st.warning(f"Diagramm nicht gefunden: {filename}")
+
 def qp_vorschau(z, windzone, gelaende):
     qb0 = QB0_REF[windzone]
     if gelaende == "binnen":
@@ -281,6 +300,16 @@ with tab_calc:
         st.caption(f"h/d = max(h/d, h/b) = {h_d_eff:.3f} · Aref = {A_ref:.2f} m²")
         st.caption(f"Frontfläche = {s_verank*h_abschl:.2f} m² · Seitenfläche = {e_balkon*h_abschl:.2f} m²")
 
+        st.markdown("#### Geometrie des Gebäudes – visuelle Parameterzuordnung")
+        _render_svg_asset(
+            "building_geometry_zoning.svg",
+            "Zonierung der Fassade mit Parametern h, d, b und e.",
+        )
+        _render_svg_asset(
+            "building_geometry_cases.svg",
+            "Vereinfachte Fallunterscheidung für e<d, e≥d und e≥5d.",
+        )
+
     st.markdown("---")
     bc, _ = st.columns([2, 5])
     with bc:
@@ -380,6 +409,23 @@ with tab_calc:
             "• Reaktionen in y aus Gleichgewicht in Draufsicht\n"
             "• vereinfachte Abschätzung für Vorbemessung"
         )
+
+        st.markdown("### Systemskizzen / Lastabtragung")
+        _render_svg_asset(
+            "balcony_system.svg",
+            "Balkongeometrie mit B, T, b sowie Festlager/Gleitlager in x.",
+        )
+        sk1, sk2 = st.columns(2)
+        with sk1:
+            _render_svg_asset(
+                "load_scheme.svg",
+                "Lastansatz in Draufsicht mit q_seite_1, q_seite_2 und q_vorne.",
+            )
+        with sk2:
+            _render_svg_asset(
+                "reaction_scheme.svg",
+                "Vereinfachte Reaktionsabschätzung mit Hx, Hy_1 und Hy_2.",
+            )
 
         st.success("PDF erfolgreich erzeugt.")
         st.download_button(

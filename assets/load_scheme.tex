@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=0.9, every node/.style={font=\footnotesize}]
+\draw[thick] (0,0) rectangle (8,3);
+\foreach \y in {0.5,1.5,2.5} {\draw[->,red!70!black,thick] (0,\y)--(-0.8,\y);} 
+\foreach \y in {0.5,1.5,2.5} {\draw[->,red!70!black,thick] (8,\y)--(8.8,\y);} 
+\foreach \x in {1.2,4.0,6.8} {\draw[->,red!70!black,thick] (\x,3)--(\x,3.8);} 
+\node[left] at (-0.9,1.5) {$q_{seite,1}$};
+\node[right] at (8.9,1.5) {$q_{seite,2}$};
+\node[above] at (4.0,3.85) {$q_{vorne}$};
+\end{tikzpicture}

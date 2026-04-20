@@ -59,6 +59,7 @@ packages = ["src/spittelmeister_windlast"]
 [tool.hatch.build.targets.wheel.force-include]
 # JSON-Datentabellen mitverpacken
 "src/spittelmeister_windlast/daten" = "spittelmeister_windlast/daten"
+"assets" = "spittelmeister_windlast/assets"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

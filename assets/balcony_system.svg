@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style>.line{stroke:#111827;stroke-width:2;fill:none}.dim{stroke:#0f766e;stroke-width:2}.txt{font-family:Arial,sans-serif;font-size:17px;fill:#111827}</style>
+  <rect x="160" y="70" width="560" height="180" class="line"/>
+  <line x1="160" y1="270" x2="720" y2="270" class="dim"/>
+  <text x="430" y="300" class="txt">B = Breite Balkon</text>
+  <line x1="740" y1="70" x2="740" y2="250" class="dim"/>
+  <text x="748" y="165" class="txt">T = Tiefe Balkon</text>
+  <circle cx="270" cy="250" r="9" fill="#111827"/>
+  <circle cx="610" cy="250" r="9" fill="#111827"/>
+  <line x1="160" y1="320" x2="270" y2="320" class="dim"/>
+  <text x="190" y="345" class="txt">b</text>
+  <text x="230" y="35" class="txt">Festlager in x (links)</text>
+  <text x="520" y="35" class="txt">Gleitlager in x (rechts)</text>
+</svg>
