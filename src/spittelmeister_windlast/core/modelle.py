@@ -138,6 +138,7 @@ class Ergebnisse:
     q_seite_1: float = 0.0
     q_seite_2: float = 0.0
     q_vorne: float = 0.0
+    s: float = 0.0
     auflagerabstand: float = 0.0
     Hx_k: float = 0.0
     Hx_Ed: float = 0.0
@@ -148,8 +149,9 @@ class Ergebnisse:
     M_A_k: float = 0.0
     gamma_Q_reaktionen: float = 1.5
     reaktionsmodell_hinweis: str = (
-        "Vereinfachte statische Reaktionsabschaetzung in Draufsicht; "
-        "keine exakte Lagerreaktionsberechnung eines vollstaendigen Tragmodells."
+        "Die nachfolgenden Auflagerreaktionen stellen eine vereinfachte statische "
+        "Abschätzung in Draufsicht dar. Sie dienen der Vorbemessung und ersetzen "
+        "kein vollständiges Tragwerksmodell mit exakter Lagerreaktionsbestimmung."
     )
 
 
