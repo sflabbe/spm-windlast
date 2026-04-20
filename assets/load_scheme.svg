@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style>.line{stroke:#111827;stroke-width:2;fill:none}.arr{stroke:#b91c1c;stroke-width:2}.txt{font-family:Arial,sans-serif;font-size:17px;fill:#111827}</style>
+  <rect x="180" y="80" width="520" height="180" class="line"/>
+  <line x1="180" y1="100" x2="150" y2="100" class="arr"/><line x1="180" y1="170" x2="150" y2="170" class="arr"/><line x1="180" y1="240" x2="150" y2="240" class="arr"/>
+  <text x="45" y="175" class="txt">q_seite_1</text>
+  <line x1="700" y1="100" x2="730" y2="100" class="arr"/><line x1="700" y1="170" x2="730" y2="170" class="arr"/><line x1="700" y1="240" x2="730" y2="240" class="arr"/>
+  <text x="740" y="175" class="txt">q_seite_2</text>
+  <line x1="220" y1="80" x2="220" y2="50" class="arr"/><line x1="440" y1="80" x2="440" y2="50" class="arr"/><line x1="660" y1="80" x2="660" y2="50" class="arr"/>
+  <text x="380" y="35" class="txt">q_vorne</text>
+</svg>

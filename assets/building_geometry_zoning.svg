@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <style>
+    .line{stroke:#1f2937;stroke-width:2;fill:none}
+    .dim{stroke:#0f766e;stroke-width:2;marker-start:url(#a);marker-end:url(#a)}
+    .txt{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+    .small{font-size:15px;fill:#374151}
+  </style>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,4 L8,0 L8,8 Z" fill="#0f766e"/></marker></defs>
+  <rect x="180" y="60" width="520" height="280" class="line"/>
+  <line x1="180" y1="140" x2="700" y2="140" class="line" stroke-dasharray="6 5"/>
+  <line x1="180" y1="260" x2="700" y2="260" class="line" stroke-dasharray="6 5"/>
+  <line x1="120" y1="60" x2="120" y2="340" class="dim"/>
+  <text x="85" y="205" class="txt">h</text>
+  <line x1="180" y1="370" x2="700" y2="370" class="dim"/>
+  <text x="435" y="395" class="txt">b</text>
+  <line x1="730" y1="60" x2="830" y2="60" class="line"/>
+  <line x1="730" y1="340" x2="830" y2="340" class="line"/>
+  <line x1="830" y1="60" x2="830" y2="340" class="dim"/>
+  <text x="842" y="208" class="txt">d</text>
+  <rect x="700" y="180" width="90" height="120" class="line"/>
+  <line x1="700" y1="320" x2="790" y2="320" class="dim"/>
+  <text x="742" y="345" class="txt">e</text>
+  <text x="210" y="98" class="small">Zonierung und Parameterzuordnung</text>
+</svg>

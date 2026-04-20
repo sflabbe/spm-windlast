@@ -16,6 +16,7 @@ import subprocess
 import tempfile
 
 from ..core.modelle import Ergebnisse, Geometrie, Projekt, Standort
+from ..utils.assets import copy_assets
 from ..utils.latex_escape import latex_escape
 
 
@@ -24,6 +25,7 @@ def render_latex(
     standort: Standort,
     geo: Geometrie,
     ergebnisse: Ergebnisse,
+    asset_subdir: str = "assets",
 ) -> str:
     """Erzeugt den vollstaendigen LaTeX-Quelltext des Reports als String."""
     e = ergebnisse
@@ -50,6 +52,9 @@ def render_latex(
 \usepackage{{lastpage}}
 \usepackage{{parskip}}
 \usepackage{{tabularx}}
+\usepackage{{graphicx}}
+\usepackage{{float}}
+\usepackage{{tikz}}
 \usepackage[hidelinks]{{hyperref}}
 
 \definecolor{{spittel}}{{RGB}}{{30,80,140}}
@@ -99,7 +104,28 @@ Achsabstand Verankerungen & $B = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontfl
 \bottomrule
 \end{{tabular}}
 
-\section*{{2 \quad Boeengeschwindigkeitsdruck $q_p$}}
+\section*{{2 \quad Geometrische Systemskizzen}}
+\subsection*{{2.1 \quad Geometrie des Gebaeudes}}
+\begin{{figure}}[H]
+\centering
+\input{{{asset_subdir}/building_geometry_zoning.tex}}
+\caption{{Zonierung und Parameterzuordnung $h,d,b,e$.}}
+\end{{figure}}
+
+\begin{{figure}}[H]
+\centering
+\input{{{asset_subdir}/building_geometry_cases.tex}}
+\caption{{Fallunterscheidung in Abhaengigkeit von $e$ und $d$.}}
+\end{{figure}}
+
+\subsection*{{2.2 \quad Geometrie des Balkonsystems}}
+\begin{{figure}}[H]
+\centering
+\input{{{asset_subdir}/balcony_system.tex}}
+\caption{{Draufsicht mit $B$, $T$, $b$ sowie Festlager/Gleitlager in $x$.}}
+\end{{figure}}
+
+\section*{{3 \quad Boeengeschwindigkeitsdruck $q_p$}}
 \begin{{align*}}
 q_{{b,0}} &= {e.qb0:.2f}~\mathrm{{kN/m^2}} \\
 {e.qp_formel}
@@ -112,7 +138,7 @@ q_{{b,0}} &= {e.qb0:.2f}~\mathrm{{kN/m^2}} \\
 \noindent \textit{{Normstelle:}} {e.qp_normstelle} \\
 \noindent \textit{{Verfahren:}} {e.qp_verfahren}
 
-\section*{{3 \quad Detaillierter Richtungsansatz}}
+\section*{{4 \quad Detaillierter Richtungsansatz}}
 {e.cscd_begruendung}
 
 \begin{{align*}}
@@ -132,7 +158,7 @@ A & Front Sog & {e.cpe10_A:.2f} \\
 \end{{tabular}}
 \end{{center}}
 
-\section*{{4 \quad Flaechen und Linienlasten}}
+\section*{{5 \quad Flaechen und Linienlasten}}
 \begin{{align*}}
 A_{{w,Seite}} &= T \cdot h_w = {geo.e_balkon:.3f} \cdot {geo.h_abschluss:.2f} = {e.A_w_side:.2f}~\mathrm{{m^2}} \\
 A_{{w,Front}} &= B \cdot h_w = {geo.s_verankerung:.2f} \cdot {geo.h_abschluss:.2f} = {e.A_w_front:.2f}~\mathrm{{m^2}}
@@ -150,7 +176,7 @@ Front Sog (A) & {e.we_front_suction:.2f} & {e.q_front_suction:.2f} & pruefen \\
 \end{{tabular}}
 \end{{center}}
 
-\section*{{5 \quad Massgebende Schnittgroessen}}
+\section*{{6 \quad Massgebende Schnittgroessen}}
 Massgebender Lastfall: \textbf{{{e.lastfall_massgebend}}}
 \begin{{align*}}
 q_{{h,k}} &= \mathbf{{{e.qhk:.2f}~\mathrm{{kN/m}}}} \\
@@ -176,7 +202,21 @@ $M_{{k,\mathrm{{Fusspunkt}}}}$ & {e.Mk:.2f} & $\mathrm{{kNm}}$ \\
 }}
 \end{{center}}
 
-\section*{{6 \quad Balkonsystem / vereinfachte Reaktionsabschaetzung}}
+\section*{{7 \quad Balkonsystem / vereinfachte Reaktionsabschaetzung}}
+\subsection*{{7.1 \quad Lastansatz in Draufsicht}}
+\begin{{figure}}[H]
+\centering
+\input{{{asset_subdir}/load_scheme.tex}}
+\caption{{Linienlasten $q_{{seite,1}}$, $q_{{seite,2}}$ und $q_{{vorne}}$.}}
+\end{{figure}}
+
+\subsection*{{7.2 \quad Vereinfachte Reaktionsabschaetzung}}
+\begin{{figure}}[H]
+\centering
+\input{{{asset_subdir}/reaction_scheme.tex}}
+\caption{{Reaktionen $H_x$, $H_{{y,1}}$, $H_{{y,2}}$ mit Lagerannahme.}}
+\end{{figure}}
+
 \textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
 
 \begin{{align*}}
@@ -237,9 +277,17 @@ def export_pdf(
             "pdflatex nicht gefunden. Bitte TeX Live oder MiKTeX installieren."
         )
 
-    latex_src = render_latex(projekt, standort, geo, ergebnisse)
+    latex_assets = [
+        "building_geometry_zoning.tex",
+        "building_geometry_cases.tex",
+        "balcony_system.tex",
+        "load_scheme.tex",
+        "reaction_scheme.tex",
+    ]
 
     with tempfile.TemporaryDirectory() as tmpdir:
+        copy_assets(tmpdir, latex_assets)
+        latex_src = render_latex(projekt, standort, geo, ergebnisse, asset_subdir="assets")
         tex_file = os.path.join(tmpdir, "windlast.tex")
         pdf_tmp = os.path.join(tmpdir, "windlast.pdf")
         with open(tex_file, "w", encoding="utf-8") as f:

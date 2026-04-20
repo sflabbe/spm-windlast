@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style>.line{stroke:#111827;stroke-width:2;fill:none}.arr{stroke:#1d4ed8;stroke-width:2}.txt{font-family:Arial,sans-serif;font-size:17px;fill:#111827}</style>
+  <rect x="180" y="80" width="520" height="180" class="line"/>
+  <circle cx="270" cy="250" r="9" fill="#111827"/>
+  <circle cx="610" cy="250" r="9" fill="#111827"/>
+  <line x1="270" y1="250" x2="270" y2="305" class="arr"/><text x="282" y="300" class="txt">Hy_1</text>
+  <line x1="610" y1="250" x2="610" y2="305" class="arr"/><text x="622" y="300" class="txt">Hy_2</text>
+  <line x1="270" y1="250" x2="215" y2="250" class="arr"/><text x="190" y="238" class="txt">Hx</text>
+  <text x="180" y="40" class="txt">Festlager in x (links)</text>
+  <text x="520" y="40" class="txt">Gleitlager in x (rechts)</text>
+</svg>

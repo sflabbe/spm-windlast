@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <style>.line{stroke:#1f2937;stroke-width:2;fill:none}.txt{font-family:Arial,sans-serif;font-size:16px;fill:#111827}</style>
+  <g transform="translate(40,40)">
+    <rect x="0" y="0" width="180" height="180" class="line"/><rect x="180" y="80" width="50" height="100" class="line"/>
+    <text x="20" y="210" class="txt">Fall 1: e &lt; d</text>
+  </g>
+  <g transform="translate(330,40)">
+    <rect x="0" y="0" width="180" height="180" class="line"/><rect x="180" y="20" width="90" height="160" class="line"/>
+    <text x="8" y="210" class="txt">Fall 2: e ≥ d</text>
+  </g>
+  <g transform="translate(620,40)">
+    <rect x="0" y="0" width="180" height="180" class="line"/><rect x="180" y="0" width="120" height="180" class="line"/>
+    <text x="0" y="210" class="txt">Fall 3: e ≥ 5d</text>
+  </g>
+</svg>
