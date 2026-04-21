@@ -24,8 +24,7 @@ from spittelmeister_windlast.report import export_pdf
 
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Windlast-Rechner | Spittelmeister",
-    page_icon="🏗️", layout="wide", initial_sidebar_state="expanded",
+    page_title="Windlast-Rechner | Spittelmeister", layout="wide", initial_sidebar_state="expanded",
 )
 
 st.markdown("""
@@ -52,11 +51,8 @@ st.markdown("""
 
 # ── HEADER ──
 col_logo, col_title = st.columns([1, 5])
-with col_logo:
-    st.markdown("## 🏗️")
-with col_title:
-    st.markdown("# Windlast-Rechner")
-    st.markdown("**Spittelmeister GmbH** · DIN EN 1991-1-4 / NA:2010-12 · Balkonabschlüsse")
+st.markdown("# Windlast-Rechner")
+st.markdown("**Spittelmeister GmbH** · DIN EN 1991-1-4 / NA:2010-12 · Balkonabschlüsse")
 st.markdown("---")
 
 # ── SIDEBAR ──
@@ -251,6 +247,23 @@ with tab_calc:
     auto_wz_idx   = [1,2,3,4].index(auto_wz) if auto_wz in [1,2,3,4] else 0
 
     with col_left:
+        st.markdown('<div class="section-header">📐 Geometrie</div>', unsafe_allow_html=True)
+        g1, g2 = st.columns(2)
+        with g1:
+            h_gebaeude = st.number_input("Gebäudehöhe h [m]", 1.0, 300.0, 15.13, 0.1)
+            d_gebaeude = st.number_input("Gebäudetiefe d [m]", 1.0, 200.0, 12.55, 0.1)
+            b_gebaeude = st.number_input("Gebäudebreite b [m]", 1.0, 300.0, 20.0, 0.1)
+        with g2:
+            z_balkon = st.number_input("OK Balkonabschluss ze [m]", 0.5, 300.0, 12.83, 0.1)
+            e_balkon = st.number_input("Ausladung Balkon [m]", 0.1, 10.0, 1.425, 0.05)
+            h_abschl = st.number_input("Höhe Abschlusselement [m]", 0.5, 10.0, 3.00, 0.05)
+        s_verank = st.number_input("Achsabstand Verankerungen / Isokörbe [m]", 0.1, 20.0, 4.93, 0.01)
+        b_auflager_rand = st.number_input("Abstand Ecke bis Auflage b [m]", 0.0, 10.0, 0.30, 0.01)
+        A_ref = s_verank * h_abschl
+        h_d_eff = max(h_gebaeude/d_gebaeude, h_gebaeude/b_gebaeude)
+        st.caption(f"h/d = max(h/d, h/b) = {h_d_eff:.3f} · Aref = {A_ref:.2f} m²")
+        st.caption(f"Frontfläche = {s_verank*h_abschl:.2f} m² · Seitenfläche = {e_balkon*h_abschl:.2f} m²")
+                
         st.markdown('<div class="section-header">📍 Standort &amp; Windzone</div>', unsafe_allow_html=True)
         standort_bez = st.text_input("Standortbezeichnung", value=auto_standort)
         hoehe_uNN    = st.number_input("Höhe über NN [m]", 0.0, 2000.0, float(auto_hoehe), 5.0)
@@ -283,31 +296,14 @@ with tab_calc:
         st.caption(f"Ansatz bei h = 13.7 m: {f2}")
 
     with col_right:
-        st.markdown('<div class="section-header">📐 Geometrie</div>', unsafe_allow_html=True)
-        g1, g2 = st.columns(2)
-        with g1:
-            h_gebaeude = st.number_input("Gebäudehöhe h [m]", 1.0, 300.0, 15.13, 0.1)
-            d_gebaeude = st.number_input("Gebäudetiefe d [m]", 1.0, 200.0, 12.55, 0.1)
-            b_gebaeude = st.number_input("Gebäudebreite b [m]", 1.0, 300.0, 20.0, 0.1)
-        with g2:
-            z_balkon = st.number_input("OK Balkonabschluss ze [m]", 0.5, 300.0, 12.83, 0.1)
-            e_balkon = st.number_input("Ausladung Balkon [m]", 0.1, 10.0, 1.425, 0.05)
-            h_abschl = st.number_input("Höhe Abschlusselement [m]", 0.5, 10.0, 3.00, 0.05)
-        s_verank = st.number_input("Achsabstand Verankerungen / Isokörbe [m]", 0.1, 20.0, 4.93, 0.01)
-        b_auflager_rand = st.number_input("Abstand Ecke bis Auflage b [m]", 0.0, 10.0, 0.30, 0.01)
-        A_ref = s_verank * h_abschl
-        h_d_eff = max(h_gebaeude/d_gebaeude, h_gebaeude/b_gebaeude)
-        st.caption(f"h/d = max(h/d, h/b) = {h_d_eff:.3f} · Aref = {A_ref:.2f} m²")
-        st.caption(f"Frontfläche = {s_verank*h_abschl:.2f} m² · Seitenfläche = {e_balkon*h_abschl:.2f} m²")
-
-        st.markdown("#### Geometrie des Gebäudes – visuelle Parameterzuordnung")
+        st.markdown("#### Geometrie")
         _render_svg_asset(
-            "building_geometry_zoning.svg",
-            "Zonierung der Fassade mit Parametern h, d, b und e.",
+            "wind_geb.svg",
+            "Gebäudegeometrie"
         )
         _render_svg_asset(
-            "building_geometry_cases.svg",
-            "Vereinfachte Fallunterscheidung für e<d, e≥d und e≥5d.",
+            "balcony_system.svg",
+            "Balkongeometrie"
         )
 
     st.markdown("---")
@@ -432,22 +428,11 @@ with tab_calc:
         )
         st.caption(e.reaktionsmodell_hinweis)
 
-        st.markdown("### Systemskizzen / Lastabtragung")
+        st.markdown("### Lasten")
         _render_svg_asset(
-            "balcony_system.svg",
-            "Balkongeometrie mit B, T, b sowie Festlager/Gleitlager in x.",
+            "balcony_system._lasten.svg",
+            "Vereinfachte Reaktionsabschätzung mit Hx, Hy_1 und Hy_2.",
         )
-        sk1, sk2 = st.columns(2)
-        with sk1:
-            _render_svg_asset(
-                "load_scheme.svg",
-                "Lastansatz in Draufsicht mit q_seite_1, q_seite_2 und q_vorne.",
-            )
-        with sk2:
-            _render_svg_asset(
-                "reaction_scheme.svg",
-                "Vereinfachte Reaktionsabschätzung mit Hx, Hy_1 und Hy_2.",
-            )
 
         st.success("PDF erfolgreich erzeugt.")
         st.download_button(

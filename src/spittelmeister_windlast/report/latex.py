@@ -93,14 +93,14 @@ def render_latex(
 \textbf{{Groesse}} & \textbf{{Wert}} & \textbf{{Bemerkung}} \\
 \midrule
 Windzone & WZ~{st.windzone} & DIN EN 1991-1-4/NA, Anhang NA.A \\
-Gelaendekategorie & {gelaende_label} & Excel 27.02.2026 / NA.B.3 \\
+Gelaendekategorie & {gelaende_label} & NA.B.3 \\
 Gebaeudehoehe & $h = {geo.h:.2f}~\mathrm{{m}}$ & massgebend fuer $q_p$ \\
 Gebaeudetiefe & $d = {geo.d:.2f}~\mathrm{{m}}$ & Windrichtung 1 \\
 Gebaeudebreite & $b = {geo.b:.2f}~\mathrm{{m}}$ & Windrichtung 2 \\
 Hoehe OK Balkonabschluss & $z_e = {geo.z_balkon:.2f}~\mathrm{{m}}$ & Geometrie Balkon \\
 Balkonausladung & $T = {geo.e_balkon:.3f}~\mathrm{{m}}$ & Seitenflaeche \\
 Hoehe Abschlusselement & $h_w = {geo.h_abschluss:.2f}~\mathrm{{m}}$ & \\
-Achsabstand Verankerungen & $B = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontflaeche \\
+Achsabstand Verankerungen & $B-2a = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontflaeche \\
 \bottomrule
 \end{{tabular}}
 
@@ -108,21 +108,15 @@ Achsabstand Verankerungen & $B = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontfl
 \subsection*{{2.1 \quad Geometrie des Gebaeudes}}
 \begin{{figure}}[H]
 \centering
-\input{{{asset_subdir}/building_geometry_zoning.tex}}
+\includegraphics[width=\linewidth]{{{asset_subdir}/wind_geb.pdf}}
 \caption{{Zonierung und Parameterzuordnung $h,d,b,e$.}}
-\end{{figure}}
-
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/building_geometry_cases.tex}}
-\caption{{Fallunterscheidung in Abhaengigkeit von $e$ und $d$.}}
 \end{{figure}}
 
 \subsection*{{2.2 \quad Geometrie des Balkonsystems}}
 \begin{{figure}}[H]
 \centering
-\input{{{asset_subdir}/balcony_system.tex}}
-\caption{{Draufsicht mit $B$, $T$, $b$ sowie Festlager/Gleitlager in $x$.}}
+\includegraphics[width=\linewidth]{{{asset_subdir}/balcony_system.pdf}}
+\caption{{Draufsicht mit $B$, $T$, $a$ sowie Festlager/Gleitlager in $x$.}}
 \end{{figure}}
 
 \section*{{3 \quad Boeengeschwindigkeitsdruck $q_p$}}
@@ -202,24 +196,16 @@ $M_{{k,\mathrm{{Fusspunkt}}}}$ & {e.Mk:.2f} & $\mathrm{{kNm}}$ \\
 }}
 \end{{center}}
 
-\section*{{7 \quad Balkonsystem / vereinfachte Reaktionsabschaetzung}}
-\subsection*{{7.1 \quad Lastansatz in Draufsicht}}
+\subsection*{{7.1 \quad Vereinfachte Reaktionsabschaetzung}}
 \begin{{figure}}[H]
 \centering
-\input{{{asset_subdir}/load_scheme.tex}}
-\caption{{Linienlasten $q_{{seite,1}}$, $q_{{seite,2}}$ und $q_{{vorne}}$.}}
-\end{{figure}}
-
-\subsection*{{7.2 \quad Vereinfachte Reaktionsabschaetzung}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/reaction_scheme.tex}}
-\caption{{Reaktionen $H_x$, $H_{{y,1}}$, $H_{{y,2}}$ mit Lagerannahme.}}
+\includegraphics[width=\linewidth]{{{asset_subdir}/balcony_system._lasten.pdf}}
+\caption{{Linien Lasten und Reaktionen $H_x$, $H_{{y,1}}$, $H_{{y,2}}$ mit Lagerannahme.}}
 \end{{figure}}
 
 \textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
 
-\subsection*{{7.3 \quad Formelansatz und Herleitung (Vorbemessung)}}
+\subsection*{{7.2 \quad Formelansatz und Herleitung (Vorbemessung)}}
 Die Winddruckbeiwerte aus Abschnitt~4 werden als Flaechenlasten $w_e$ angesetzt und ueber die wirksamen
 Windflaechenhoehen in Linienlasten umgerechnet:
 
