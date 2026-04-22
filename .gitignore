@@ -80,6 +80,7 @@ Thumbs.db
 /generated/
 *.pdf
 !docs/**/*.pdf
+!assets/*.pdf
 
 # Lokale Beispielausgaben
 *.tex.bak
