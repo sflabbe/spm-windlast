@@ -27,7 +27,7 @@ Drei Schichten, unabhaengig voneinander verwendbar:
 |---------|--------|-----------------------|
 | `spittelmeister_windlast.core`   | Reiner EC1-Rechenkern (qp, cpe,10, Berechnung) | keine — nur stdlib |
 | `spittelmeister_windlast.geo`    | Standortermittlung (Nominatim, Elevation, Windzone-Lookup) | `requests` |
-| `spittelmeister_windlast.report` | LaTeX/PDF-Export | `pdflatex` (System) |
+| `spittelmeister_windlast.report` | LaTeX/PDF-Export | `pdflatex` (System, Env oder Portable-MiKTeX) |
 | `spittelmeister_windlast.daten`  | Normative Tabellen (JSON, im Paket ausgeliefert) | — |
 
 ```
@@ -119,6 +119,16 @@ pip install -e .[dev]            # + Test-/Lint-Tools
 pip install -e .[app]
 streamlit run apps/streamlit_app/app.py
 ```
+
+Die App sucht `pdflatex` in dieser Reihenfolge:
+
+1. gespeicherter Pfad aus der Sidebar
+2. Umgebungsvariablen `SPM_WINDLAST_PDFLATEX`, `BALKONSYSTEM_PDFLATEX`, `PDFLATEX_PATH`
+3. `pdflatex` im `PATH`
+4. bekannte Portable-MiKTeX-Pfade, u. a.
+   `C:\PortableLatex\MiKTeX\texmfs\install\miktex\bin\x64\pdflatex.exe`
+
+Damit funktioniert auch eine portable Windows-Installation ohne globale PATH-Aenderung.
 
 ---
 

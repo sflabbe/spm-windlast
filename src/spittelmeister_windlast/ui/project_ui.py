@@ -3,7 +3,6 @@ from __future__ import annotations
 from dataclasses import asdict
 from datetime import date, datetime
 from typing import Any
-import shutil
 
 try:  # pragma: no cover
     import streamlit as st
@@ -12,6 +11,7 @@ except Exception:  # pragma: no cover
 
 from ..projectio.models import ModuleEntry, ProjectDocument, ProjectMetadata
 from ..projectio.service import dump_project_document, load_project_document
+from ..utils import resolve_pdflatex
 from .session import (
     load_latex_config_state,
     load_project_meta_state,
@@ -26,8 +26,8 @@ from .session import (
 )
 
 
-def detect_pdflatex() -> str | None:
-    return shutil.which("pdflatex")
+def detect_pdflatex(explicit_path: str | None = None) -> str | None:
+    return resolve_pdflatex(explicit_path)
 
 
 def _parse_sidebar_date(value: Any) -> date:
@@ -162,12 +162,17 @@ def render_project_sidebar() -> dict[str, Any]:
         st.markdown("---")
         st.markdown("### LaTeX")
         latex_state = load_latex_config_state()
-        latex_default = latex_state.get("pdflatex_path") or detect_pdflatex() or ""
+        resolved_pdflatex = detect_pdflatex(str(latex_state.get("pdflatex_path") or ""))
+        latex_default = str(latex_state.get("pdflatex_path") or resolved_pdflatex or "")
         latex_path = st.text_input("pdflatex-Pfad", value=latex_default)
+        effective_pdflatex = detect_pdflatex(latex_path)
         save_latex_config_state(pdflatex_path=latex_path)
-        if latex_path:
-            st.caption(f"pdflatex konfiguriert: `{latex_path}`")
+        if effective_pdflatex:
+            st.caption(f"pdflatex aktiv: `{effective_pdflatex}`")
+            if latex_path and latex_path != effective_pdflatex:
+                st.info("Gespeicherter Pfad war nicht gueltig. Fallback-Autodetektion wird verwendet.")
         else:
             st.warning("pdflatex wurde nicht automatisch gefunden.")
+            st.caption("Getestet werden PATH, Umgebungsvariablen und bekannte portable-MiKTeX-Pfade.")
 
     return asdict(meta)

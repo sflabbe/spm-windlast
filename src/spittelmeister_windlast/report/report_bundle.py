@@ -7,6 +7,7 @@ import tempfile
 import zipfile
 from collections.abc import Iterable
 
+from ..utils import resolve_pdflatex
 from ..utils.assets import get_asset_root
 
 FIGURE_FILENAMES = [
@@ -77,7 +78,8 @@ def compile_latex_to_pdf_bytes(
     main_tex_name: str = "main.tex",
     pdflatex_executable: str = "pdflatex",
 ) -> bytes:
-    if shutil.which(pdflatex_executable) is None and not Path(pdflatex_executable).exists():
+    resolved_pdflatex = resolve_pdflatex(pdflatex_executable)
+    if resolved_pdflatex is None:
         raise FileNotFoundError(
             f"pdflatex nicht gefunden: {pdflatex_executable}. Bitte TeX Live oder MiKTeX installieren."
         )
@@ -89,15 +91,15 @@ def compile_latex_to_pdf_bytes(
         _copy_report_assets(project_dir)
 
         result = None
+        compile_cmd = [
+            resolved_pdflatex,
+            "-interaction=nonstopmode",
+            main_tex_name,
+        ]
         for _ in range(2):
             result = subprocess.run(
-                [
-                    pdflatex_executable,
-                    "-interaction=nonstopmode",
-                    "-output-directory",
-                    str(project_dir),
-                    str(tex_path),
-                ],
+                compile_cmd,
+                cwd=str(project_dir),
                 capture_output=True,
                 text=True,
                 encoding="latin-1",

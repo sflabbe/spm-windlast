@@ -18,6 +18,7 @@ from spittelmeister_windlast.ui.session import (
     load_wind_state,
     save_report_selection_state,
 )
+from spittelmeister_windlast.utils import resolve_pdflatex
 
 st.set_page_config(page_title="04 Protokoll", layout="wide")
 st.title("04 · Protokoll")
@@ -88,6 +89,11 @@ with exp2:
 with exp3:
     latex_cfg = load_latex_config_state()
     pdflatex_path = str(latex_cfg.get("pdflatex_path") or "pdflatex")
+    resolved_pdflatex = resolve_pdflatex(pdflatex_path)
+    if resolved_pdflatex:
+        st.caption(f"pdflatex: `{resolved_pdflatex}`")
+    else:
+        st.warning("Kein pdflatex gefunden. Bitte Pfad in der Sidebar pruefen.")
     if st.button("PDF kompilieren"):
         try:
             pdf_bytes = compile_latex_to_pdf_bytes(tex_source, pdflatex_executable=pdflatex_path)

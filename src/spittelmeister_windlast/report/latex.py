@@ -20,6 +20,7 @@ import subprocess
 import tempfile
 
 from ..core.modelle import Ergebnisse, Geometrie, Projekt, Standort
+from ..utils import resolve_pdflatex
 from ..utils.assets import copy_assets
 from .protokoll_windlast import render_windlast_standalone
 
@@ -64,7 +65,8 @@ def export_pdf(
         FileNotFoundError: Wenn ``pdflatex`` nicht installiert ist.
         RuntimeError: Wenn die LaTeX-Kompilierung fehlschlaegt.
     """
-    if shutil.which("pdflatex") is None:
+    pdflatex_executable = resolve_pdflatex("pdflatex")
+    if pdflatex_executable is None:
         raise FileNotFoundError(
             "pdflatex nicht gefunden. Bitte TeX Live oder MiKTeX installieren."
         )
@@ -86,14 +88,15 @@ def export_pdf(
             f.write(latex_src)
 
         result = None
+        compile_cmd = [
+            pdflatex_executable,
+            "-interaction=nonstopmode",
+            "windlast.tex",
+        ]
         for _ in range(2):
             result = subprocess.run(
-                [
-                    "pdflatex",
-                    "-interaction=nonstopmode",
-                    "-output-directory", tmpdir,
-                    tex_file,
-                ],
+                compile_cmd,
+                cwd=tmpdir,
                 capture_output=True, text=True,
                 encoding="latin-1", errors="replace",
             )
