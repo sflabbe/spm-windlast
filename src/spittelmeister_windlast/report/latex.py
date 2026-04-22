@@ -6,6 +6,10 @@ Zwischenergebnissen und Ergebnistabelle. Benoetigt ``pdflatex`` im System-PATH
 
 Dieses Modul ist OPTIONAL: der Rechenkern (``spittelmeister_windlast.core``)
 funktioniert auch ohne installiertes LaTeX.
+
+Hinweis zur Architektur:
+Die Legacy-API ``render_latex`` bleibt erhalten, delegiert jedoch seit dem
+Report-Refactor an ``protokoll_windlast.render_windlast_standalone``.
 """
 
 from __future__ import annotations
@@ -17,7 +21,7 @@ import tempfile
 
 from ..core.modelle import Ergebnisse, Geometrie, Projekt, Standort
 from ..utils.assets import copy_assets
-from ..utils.latex_escape import latex_escape
+from .protokoll_windlast import render_windlast_standalone
 
 
 def render_latex(
@@ -27,220 +31,17 @@ def render_latex(
     ergebnisse: Ergebnisse,
     asset_subdir: str = "assets",
 ) -> str:
-    """Erzeugt den vollstaendigen LaTeX-Quelltext des Reports als String."""
-    e = ergebnisse
-    p = projekt
-    st = standort
+    """Erzeugt den vollständigen LaTeX-Quelltext des Standalone-Reports.
 
-    hoehen_labels = [
-        r"$h \leq 10~\mathrm{m}$",
-        r"$10 < h \leq 18~\mathrm{m}$",
-        r"$18 < h \leq 25~\mathrm{m}$",
-    ]
-    _ = hoehen_labels[e.hoehenstufe]  # kept for backward-compat semantics
-    gelaende_label = "Binnenland" if st.gelaende == "binnen" else "Kueste"
-
-    return rf"""\documentclass[a4paper,11pt]{{article}}
-\usepackage[utf8]{{inputenc}}
-\usepackage[T1]{{fontenc}}
-\usepackage{{geometry}}
-\geometry{{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}}
-\usepackage{{amsmath}}
-\usepackage{{booktabs}}
-\usepackage{{xcolor}}
-\usepackage{{fancyhdr}}
-\usepackage{{lastpage}}
-\usepackage{{parskip}}
-\usepackage{{tabularx}}
-\usepackage{{graphicx}}
-\usepackage{{float}}
-\usepackage{{tikz}}
-\usepackage[hidelinks]{{hyperref}}
-
-\definecolor{{spittel}}{{RGB}}{{30,80,140}}
-\definecolor{{resultbg}}{{RGB}}{{230,240,255}}
-
-\pagestyle{{fancy}}
-\fancyhf{{}}
-\lhead{{\footnotesize\textbf{{Spittelmeister GmbH}} \quad Statik-Abteilung}}
-\rhead{{\footnotesize Projekt: {latex_escape(p.bezeichnung)} \quad Nr.: {latex_escape(p.nummer)}}}
-\lfoot{{\footnotesize Bearbeiter: {latex_escape(p.bearbeiter)} \quad Datum: {latex_escape(p.datum)}}}
-\rfoot{{\footnotesize Seite \thepage\ von \pageref{{LastPage}}}}
-\renewcommand{{\headrulewidth}}{{0.4pt}}
-\renewcommand{{\footrulewidth}}{{0.4pt}}
-
-\begin{{document}}
-\begin{{center}}
-{{\color{{spittel}}\rule{{\linewidth}}{{2pt}}}}\\[4pt]
-{{\Large\bfseries\color{{spittel}} Windlastermittlung}}\\[2pt]
-{{\large Balkonabschluss / Fassadenabschluss}}\\[2pt]
-{{\normalsize DIN EN 1991-1-4 / NA:2010-12}}\\[4pt]
-{{\color{{spittel}}\rule{{\linewidth}}{{2pt}}}}
-\end{{center}}
-
-\vspace{{4pt}}
-\begin{{tabularx}}{{\linewidth}}{{lX lX}}
-\textbf{{Projekt:}} & {latex_escape(p.bezeichnung)} & \textbf{{Projektnr.:}} & {latex_escape(p.nummer)} \\
-\textbf{{Bearbeiter:}} & {latex_escape(p.bearbeiter)} & \textbf{{Datum:}} & {latex_escape(p.datum)} \\
-\textbf{{Standort:}} & {latex_escape(st.bezeichnung)} & \textbf{{Hoehe ue.\ NN:}} & {st.hoehe_uNN:.0f}~m \\
-\end{{tabularx}}
-\vspace{{6pt}}
-{{\color{{spittel}}\rule{{\linewidth}}{{0.6pt}}}}
-
-\section*{{1 \quad Eingangsgroessen}}
-\begin{{tabular}}{{@{{}}lll@{{}}}}
-\toprule
-\textbf{{Groesse}} & \textbf{{Wert}} & \textbf{{Bemerkung}} \\
-\midrule
-Windzone & WZ~{st.windzone} & DIN EN 1991-1-4/NA, Anhang NA.A \\
-Gelaendekategorie & {gelaende_label} & NA.B.3 \\
-Gebaeudehoehe & $h = {geo.h:.2f}~\mathrm{{m}}$ & massgebend fuer $q_p$ \\
-Gebaeudetiefe & $d = {geo.d:.2f}~\mathrm{{m}}$ & Windrichtung 1 \\
-Gebaeudebreite & $b = {geo.b:.2f}~\mathrm{{m}}$ & Windrichtung 2 \\
-Hoehe OK Balkonabschluss & $z_e = {geo.z_balkon:.2f}~\mathrm{{m}}$ & Geometrie Balkon \\
-Balkonausladung & $T = {geo.e_balkon:.3f}~\mathrm{{m}}$ & Seitenflaeche \\
-Hoehe Abschlusselement & $h_w = {geo.h_abschluss:.2f}~\mathrm{{m}}$ & \\
-Achsabstand Verankerungen & $B-2a = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontflaeche \\
-\bottomrule
-\end{{tabular}}
-
-\section*{{2 \quad Geometrische Systemskizzen}}
-\subsection*{{2.1 \quad Geometrie des Gebaeudes}}
-\begin{{figure}}[H]
-\centering
-\includegraphics[width=\linewidth]{{{asset_subdir}/wind_geb.pdf}}
-\caption{{Zonierung und Parameterzuordnung $h,d,b,e$.}}
-\end{{figure}}
-
-\subsection*{{2.2 \quad Geometrie des Balkonsystems}}
-\begin{{figure}}[H]
-\centering
-\includegraphics[width=\linewidth]{{{asset_subdir}/balcony_system.pdf}}
-\caption{{Draufsicht mit $B$, $T$, $a$ sowie Festlager/Gleitlager in $x$.}}
-\end{{figure}}
-
-\section*{{3 \quad Boeengeschwindigkeitsdruck $q_p$}}
-\begin{{align*}}
-q_{{b,0}} &= {e.qb0:.2f}~\mathrm{{kN/m^2}} \\
-{e.qp_formel}
-\end{{align*}}
-\begin{{align*}}
-{e.qp_auswertung}
-\end{{align*}}
-
-\noindent {e.qp_abschnitt} \\
-\noindent \textit{{Normstelle:}} {e.qp_normstelle} \\
-\noindent \textit{{Verfahren:}} {e.qp_verfahren}
-
-\section*{{4 \quad Detaillierter Richtungsansatz}}
-{e.cscd_begruendung}
-
-\begin{{align*}}
-h/d &= \max\left(\frac{{{geo.h:.2f}}}{{{geo.d:.2f}}},\frac{{{geo.h:.2f}}}{{{geo.b:.2f}}}\right) = {e.h_d:.2f}
-\end{{align*}}
-
-Angesetzt werden die Aussendruckbeiwerte analog Excel-Vorlage 27.02.2026 / Tafel 3.35:
-\begin{{center}}
-\begin{{tabular}}{{lcc}}
-\toprule
-Bereich & Beschreibung & $c_{{pe,10}}$ \\
-\midrule
-D & Seite Druck & +{e.cpe10_D:.2f} \\
-E & Seite Sog & {e.cpe10_E:.2f} \\
-A & Front Sog & {e.cpe10_A:.2f} \\
-\bottomrule
-\end{{tabular}}
-\end{{center}}
-
-\section*{{5 \quad Flaechen und Linienlasten}}
-\begin{{align*}}
-A_{{w,Seite}} &= T \cdot h_w = {geo.e_balkon:.3f} \cdot {geo.h_abschluss:.2f} = {e.A_w_side:.2f}~\mathrm{{m^2}} \\
-A_{{w,Front}} &= B \cdot h_w = {geo.s_verankerung:.2f} \cdot {geo.h_abschluss:.2f} = {e.A_w_front:.2f}~\mathrm{{m^2}}
-\end{{align*}}
-
-\begin{{center}}
-\begin{{tabular}}{{lccc}}
-\toprule
-Lastfall & $w_e$ [kN/m$^2$] & $q$ [kN/m] & Bemerkung \\
-\midrule
-Seite Druck (D) & {e.we_side_pressure:.2f} & {e.q_side_pressure:.2f} & \\
-Seite Sog (E) & {e.we_side_suction:.2f} & {e.q_side_suction:.2f} & \\
-Front Sog (A) & {e.we_front_suction:.2f} & {e.q_front_suction:.2f} & pruefen \\
-\bottomrule
-\end{{tabular}}
-\end{{center}}
-
-\section*{{6 \quad Massgebende Schnittgroessen}}
-Massgebender Lastfall: \textbf{{{e.lastfall_massgebend}}}
-\begin{{align*}}
-q_{{h,k}} &= \mathbf{{{e.qhk:.2f}~\mathrm{{kN/m}}}} \\
-H_k &= q_{{h,k}} \cdot B = {e.qhk:.2f} \cdot {geo.s_verankerung:.2f} = \mathbf{{{e.Hk:.2f}~\mathrm{{kN}}}} \\
-M_{{k,Fusspunkt}} &= H_k \cdot \frac{{h_w}}{{2}} = {e.Hk:.2f} \cdot {geo.h_abschluss/2:.3f} = \mathbf{{{e.Mk:.2f}~\mathrm{{kNm}}}}
-\end{{align*}}
-
-\vspace{{8pt}}
-\begin{{center}}
-{{\color{{spittel}}\bfseries\large Zusammenfassung Ergebnisse}}\\[6pt]
-\colorbox{{resultbg}}{{%
-\begin{{tabular}}{{lrl}}
-\toprule
-\textbf{{Groesse}} & \textbf{{Wert}} & \textbf{{Einheit}} \\
-\midrule
-$q_p(h)$ & {e.qp:.3f} & $\mathrm{{kN/m^2}}$ \\
-$w_k$ (massg.) & {e.wk_massgebend:.2f} & $\mathrm{{kN/m^2}}$ \\
-$q_{{h,k}}$ & {e.qhk:.2f} & $\mathrm{{kN/m}}$ \\
-$H_k$ je Feld & {e.Hk:.2f} & $\mathrm{{kN}}$ \\
-$M_{{k,\mathrm{{Fusspunkt}}}}$ & {e.Mk:.2f} & $\mathrm{{kNm}}$ \\
-\bottomrule
-\end{{tabular}}%
-}}
-\end{{center}}
-
-\subsection*{{7.1 \quad Vereinfachte Reaktionsabschaetzung}}
-\begin{{figure}}[H]
-\centering
-\includegraphics[width=\linewidth]{{{asset_subdir}/balcony_system._lasten.pdf}}
-\caption{{Linien Lasten und Reaktionen $H_x$, $H_{{y,1}}$, $H_{{y,2}}$ mit Lagerannahme.}}
-\end{{figure}}
-
-\textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
-
-\subsection*{{7.2 \quad Formelansatz und Herleitung (Vorbemessung)}}
-Die Winddruckbeiwerte aus Abschnitt~4 werden als Flaechenlasten $w_e$ angesetzt und ueber die wirksamen
-Windflaechenhoehen in Linienlasten umgerechnet:
-
-\begin{{align*}}
-q_{{seite,1}} &= |w_{{e,seite,druck}}| \cdot h_{{w,yz}} = |{e.we_side_pressure:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_1:.3f}~\mathrm{{kN/m}} \\
-q_{{seite,2}} &= |w_{{e,seite,sog}}| \cdot h_{{w,yz}} = |{e.we_side_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_seite_2:.3f}~\mathrm{{kN/m}} \\
-q_{{vorne}} &= |w_{{e,front,sog}}| \cdot h_{{w,xz}} = |{e.we_front_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {e.q_vorne:.3f}~\mathrm{{kN/m}}
-\end{{align*}}
-
-Mit dem Auflagerabstand $s = B - 2b$ ergibt sich aus Kraefte- und Momentengleichgewicht in Draufsicht:
-\begin{{align*}}
-H_{{x,k}} &= T \cdot (q_{{seite,1}}+q_{{seite,2}}) = {geo.e_balkon:.3f} \cdot ({e.q_seite_1:.3f}+{e.q_seite_2:.3f}) = {e.Hx_k:.2f}~\mathrm{{kN}} \\
-M_{{A,k}} &= \frac{{T^2}}{{2}}(q_{{seite,1}}+q_{{seite,2}}) + q_{{vorne}} \cdot B \cdot (B/2-b) = {e.M_A_k:.2f}~\mathrm{{kNm}} \\
-s &= B - 2b = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {e.s:.3f}~\mathrm{{m}} \\
-H_{{y,2,k}} &= M_{{A,k}}/s = {e.Hy_2_k:.2f}~\mathrm{{kN}} \\
-H_{{y,1,k}} &= q_{{vorne}}\cdot B - H_{{y,2,k}} = {e.Hy_1_k:.2f}~\mathrm{{kN}}
-\end{{align*}}
-
-\begin{{center}}
-\begin{{tabular}}{{lrr}}
-\toprule
-\textbf{{Groesse}} & \textbf{{k-Wert}} & \textbf{{Ed-Wert}} \\
-\midrule
-$H_x$ & {e.Hx_k:.2f}~kN & {e.Hx_Ed:.2f}~kN \\
-$H_{{y,1}}$ & {e.Hy_1_k:.2f}~kN & {e.Hy_1_Ed:.2f}~kN \\
-$H_{{y,2}}$ & {e.Hy_2_k:.2f}~kN & {e.Hy_2_Ed:.2f}~kN \\
-\bottomrule
-\end{{tabular}}
-\end{{center}}
-
-\noindent\textit{{Strukturelle Hypothesen:}} ein Auflager als Festlager in x, ein Auflager als Gleitlager in x; Reaktionen in y rein aus Gleichgewicht in Draufsicht; keine Verformungskompatibilitaet und keine Torsionsumlagerung im Gesamttragwerk.\\
-\noindent\textit{{Technische Einordnung:}} {latex_escape(e.reaktionsmodell_hinweis)}
-
-\end{{document}}
-"""
+    Die Signatur bleibt aus Kompatibilitätsgründen unverändert.
+    """
+    return render_windlast_standalone(
+        projekt,
+        standort,
+        geo,
+        ergebnisse,
+        asset_subdir=asset_subdir,
+    )
 
 
 def export_pdf(
@@ -284,7 +85,6 @@ def export_pdf(
         with open(tex_file, "w", encoding="utf-8") as f:
             f.write(latex_src)
 
-        # Zweimal kompilieren fuer korrekte lastpage-Referenzen
         result = None
         for _ in range(2):
             result = subprocess.run(

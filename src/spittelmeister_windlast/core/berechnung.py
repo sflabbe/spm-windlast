@@ -11,6 +11,7 @@ from typing import Optional
 from .druckbeiwerte import cpe10
 from .modelle import Ergebnisse, Geometrie, Projekt, Standort
 from .peak_pressure import berechne_qp
+from ..transfer.vereinfachtes_balkonsystem import derive_connection_actions_simple
 
 _METHODIK = "Detaillierter Richtungsansatz nach Excel-Vorlage 27.02.2026"
 _GAMMA_Q_REAKTIONEN = 1.5
@@ -31,54 +32,31 @@ def _berechne_reaktionen_vereinfacht(
     we_side_suction: float,
     we_front_suction: float,
 ) -> dict[str, float]:
-    """Vereinfachte statische Reaktionsabschaetzung in Draufsicht.
-
-    Das Modell idealisiert das Balkonsystem in Draufsicht mit einem Festlager
-    (in x) und einem Gleitlager (in x). Die y-Reaktionen werden ausschliesslich
-    aus Gleichgewicht in Draufsicht ermittelt.
-    """
-    if B <= 0:
-        raise ValueError("Breite Balkon B muss > 0 sein.")
-    if T <= 0:
-        raise ValueError("Tiefe Balkon T muss > 0 sein.")
-    if hw_yz <= 0:
-        raise ValueError("Hoehe Windflaeche Seite hw_yz muss > 0 sein.")
-    if hw_xz <= 0:
-        raise ValueError("Hoehe Windflaeche Front hw_xz muss > 0 sein.")
-    if b < 0:
-        raise ValueError("Abstand Ecke bis Auflage b muss >= 0 sein.")
-
-    s = B - 2.0 * b
-    if s <= 0:
-        raise ValueError("Ungueltige Geometrie: B - 2*b muss > 0 sein (Auflagerabstand s).")
-
-    q_seite_1 = abs(we_side_pressure) * hw_yz
-    q_seite_2 = abs(we_side_suction) * hw_yz
-    q_vorne = abs(we_front_suction) * hw_xz
-
-    Hx_k = T * (q_seite_1 + q_seite_2)
-    M_A_k = (T**2 / 2.0) * (q_seite_1 + q_seite_2) + q_vorne * B * (B / 2.0 - b)
-
-    Hy_2_k = M_A_k / s
-    Hy_1_k = q_vorne * B - Hy_2_k
-
-    Hx_Ed = _GAMMA_Q_REAKTIONEN * Hx_k
-    Hy_1_Ed = _GAMMA_Q_REAKTIONEN * Hy_1_k
-    Hy_2_Ed = _GAMMA_Q_REAKTIONEN * Hy_2_k
-
+    """Rueckwaerts-kompatibler Wrapper auf die Transfer-Layer-Logik."""
+    actions = derive_connection_actions_simple(
+        B=B,
+        T=T,
+        b=b,
+        hw_yz=hw_yz,
+        hw_xz=hw_xz,
+        we_side_pressure=we_side_pressure,
+        we_side_suction=we_side_suction,
+        we_front_suction=we_front_suction,
+        gamma_Q=_GAMMA_Q_REAKTIONEN,
+    )
     return {
-        "s": s,
-        "q_seite_1": q_seite_1,
-        "q_seite_2": q_seite_2,
-        "q_vorne": q_vorne,
-        "auflagerabstand": s,
-        "Hx_k": Hx_k,
-        "Hx_Ed": Hx_Ed,
-        "Hy_1_k": Hy_1_k,
-        "Hy_1_Ed": Hy_1_Ed,
-        "Hy_2_k": Hy_2_k,
-        "Hy_2_Ed": Hy_2_Ed,
-        "M_A_k": M_A_k,
+        "s": actions.s,
+        "q_seite_1": actions.q_seite_1,
+        "q_seite_2": actions.q_seite_2,
+        "q_vorne": actions.q_vorne,
+        "auflagerabstand": actions.auflagerabstand,
+        "Hx_k": actions.Hx_k,
+        "Hx_Ed": actions.Hx_Ed,
+        "Hy_1_k": actions.Hy_1_k,
+        "Hy_1_Ed": actions.Hy_1_Ed,
+        "Hy_2_k": actions.Hy_2_k,
+        "Hy_2_Ed": actions.Hy_2_Ed,
+        "M_A_k": actions.M_A_k,
     }
 
 
@@ -174,7 +152,7 @@ class WindlastBerechnung:
         Mk = Hk * (geo.h_abschluss / 2.0)
 
         # 7. Vereinfachte statische Reaktionsabschaetzung in Draufsicht
-        reaktionswerte = _berechne_reaktionen_vereinfacht(
+        connection_actions = derive_connection_actions_simple(
             B=geo.s_verankerung,
             T=geo.e_balkon,
             b=geo.b_auflager_rand,
@@ -183,6 +161,7 @@ class WindlastBerechnung:
             we_side_pressure=we_side_pressure,
             we_side_suction=we_side_suction,
             we_front_suction=we_front_suction,
+            gamma_Q=_GAMMA_Q_REAKTIONEN,
         )
 
         self.erg = Ergebnisse(
@@ -228,18 +207,18 @@ class WindlastBerechnung:
             zone_massgebend=zone_massgebend,
             cpi_unguenstig_sog=0.0,
             cpi_unguenstig_druck=0.0,
-            q_seite_1=reaktionswerte["q_seite_1"],
-            q_seite_2=reaktionswerte["q_seite_2"],
-            q_vorne=reaktionswerte["q_vorne"],
-            s=reaktionswerte["s"],
-            auflagerabstand=reaktionswerte["auflagerabstand"],
-            Hx_k=reaktionswerte["Hx_k"],
-            Hx_Ed=reaktionswerte["Hx_Ed"],
-            Hy_1_k=reaktionswerte["Hy_1_k"],
-            Hy_1_Ed=reaktionswerte["Hy_1_Ed"],
-            Hy_2_k=reaktionswerte["Hy_2_k"],
-            Hy_2_Ed=reaktionswerte["Hy_2_Ed"],
-            M_A_k=reaktionswerte["M_A_k"],
+            q_seite_1=connection_actions.q_seite_1,
+            q_seite_2=connection_actions.q_seite_2,
+            q_vorne=connection_actions.q_vorne,
+            s=connection_actions.s,
+            auflagerabstand=connection_actions.auflagerabstand,
+            Hx_k=connection_actions.Hx_k,
+            Hx_Ed=connection_actions.Hx_Ed,
+            Hy_1_k=connection_actions.Hy_1_k,
+            Hy_1_Ed=connection_actions.Hy_1_Ed,
+            Hy_2_k=connection_actions.Hy_2_k,
+            Hy_2_Ed=connection_actions.Hy_2_Ed,
+            M_A_k=connection_actions.M_A_k,
             gamma_Q_reaktionen=_GAMMA_Q_REAKTIONEN,
             reaktionsmodell_hinweis=_REAKTIONSMODELL_HINWEIS,
         )
