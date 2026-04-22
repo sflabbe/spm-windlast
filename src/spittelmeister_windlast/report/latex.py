@@ -50,7 +50,7 @@ def export_pdf(
     projekt: Projekt,
     standort: Standort,
     geo: Geometrie,
-    ergebnisse: Ergebnisse,
+    ergebnisse: Erg
 ) -> str:
     """Kompiliert den LaTeX-Quelltext mit ``pdflatex`` zu einer PDF.
 
@@ -77,6 +77,13 @@ def export_pdf(
         "balcony_system.tex",
         "load_scheme.tex",
         "reaction_scheme.tex",
+        "wind_geb.pdf",
+        "building_geometry_cases.pdf",
+        "balcony_system.pdf",
+        "load_scheme.pdf",
+        "reaction_scheme.pdf",
+        "balcony_system_lasten.pdf",
+        "balcony_system_reaktionen.pdf"
     ]
 
     with tempfile.TemporaryDirectory() as tmpdir:

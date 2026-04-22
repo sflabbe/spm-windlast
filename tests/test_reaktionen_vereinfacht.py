@@ -77,7 +77,7 @@ def test_reaktions_validierung_auflagerabstand():
         ),
     )
 
-    with pytest.raises(ValueError, match=r"B - 2\*b muss > 0"):
+    with pytest.raises(ValueError, match=r"B - 2\*a muss > 0"):
         wb.berechnen()
 
 

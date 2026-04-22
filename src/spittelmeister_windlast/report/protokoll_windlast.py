@@ -34,6 +34,40 @@ def _title_block(projekt: Projekt, standort: Standort) -> str:
 """
 
 
+def _asset_figure_block(
+    *,
+    asset_subdir: str,
+    tex_name: str | None = None,
+    pdf_name: str | None = None,
+    caption: str,
+    width: str = r"\linewidth",
+) -> str:
+    """Render a report figure with legacy PDF assets first and TikZ fallback."""
+    figure_body = r"\fbox{Figure asset missing}"
+    if tex_name:
+        figure_body = (
+            rf"\IfFileExists{{{asset_subdir}/{tex_name}}}{{\input{{{asset_subdir}/{tex_name}}}}}"
+            + "{"
+            + figure_body
+            + "}"
+        )
+    if pdf_name:
+        figure_body = (
+            rf"\IfFileExists{{{asset_subdir}/{pdf_name}}}{{\includegraphics[width={width}]{{{asset_subdir}/{pdf_name}}}}}"
+            + "{"
+            + figure_body
+            + "}"
+        )
+
+    return rf"""
+\begin{{figure}}[H]
+\centering
+{figure_body}
+\caption{{{caption}}}
+\end{{figure}}
+"""
+
+
 def _section_1_inputs(geo: Geometrie, standort: Standort, ergebnisse: Ergebnisse) -> str:
     gelaende_label = _gelaende_label(standort, ergebnisse)
     return rf"""
@@ -47,39 +81,38 @@ Geländekategorie & {gelaende_label} & NA.B.3 \\
 Gebäudehöhe & $h = {geo.h:.2f}~\mathrm{{m}}$ & massgebend für $q_p$ \\
 Gebäudetiefe & $d = {geo.d:.2f}~\mathrm{{m}}$ & Windrichtung 1 \\
 Gebäudebreite & $b = {geo.b:.2f}~\mathrm{{m}}$ & Windrichtung 2 \\
-Höhe OK Balkonabschluss & $z_e = {geo.z_balkon:.2f}~\mathrm{{m}}$ & Geometrie Balkon \\
-Balkonausladung & $T = {geo.e_balkon:.3f}~\mathrm{{m}}$ & Seitenfläche \\
-Höhe Abschlusselement & $h_w = {geo.h_abschluss:.2f}~\mathrm{{m}}$ & \\
-Achsabstand Verankerungen & $B-2a = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontfläche \\
+Höhe OK Balkon / Geländeroberkante & $z_e = {geo.z_balkon:.2f}~\mathrm{{m}}$ & Geometrie Balkon \\
+Balkon Tiefe & $T = {geo.e_balkon:.3f}~\mathrm{{m}}$ & Seitenfläche \\
+Höhe Geländer bzw. Abschattung & $h_w = {geo.h_abschluss:.2f}~\mathrm{{m}}$ & wirksame Höhe \\
+Balkon Breite & $B = {geo.s_verankerung:.2f}~\mathrm{{m}}$ & Frontfläche \\
+Verankerung Abstand zum Rand & $a = {geo.b_auflager_rand:.2f}~\mathrm{{m}}$ & Randabstand je Seite \\
 \bottomrule
 \end{{tabular}}
 """
 
 
 def _section_2_figures(asset_subdir: str) -> str:
-    return rf"""
-\section*{{2 \quad Geometrische Systemskizzen}}
-\subsection*{{2.1 \quad Geometrie des Gebaeudes}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/building_geometry_zoning.tex}}
-\caption{{Zonierung und Parameterzuordnung $h,d,b,e$.}}
-\end{{figure}}
-
-\subsection*{{2.2 \quad Geometriefaelle des Anbaus}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/building_geometry_cases.tex}}
-\caption{{Systemfälle für die Zuordnung der Anbaugeometrie.}}
-\end{{figure}}
-
-\subsection*{{2.3 \quad Geometrie des Balkonsystems}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/balcony_system.tex}}
-\caption{{Draufsicht mit $B$, $T$, $b$ sowie Festlager/Gleitlager in $x$.}}
-\end{{figure}}
-"""
+    return (
+        r"\section*{2 \quad Geometrische Systemskizzen}"
+        + "\n\n"
+        + r"\subsection*{2.1 \quad Geometrie des Gebaeudes}"
+        + "\n"
+        + _asset_figure_block(
+            asset_subdir=asset_subdir,
+            tex_name="building_geometry_zoning.tex",
+            pdf_name="wind_geb.pdf",
+            caption=r"Zonierung und Parameterzuordnung $h,d,b,e$.",
+        )
+        + "\n"
+        + r"\subsection*{2.2 \quad Geometrie des Balkonsystems}"
+        + "\n"
+        + _asset_figure_block(
+            asset_subdir=asset_subdir,
+            tex_name="balcony_system.tex",
+            pdf_name="balcony_system.pdf",
+            caption=r"Draufsicht mit Balkonbreite $B$, Balkontiefe $T$, Randabstand $a$ sowie Festlager/Gleitlager in $x$.",
+        )
+    )
 
 
 def _section_3_qp(ergebnisse: Ergebnisse) -> str:
@@ -122,8 +155,13 @@ A & Front Sog & {ergebnisse.cpe10_A:.2f} \\
 \end{{center}}
 """
 
-
 def _section_5_loads(geo: Geometrie, ergebnisse: Ergebnisse, asset_subdir: str) -> str:
+    figure_block = _asset_figure_block(
+        asset_subdir=asset_subdir,
+        tex_name="",
+        pdf_name="balcony_system_lasten.pdf",
+        caption=r"Ansatz der Linienlasten $q_{seite,1}$, $q_{seite,2}$ und $q_{vorne}$.",
+    )
     return rf"""
 \section*{{5 \quad Flaechen und Linienlasten}}
 \begin{{align*}}
@@ -132,11 +170,7 @@ A_{{w,Front}} &= B \cdot h_w = {geo.s_verankerung:.2f} \cdot {geo.h_abschluss:.2
 \end{{align*}}
 
 \subsection*{{5.1 \quad Lastansatz in Draufsicht}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/load_scheme.tex}}
-\caption{{Ansatz der Linienlasten $q_{{seite,1}}$, $q_{{seite,2}}$ und $q_{{vorne}}$.}}
-\end{{figure}}
+{figure_block}
 
 \begin{{center}}
 \begin{{tabular}}{{lccc}}
@@ -150,7 +184,6 @@ Front Sog (A) & {ergebnisse.we_front_suction:.2f} & {ergebnisse.q_front_suction:
 \end{{tabular}}
 \end{{center}}
 """
-
 
 def _section_6_decisive(geo: Geometrie, ergebnisse: Ergebnisse) -> str:
     return rf"""
@@ -183,13 +216,15 @@ $M_{{k,\mathrm{{Fusspunkt}}}}$ & {ergebnisse.Mk:.2f} & $\mathrm{{kNm}}$ \\
 
 
 def _section_7_reactions(geo: Geometrie, ergebnisse: Ergebnisse, actions: ConnectionActions, asset_subdir: str) -> str:
+    figure_block = _asset_figure_block(
+        asset_subdir=asset_subdir,
+        tex_name="",
+        pdf_name="balcony_system_reaktionen.pdf",
+        caption=r"Linienlasten und Reaktionen $H_x$, $H_{y,1}$, $H_{y,2}$ mit Lagerannahme.",
+    )
     return rf"""
 \section*{{7 \quad Vereinfachte Reaktionsabschaetzung}}
-\begin{{figure}}[H]
-\centering
-\input{{{asset_subdir}/reaction_scheme.tex}}
-\caption{{Linienlasten und Reaktionen $H_x$, $H_{{y,1}}$, $H_{{y,2}}$ mit Lagerannahme.}}
-\end{{figure}}
+{figure_block}
 
 \textbf{{Vereinfachte Reaktionsabschaetzung des Balkonsystems in Draufsicht}}
 
@@ -203,11 +238,11 @@ q_{{seite,2}} &= |w_{{e,seite,sog}}| \cdot h_{{w,yz}} = |{ergebnisse.we_side_suc
 q_{{vorne}} &= |w_{{e,front,sog}}| \cdot h_{{w,xz}} = |{ergebnisse.we_front_suction:.3f}| \cdot {geo.h_abschluss:.2f} = {actions.q_vorne:.3f}~\mathrm{{kN/m}}
 \end{{align*}}
 
-Mit dem Auflagerabstand $s = B - 2b$ ergibt sich aus Kraefte- und Momentengleichgewicht in Draufsicht:
+Mit dem Auflagerabstand $s = B - 2a$ ergibt sich aus Kraefte- und Momentengleichgewicht in Draufsicht:
 \begin{{align*}}
 H_{{x,k}} &= T \cdot (q_{{seite,1}}+q_{{seite,2}}) = {geo.e_balkon:.3f} \cdot ({actions.q_seite_1:.3f}+{actions.q_seite_2:.3f}) = {actions.Hx_k:.2f}~\mathrm{{kN}} \\
-M_{{A,k}} &= \frac{{T^2}}{{2}}(q_{{seite,1}}+q_{{seite,2}}) + q_{{vorne}} \cdot B \cdot (B/2-b) = {actions.M_A_k:.2f}~\mathrm{{kNm}} \\
-s &= B - 2b = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {actions.s:.3f}~\mathrm{{m}} \\
+M_{{A,k}} &= \frac{{T^2}}{{2}}(q_{{seite,1}}+q_{{seite,2}}) + q_{{vorne}} \cdot B \cdot (B/2-a) = {actions.M_A_k:.2f}~\mathrm{{kNm}} \\
+s &= B - 2a = {geo.s_verankerung:.2f} - 2\cdot{geo.b_auflager_rand:.2f} = {actions.s:.3f}~\mathrm{{m}} \\
 H_{{y,2,k}} &= M_{{A,k}}/s = {actions.Hy_2_k:.2f}~\mathrm{{kN}} \\
 H_{{y,1,k}} &= q_{{vorne}}\cdot B - H_{{y,2,k}} = {actions.Hy_1_k:.2f}~\mathrm{{kN}}
 \end{{align*}}

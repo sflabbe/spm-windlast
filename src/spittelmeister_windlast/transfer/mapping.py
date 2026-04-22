@@ -35,8 +35,8 @@ def derive_connection_actions_from_wind(
     return derive_connection_actions_simple(
         B=geo.s_verankerung,
         T=geo.e_balkon,
-        b=geo.b_auflager_rand,
         hw_yz=geo.h_abschluss,
+        a=geo.b_auflager_rand,
         hw_xz=geo.h_abschluss,
         we_side_pressure=ergebnisse.we_side_pressure,
         we_side_suction=ergebnisse.we_side_suction,
@@ -67,10 +67,10 @@ def derive_connection_actions_from_snapshot(
             d=float(wind_input["d_gebaeude"]),
             b=float(wind_input["b_gebaeude"]),
             z_balkon=float(wind_input["z_balkon"]),
-            e_balkon=float(wind_input["e_balkon"]),
-            h_abschluss=float(wind_input["h_abschl"]),
-            s_verankerung=float(wind_input["s_verank"]),
-            b_auflager_rand=float(wind_input.get("b_auflager_rand", 0.0)),
+            e_balkon=float(wind_input.get("e_balkon", wind_input.get("balkon_tiefe", 0.0))),
+            h_abschluss=float(wind_input.get("h_abschl", wind_input.get("hoehe_gelaender_abschattung", 0.0))),
+            s_verankerung=float(wind_input.get("s_verank", wind_input.get("balkon_breite", 0.0))),
+            b_auflager_rand=float(wind_input.get("b_auflager_rand", wind_input.get("verankerung_randabstand", 0.0))),
         )
     except KeyError as exc:
         raise ValueError(f"Wind-Input unvollständig; fehlender Schlüssel: {exc.args[0]}") from exc
@@ -86,8 +86,8 @@ def derive_connection_actions_from_snapshot(
     actions = derive_connection_actions_simple(
         B=geo.s_verankerung,
         T=geo.e_balkon,
-        b=geo.b_auflager_rand,
         hw_yz=geo.h_abschluss,
+        a=geo.b_auflager_rand,
         hw_xz=geo.h_abschluss,
         we_side_pressure=we_side_pressure,
         we_side_suction=we_side_suction,

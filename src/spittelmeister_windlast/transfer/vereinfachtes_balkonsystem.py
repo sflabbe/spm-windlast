@@ -14,34 +14,42 @@ def derive_connection_actions_simple(
     *,
     B: float,
     T: float,
-    b: float,
     hw_yz: float,
     hw_xz: float,
     we_side_pressure: float,
     we_side_suction: float,
     we_front_suction: float,
     gamma_Q: float = DEFAULT_GAMMA_Q,
+    a: float | None = None,
+    b: float | None = None,
 ) -> ConnectionActions:
-    """Extrahierte Vorbemessungslogik für das vereinfachte Balkonsystem."""
+    """Extrahierte Vorbemessungslogik fuer das vereinfachte Balkonsystem.
+
+    ``B`` steht fuer die Balkonbreite, ``T`` fuer die Balkontiefe und ``a``
+    fuer den Verankerungsabstand zum Rand. Das alte Keyword ``b`` bleibt fuer
+    Rueckwaertskompatibilitaet als Alias zu ``a`` zulaessig.
+    """
+    if a is None:
+        a = b if b is not None else 0.0
     if B <= 0:
         raise ValueError("Breite B muss > 0 sein.")
     if T <= 0:
         raise ValueError("Tiefe T muss > 0 sein.")
     if hw_yz <= 0 or hw_xz <= 0:
         raise ValueError("Windflächenhöhen müssen > 0 sein.")
-    if b < 0:
-        raise ValueError("Randabstand b muss >= 0 sein.")
+    if a < 0:
+        raise ValueError("Randabstand a muss >= 0 sein.")
 
-    s = B - 2.0 * b
+    s = B - 2.0 * a
     if s <= 0:
-        raise ValueError("Ungültige Geometrie: B - 2*b muss > 0 sein.")
+        raise ValueError("Ungueltige Geometrie: B - 2*a muss > 0 sein.")
 
     q_seite_1 = abs(we_side_pressure) * hw_yz
     q_seite_2 = abs(we_side_suction) * hw_yz
     q_vorne = abs(we_front_suction) * hw_xz
 
     Hx_k = T * (q_seite_1 + q_seite_2)
-    M_A_k = (T**2 / 2.0) * (q_seite_1 + q_seite_2) + q_vorne * B * (B / 2.0 - b)
+    M_A_k = (T**2 / 2.0) * (q_seite_1 + q_seite_2) + q_vorne * B * (B / 2.0 - a)
     Hy_2_k = M_A_k / s
     Hy_1_k = q_vorne * B - Hy_2_k
 

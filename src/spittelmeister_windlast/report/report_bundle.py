@@ -17,6 +17,15 @@ FIGURE_FILENAMES = [
     "verankerung.svg",
 ]
 
+LEGACY_PDF_FILENAMES = [
+    "wind_geb.pdf",
+    "building_geometry_cases.pdf",
+    "balcony_system.pdf",
+    "load_scheme.pdf",
+    "reaction_scheme.pdf",
+    "verankerung.pdf",
+]
+
 LATEX_ASSET_FILENAMES = [
     "building_geometry_zoning.tex",
     "building_geometry_cases.tex",
@@ -31,7 +40,7 @@ def _copy_report_assets(project_dir: Path) -> None:
     assets_dir = project_dir / "assets"
     assets_dir.mkdir(parents=True, exist_ok=True)
 
-    for name in sorted(set(FIGURE_FILENAMES + LATEX_ASSET_FILENAMES)):
+    for name in sorted(set(FIGURE_FILENAMES + LEGACY_PDF_FILENAMES + LATEX_ASSET_FILENAMES)):
         src = assets_root / name
         if src.is_file():
             shutil.copy(src, assets_dir / name)

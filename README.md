@@ -147,7 +147,7 @@ wb = WindlastBerechnung(
     Geometrie(
         h=15.13, d=12.55, b=20.0,
         z_balkon=12.83, e_balkon=1.425,
-        h_abschluss=3.00, s_verankerung=4.93,
+        h_abschluss=3.00, s_verankerung=4.93,  # s_verankerung = Balkonbreite B
     ),
 )
 erg = wb.berechnen()
@@ -194,6 +194,14 @@ spittelmeister-windlast calc \
     --e-balkon 1.425 --h-abschluss 3.00 --s-verankerung 4.93 \
     --pdf /tmp/windlast.pdf --json
 ```
+
+---
+
+## Projektzustand / YAML-Persistenz
+
+- Der Sidebar-Export `Projektzustand herunterladen` schreibt die aktuellen Eingaben aus dem Windlast-Modul mit.
+- Gebäude- und Balkongeometrie werden auch ohne vorherige Berechnung persistent im YAML gehalten.
+- Ein vorhandener Ergebnissnapshot bleibt bei reinen Geometrie-/Standortänderungen erhalten, bis neu gerechnet wird.
 
 ---
 
@@ -279,3 +287,8 @@ Kurz gesagt:
 - `BW` -> expliziter Kartenverweis / kein stilles Loch in der Datenbank
 - `NW` -> externer Kartenverweis laut Tabellenwerk
 - `BY`, `HE`, `RP`, `TH`, `SN`, `ST` -> tabellarische Datensätze integriert
+
+
+## Legacy-PDF-Assets
+
+Die LaTeX-Berichte priorisieren die historischen PDF-Skizzen in `assets/` (`wind_geb.pdf`, `balcony_system.pdf`, `load_scheme.pdf`, `reaction_scheme.pdf`). Die zugehörigen TikZ-/TeX-Dateien bleiben als Fallback in der Repo.

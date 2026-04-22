@@ -163,6 +163,9 @@ def test_combined_report_smoke_contains_verankerung_sections() -> None:
     assert "Skizzen Festlager / Gleitlager und Exzentrizität" in tex
     assert "Skizze in Plandarstellung" in tex
     assert "Skizze in Seitenansicht" in tex
+    assert "Höhe Geländer bzw. Abschattung" in tex
+    assert "Balkon Breite" in tex
+    assert "Verankerung Abstand zum Rand" in tex
 
 
 @pytest.mark.skipif(shutil.which("pdflatex") is None, reason="pdflatex nicht installiert")

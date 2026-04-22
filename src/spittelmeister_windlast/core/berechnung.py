@@ -25,19 +25,21 @@ _REAKTIONSMODELL_HINWEIS = (
 def _berechne_reaktionen_vereinfacht(
     B: float,
     T: float,
-    b: float,
     hw_yz: float,
     hw_xz: float,
     we_side_pressure: float,
     we_side_suction: float,
     we_front_suction: float,
+    a: float | None = None,
+    b: float | None = None,
 ) -> dict[str, float]:
     """Rueckwaerts-kompatibler Wrapper auf die Transfer-Layer-Logik."""
     actions = derive_connection_actions_simple(
         B=B,
         T=T,
-        b=b,
         hw_yz=hw_yz,
+        a=a,
+        b=b,
         hw_xz=hw_xz,
         we_side_pressure=we_side_pressure,
         we_side_suction=we_side_suction,
@@ -155,8 +157,8 @@ class WindlastBerechnung:
         connection_actions = derive_connection_actions_simple(
             B=geo.s_verankerung,
             T=geo.e_balkon,
-            b=geo.b_auflager_rand,
             hw_yz=geo.h_abschluss,
+            a=geo.b_auflager_rand,
             hw_xz=geo.h_abschluss,
             we_side_pressure=we_side_pressure,
             we_side_suction=we_side_suction,

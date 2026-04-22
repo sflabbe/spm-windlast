@@ -25,6 +25,14 @@ REQUIRED_TEX = [
     "reaction_scheme.tex",
 ]
 
+REQUIRED_PDF = [
+    "wind_geb.pdf",
+    "building_geometry_cases.pdf",
+    "balcony_system.pdf",
+    "load_scheme.pdf",
+    "reaction_scheme.pdf",
+]
+
 
 def _sample_wb() -> WindlastBerechnung:
     wb = WindlastBerechnung(
@@ -38,7 +46,7 @@ def _sample_wb() -> WindlastBerechnung:
 
 def test_all_visual_assets_exist():
     """Alle benoetigten Dateien sind in assets/ vorhanden."""
-    for filename in [*REQUIRED_SVG, *REQUIRED_TEX]:
+    for filename in [*REQUIRED_SVG, *REQUIRED_TEX, *REQUIRED_PDF]:
         path = get_asset_path(filename)
         assert path.exists(), filename
         assert path.stat().st_size > 0, filename
@@ -46,10 +54,10 @@ def test_all_visual_assets_exist():
 
 def test_copy_assets_for_latex(tmp_path: Path):
     """Assets werden in den Temp-Ordner fuer pdflatex kopiert."""
-    copied_root = copy_assets(tmp_path, REQUIRED_TEX)
+    copied_root = copy_assets(tmp_path, [*REQUIRED_TEX, *REQUIRED_PDF])
     assert copied_root == tmp_path / "assets"
 
-    for filename in REQUIRED_TEX:
+    for filename in [*REQUIRED_TEX, *REQUIRED_PDF]:
         copied = copied_root / filename
         assert copied.exists(), filename
         assert copied.stat().st_size > 0, filename
@@ -66,6 +74,11 @@ def test_render_latex_references_visual_subsections():
     assert "Vereinfachte Reaktionsabschaetzung" in src
     assert "Formelansatz und Herleitung (Vorbemessung)" in src
     assert "Die nachfolgenden Auflagerreaktionen stellen eine vereinfachte statische Abschätzung in Draufsicht dar." in src
-    assert "s = B - 2b" in src
-    assert "assets/building_geometry_zoning.tex" in src
-    assert "assets/load_scheme.tex" in src
+    assert "s = B - 2a" in src
+    assert "assets/wind_geb.pdf" in src
+    assert "assets/building_geometry_cases.pdf" in src
+    assert "assets/balcony_system.pdf" in src
+    assert "assets/load_scheme.pdf" in src
+    assert "assets/reaction_scheme.pdf" in src
+    assert r"\IfFileExists{assets/wind_geb.pdf}" in src
+    assert r"\IfFileExists{assets/balcony_system.pdf}" in src

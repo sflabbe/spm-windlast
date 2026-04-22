@@ -83,10 +83,10 @@ def _geo_from_wind_input(wind_input: Mapping[str, Any]) -> Geometrie:
         d=max(_as_float(wind_input.get("d_gebaeude", 1.0), 1.0), 1e-6),
         b=max(_as_float(wind_input.get("b_gebaeude", 1.0), 1.0), 1e-6),
         z_balkon=_as_float(wind_input.get("z_balkon", 0.0)),
-        e_balkon=_as_float(wind_input.get("e_balkon", 0.0)),
-        h_abschluss=_as_float(wind_input.get("h_abschl", 0.0)),
-        s_verankerung=_as_float(wind_input.get("s_verank", 0.0)),
-        b_auflager_rand=_as_float(wind_input.get("b_auflager_rand", 0.0)),
+        e_balkon=_as_float(wind_input.get("e_balkon", wind_input.get("balkon_tiefe", 0.0))),
+        h_abschluss=_as_float(wind_input.get("h_abschl", wind_input.get("hoehe_gelaender_abschattung", 0.0))),
+        s_verankerung=_as_float(wind_input.get("s_verank", wind_input.get("balkon_breite", 0.0))),
+        b_auflager_rand=_as_float(wind_input.get("b_auflager_rand", wind_input.get("verankerung_randabstand", 0.0))),
     )
 
 

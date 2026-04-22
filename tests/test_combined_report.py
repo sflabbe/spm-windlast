@@ -148,6 +148,17 @@ def test_combined_runtime_and_render_include_selected_modules() -> None:
     assert "Skizze in Plandarstellung" in tex
     assert "Skizze in Seitenansicht" in tex
     assert "Hx_{Ed}" in tex or "H_{x,Ed}" in tex
+    assert "Höhe Geländer bzw. Abschattung" in tex
+    assert "Balkon Breite" in tex
+    assert "Verankerung Abstand zum Rand" in tex
+    assert "s = B - 2a" in tex
+    assert "assets/wind_geb.pdf" in tex
+    assert "assets/building_geometry_cases.pdf" in tex
+    assert "assets/balcony_system.pdf" in tex
+    assert "assets/load_scheme.pdf" in tex
+    assert "assets/reaction_scheme.pdf" in tex
+    assert r"\IfFileExists{assets/wind_geb.pdf}" in tex
+    assert r"\IfFileExists{assets/balcony_system.pdf}" in tex
 
 
 def test_report_zip_bundle_contains_main_and_assets() -> None:
@@ -166,5 +177,8 @@ def test_report_zip_bundle_contains_main_and_assets() -> None:
 
     assert "main.tex" in names
     assert "README.txt" in names
-    assert "assets/building_geometry_zoning.tex" in names
-    assert "assets/reaction_scheme.tex" in names
+    assert "assets/wind_geb.pdf" in names
+    assert "assets/building_geometry_cases.pdf" in names
+    assert "assets/balcony_system.pdf" in names
+    assert "assets/load_scheme.pdf" in names
+    assert "assets/reaction_scheme.pdf" in names

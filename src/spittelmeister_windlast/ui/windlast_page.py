@@ -7,7 +7,11 @@ from dataclasses import asdict
 from datetime import datetime
 
 import pandas as pd
-import streamlit as st
+
+try:  # pragma: no cover
+    import streamlit as st
+except Exception:  # pragma: no cover
+    st = None
 
 from spittelmeister_windlast import Geometrie, Projekt, Standort, WindlastBerechnung
 from spittelmeister_windlast.transfer import derive_connection_actions_from_wind
@@ -106,15 +110,61 @@ def _render_sidebar_info() -> None:
         st.caption("v1.3 · Statik-Abteilung Spittelmeister")
 
 
+def _build_wind_input_snapshot(
+    *,
+    adresse: str,
+    h_gebaeude: float,
+    d_gebaeude: float,
+    b_gebaeude: float,
+    z_balkon: float,
+    e_balkon: float,
+    h_abschl: float,
+    s_verank: float,
+    b_auflager_rand: float,
+    standort_bez: str,
+    hoehe_uNN: float,
+    windzone: int,
+    gelaende: str,
+) -> dict[str, float | int | str]:
+    return {
+        "adresse": adresse,
+        "h_gebaeude": h_gebaeude,
+        "d_gebaeude": d_gebaeude,
+        "b_gebaeude": b_gebaeude,
+        "z_balkon": z_balkon,
+        "e_balkon": e_balkon,
+        "h_abschl": h_abschl,
+        "hoehe_gelaender_abschattung": h_abschl,
+        "s_verank": s_verank,
+        "balkon_breite": s_verank,
+        "b_auflager_rand": b_auflager_rand,
+        "verankerung_randabstand": b_auflager_rand,
+        "balkon_tiefe": e_balkon,
+        "standort_bez": standort_bez,
+        "hoehe_uNN": hoehe_uNN,
+        "windzone": windzone,
+        "gelaende": gelaende,
+    }
+
+
+def _merge_live_wind_state(
+    previous_state: dict[str, object] | None,
+    current_input: dict[str, float | int | str],
+) -> dict[str, object]:
+    previous_state = dict(previous_state or {})
+    previous_results = dict(previous_state.get("results_snapshot", {}))
+    return {
+        "input": dict(current_input),
+        "results_snapshot": previous_results,
+    }
+
+
 def render_windlast_module_page() -> None:
+    if st is None:  # pragma: no cover
+        raise RuntimeError("Streamlit ist für die Windlast-UI nicht verfügbar.")
+
     _inject_page_css()
     _render_header()
-    project_meta = render_project_sidebar()
-    _render_sidebar_info()
-    proj_bez = project_meta["title"]
-    proj_nr = project_meta["project_id"]
-    bearbeiter = project_meta["bearbeiter"]
-    datum = datetime.strptime(project_meta["datum"], "%d.%m.%Y").date()
 
     _ensure_runtime_state()
     wind_state = load_wind_state()
@@ -297,29 +347,29 @@ def render_windlast_module_page() -> None:
                     "OK Balkonabschluss ze [m]", 0.5, 300.0, float(wind_input_defaults.get("z_balkon", 12.83)), 0.1
                 )
                 e_balkon = st.number_input(
-                    "Ausladung Balkon [m]", 0.1, 10.0, float(wind_input_defaults.get("e_balkon", 1.425)), 0.05
+                    "Balkon Tiefe T [m]", 0.1, 10.0, float(wind_input_defaults.get("e_balkon", wind_input_defaults.get("balkon_tiefe", 1.425))), 0.05
                 )
                 h_abschl = st.number_input(
-                    "Höhe Abschlusselement [m]", 0.5, 10.0, float(wind_input_defaults.get("h_abschl", 3.00)), 0.05
+                    "Höhe Geländer bzw. Abschattung [m]", 0.5, 10.0, float(wind_input_defaults.get("h_abschl", wind_input_defaults.get("hoehe_gelaender_abschattung", 3.00))), 0.05
                 )
             s_verank = st.number_input(
-                "Achsabstand Verankerungen / Isokörbe [m]",
+                "Balkon Breite B [m]",
                 0.1,
                 20.0,
-                float(wind_input_defaults.get("s_verank", 4.93)),
+                float(wind_input_defaults.get("s_verank", wind_input_defaults.get("balkon_breite", 4.93))),
                 0.01,
             )
             b_auflager_rand = st.number_input(
-                "Abstand Ecke bis Auflage b [m]",
+                "Verankerung Abstand zum Rand a [m]",
                 0.0,
                 10.0,
-                float(wind_input_defaults.get("b_auflager_rand", 0.30)),
+                float(wind_input_defaults.get("b_auflager_rand", wind_input_defaults.get("verankerung_randabstand", 0.30))),
                 0.01,
             )
             a_ref = s_verank * h_abschl
             h_d_eff = max(h_gebaeude / d_gebaeude, h_gebaeude / b_gebaeude)
             st.caption(f"h/d = max(h/d, h/b) = {h_d_eff:.3f} · Aref = {a_ref:.2f} m²")
-            st.caption(f"Frontfläche = {s_verank * h_abschl:.2f} m² · Seitenfläche = {e_balkon * h_abschl:.2f} m²")
+            st.caption(f"Frontfläche = B · h_w = {s_verank * h_abschl:.2f} m² · Seitenfläche = T · h_w = {e_balkon * h_abschl:.2f} m² · s = B - 2a = {s_verank - 2*b_auflager_rand:.2f} m")
 
             st.markdown('<div class="section-header">📍 Standort &amp; Windzone</div>', unsafe_allow_html=True)
             standort_bez = st.text_input(
@@ -356,6 +406,25 @@ def render_windlast_module_page() -> None:
                 "nordsee": "I Nordseeinseln",
             }
             st.caption(f"qb,0 = {qb0:.2f} kN/m² · {gelaende_labels[gelaende]}")
+            current_wind_input = _build_wind_input_snapshot(
+                adresse=adresse,
+                h_gebaeude=h_gebaeude,
+                d_gebaeude=d_gebaeude,
+                b_gebaeude=b_gebaeude,
+                z_balkon=z_balkon,
+                e_balkon=e_balkon,
+                h_abschl=h_abschl,
+                s_verank=s_verank,
+                b_auflager_rand=b_auflager_rand,
+                standort_bez=standort_bez,
+                hoehe_uNN=hoehe_uNN,
+                windzone=windzone,
+                gelaende=gelaende,
+            )
+            if dict(wind_state.get("input", {})) != current_wind_input:
+                save_wind_state(**_merge_live_wind_state(wind_state, current_wind_input))
+                wind_state = load_wind_state()
+
             c1, c2, c3 = st.columns(3)
             v1, _ = qp_vorschau(4, windzone, gelaende)
             v2, f2 = qp_vorschau(13.7, windzone, gelaende)
@@ -369,6 +438,13 @@ def render_windlast_module_page() -> None:
             st.markdown("#### Geometrie")
             _render_svg_asset("wind_geb.svg", "Gebäudegeometrie")
             _render_svg_asset("balcony_system.svg", "Balkongeometrie")
+
+        project_meta = render_project_sidebar()
+        _render_sidebar_info()
+        proj_bez = project_meta["title"]
+        proj_nr = project_meta["project_id"]
+        bearbeiter = project_meta["bearbeiter"]
+        datum = datetime.strptime(project_meta["datum"], "%d.%m.%Y").date()
 
         st.markdown("---")
         bc, _ = st.columns([2, 5])
@@ -408,21 +484,21 @@ def render_windlast_module_page() -> None:
                         f"Windlast_{standort_bez.replace(' ', '_')}_{datum.strftime('%Y%m%d')}.pdf"
                     )
                     save_wind_state(
-                        input={
-                            "adresse": adresse,
-                            "h_gebaeude": h_gebaeude,
-                            "d_gebaeude": d_gebaeude,
-                            "b_gebaeude": b_gebaeude,
-                            "z_balkon": z_balkon,
-                            "e_balkon": e_balkon,
-                            "h_abschl": h_abschl,
-                            "s_verank": s_verank,
-                            "b_auflager_rand": b_auflager_rand,
-                            "standort_bez": standort_bez,
-                            "hoehe_uNN": hoehe_uNN,
-                            "windzone": windzone,
-                            "gelaende": gelaende,
-                        },
+                        input=_build_wind_input_snapshot(
+                            adresse=adresse,
+                            h_gebaeude=h_gebaeude,
+                            d_gebaeude=d_gebaeude,
+                            b_gebaeude=b_gebaeude,
+                            z_balkon=z_balkon,
+                            e_balkon=e_balkon,
+                            h_abschl=h_abschl,
+                            s_verank=s_verank,
+                            b_auflager_rand=b_auflager_rand,
+                            standort_bez=standort_bez,
+                            hoehe_uNN=hoehe_uNN,
+                            windzone=windzone,
+                            gelaende=gelaende,
+                        ),
                         results_snapshot=asdict(e),
                     )
                 except Exception as ex:
@@ -498,7 +574,7 @@ def render_windlast_module_page() -> None:
             rrx1.metric("q_seite_1 [kN/m]", f"{actions.q_seite_1:.3f}")
             rrx2.metric("q_seite_2 [kN/m]", f"{actions.q_seite_2:.3f}")
             rrx3.metric("q_vorne [kN/m]", f"{actions.q_vorne:.3f}")
-            rrx4.metric("Auflagerabstand s = B - 2b [m]", f"{actions.s:.3f}")
+            rrx4.metric("Auflagerabstand s = B - 2a [m]", f"{actions.s:.3f}")
 
             rry1, rry2, rry3, rry4, rry5 = st.columns(5)
             rry1.metric("Hx_k [kN]", f"{actions.Hx_k:.2f}")
@@ -514,9 +590,9 @@ def render_windlast_module_page() -> None:
             st.markdown("#### Formelansatz (Draufsicht, Vorbemessung)")
             st.latex(r"H_{x,k}=T\cdot(q_{seite,1}+q_{seite,2})")
             st.latex(
-                r"M_{A,k}=\frac{T^2}{2}\cdot(q_{seite,1}+q_{seite,2})+q_{vorne}\cdot B\cdot\left(\frac{B}{2}-b\right)"
+                r"M_{A,k}=\frac{T^2}{2}\cdot(q_{seite,1}+q_{seite,2})+q_{vorne}\cdot B\cdot\left(\frac{B}{2}-a\right)"
             )
-            st.latex(r"H_{y,2,k}=M_{A,k}/(B-2b)")
+            st.latex(r"H_{y,2,k}=M_{A,k}/(B-2a)")
             st.latex(r"H_{y,1,k}=q_{vorne}\cdot B-H_{y,2,k}")
 
             force_residual = abs((actions.Hy_1_k + actions.Hy_2_k) - (actions.q_vorne * s_verank))
@@ -542,7 +618,13 @@ def render_windlast_module_page() -> None:
 
             st.markdown("### Lasten")
             _render_svg_asset(
-                "balcony_system._lasten.svg",
+                "balcony_system_lasten.svg",
+                "Ansatz der Linienlasten q_seite,1, q_seite,2 und q_vorne",
+            )
+
+            st.markdown("### Reaktionen")
+            _render_svg_asset(
+                "balcony_system_reaktionen.svg",
                 "Vereinfachte Reaktionsabschätzung mit Hx, Hy_1 und Hy_2.",
             )
 

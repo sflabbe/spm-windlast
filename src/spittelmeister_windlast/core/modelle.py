@@ -42,11 +42,12 @@ class Geometrie:
         h:            Gebaeudehoehe [m]
         d:            Gebaeudetiefe [m] (Windrichtung 1)
         b:            Gebaeudebreite [m] (Windrichtung 2)
-        z_balkon:     Hoehe OK Balkonabschluss ueber Gelaende [m]
-        e_balkon:     Balkonausladung / Seitenflaechenlaenge [m]
-        h_abschluss:  Hoehe des Abschlusselements [m]
-        s_verankerung: Achsabstand Verankerungen [m]
-        b_auflager_rand: Abstand Ecke bis Auflage b [m] fuer vereinfachte Reaktionsabschaetzung
+        z_balkon:      Hoehe OK Balkonabschluss ueber Gelaende [m]
+        e_balkon:      Balkon-Tiefe T / Ausladung [m]
+        h_abschluss:   Hoehe Gelaender bzw. Abschattung [m]
+        s_verankerung: Balkonbreite B / wirksame Frontbreite [m]
+        b_auflager_rand: Verankerungsabstand zum Rand a [m] fuer die
+                         vereinfachte Reaktionsabschaetzung
     """
     h: float
     d: float
@@ -58,23 +59,38 @@ class Geometrie:
     b_auflager_rand: float = 0.0
 
     @property
+    def balkonbreite_B(self) -> float:
+        """Alias fuer die Balkonbreite B [m]."""
+        return self.s_verankerung
+
+    @property
+    def balkontiefe_T(self) -> float:
+        """Alias fuer die Balkontiefe T [m]."""
+        return self.e_balkon
+
+    @property
+    def randabstand_a(self) -> float:
+        """Alias fuer den Verankerungsabstand zum Rand a [m]."""
+        return self.b_auflager_rand
+
+    @property
     def h_d(self) -> float:
         """h/d-Verhaeltnis (max aus d und b) zur Interpolation der cpe,10."""
         return max(self.h / self.d, self.h / self.b)
 
     @property
     def A_ref(self) -> float:
-        """Bezugsflaeche je Verankerungsfeld [m^2]."""
+        """Bezugsflaeche je Balkonfeld / wirksamer Frontstreifen [m^2]."""
         return self.s_verankerung * self.h_abschluss
 
     @property
     def A_w_side(self) -> float:
-        """Seitenflaeche (Ausladung x Hoehe) [m^2]."""
+        """Seitenflaeche (Balkontiefe T x Hoehe) [m^2]."""
         return self.e_balkon * self.h_abschluss
 
     @property
     def A_w_front(self) -> float:
-        """Frontflaeche (Verankerungsabstand x Hoehe) [m^2]."""
+        """Frontflaeche (Balkonbreite B x Hoehe) [m^2]."""
         return self.s_verankerung * self.h_abschluss
 
 
