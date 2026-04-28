@@ -50,7 +50,7 @@ def export_pdf(
     projekt: Projekt,
     standort: Standort,
     geo: Geometrie,
-    ergebnisse: Erg
+    ergebnisse: Ergebnisse
 ) -> str:
     """Kompiliert den LaTeX-Quelltext mit ``pdflatex`` zu einer PDF.
 

@@ -269,7 +269,7 @@ def render_windlast_module_page() -> None:
                 ).add_to(m)
                 st_folium(m, width=None, height=380, returned_objects=[])
             except ImportError:
-                st.info("`pip install folium streamlit-folium` für Kartenansicht.")
+                st.info("`uv sync --extra app --dev` ausführen, falls `folium`/`streamlit-folium` für die Kartenansicht fehlen.")
 
             st.markdown("---")
             if st.button("➡️ Werte in Berechnung übernehmen"):

@@ -95,7 +95,7 @@ def verankerung_body(
 
     if assessment is not None:
         rows = [
-            rf"{latex_escape(item.title)} & {_status_tex(item.status)} & {latex_escape(item.detail)} \\\\" 
+            rf"{latex_escape(item.title)} & {_status_tex(item.status)} & {latex_escape(item.detail)} \\\\"
             for item in assessment.checks
         ]
         basis_items = assessment.basis_summary

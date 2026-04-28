@@ -83,54 +83,70 @@ spittelmeister-windlast/
 
 ---
 
-## Installation
+## Development setup
+
+`uv` ist die Quelle für lokale Umgebung, Extras und Lockfile. Es gibt kein
+`requirements.txt` als Dependency-Quelle.
 
 ### Voraussetzungen
 
 - Python ≥ 3.10
-- TeX Live (nur fuer PDF-Export):
-  ```bash
-  sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended
-  ```
-
-### Als Bibliothek (z. B. fuer `balkonsystem`)
+- `uv`
+- TeX Live nur für PDF-Export:
 
 ```bash
-# Editable install aus lokalem Klon:
-pip install -e /pfad/zu/spittelmeister-windlast
-
-# Oder direkt aus Git:
-pip install git+https://github.com/spittelmeister/windlast.git
+sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended
 ```
 
-Installations-Varianten:
+`uv` installieren:
 
 ```bash
-pip install -e .                 # nur Rechenkern (keine Abhaengigkeiten)
-pip install -e .[geo]            # + Standortermittlung (requests)
-pip install -e .[app]            # + Streamlit-App
-pip install -e .[all]            # alles
-pip install -e .[dev]            # + Test-/Lint-Tools
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+
+### Standard-Setup
+
+```bash
+uv sync --all-extras --dev
+uv run pytest -q -m "not network"
+uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+```
+
+Alternativ über `make`:
+
+```bash
+make sync
+make test
+make lint
+# make typecheck bleibt manual review required; siehe docs/audits/uv_migration_report.md
+```
+
+### Als Bibliothek für lokale Nachbar-Repos
+
+```bash
+uv sync --all-extras --dev
+uv run python scripts/example_headless.py
+```
+
+Ein Legacy-`pip install -e .` Pfad ist nicht mehr der dokumentierte Standard.
+Falls ein Altsystem pip erzwingt, muss der Pip-Export ausdrücklich aus dem
+Lockfile abgeleitet und als Kompatibilitätsartefakt behandelt werden.
 
 ### Streamlit-App starten
 
 ```bash
-pip install -e .[app]
-streamlit run apps/streamlit_app/app.py
+uv sync --extra app --dev
+uv run streamlit run apps/streamlit_app/app.py
 ```
 
-Die App sucht `pdflatex` in dieser Reihenfolge:
+### Lockfile und Dependencies
 
-1. gespeicherter Pfad aus der Sidebar
-2. Umgebungsvariablen `SPM_WINDLAST_PDFLATEX`, `BALKONSYSTEM_PDFLATEX`, `PDFLATEX_PATH`
-3. `pdflatex` im `PATH`
-4. bekannte Portable-MiKTeX-Pfade, u. a.
-   `C:\PortableLatex\MiKTeX\texmfs\install\miktex\bin\x64\pdflatex.exe`
-
-Damit funktioniert auch eine portable Windows-Installation ohne globale PATH-Aenderung.
-
----
+```bash
+uv lock
+uv lock --check
+uv add requests --optional geo
+uv add --dev pytest
+```
 
 ## Verwendung als Bibliothek
 
@@ -236,13 +252,19 @@ spittelmeister-windlast calc \
 
 ## Entwicklung
 
+Die Entwicklungsbefehle laufen über `uv`:
+
 ```bash
-pip install -e .[dev]
-pytest                   # Smoke-Tests (ohne Netzwerk)
-pytest -m "not network"  # explizit ohne Netzwerk
-ruff check src tests
-mypy src/spittelmeister_windlast
+uv sync --all-extras --dev
+uv run pytest -q -m "not network"
+uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+uv lock --check
+
+# Optional/manual: aktuell nicht gruen ohne Type-Fixes
+uv run mypy src/spittelmeister_windlast
 ```
+
+`requirements.txt` existiert in dieser Repo nicht als Quelle der Wahrheit.
 
 ---
 

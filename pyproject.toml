@@ -1,3 +1,4 @@
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -13,17 +14,14 @@ authors = [
 ]
 license = { text = "Proprietary — internal use only" }
 keywords = ["structural-engineering", "eurocode", "wind-load", "din-en-1991", "balkon"]
-
-# Rechenkern braucht nichts ausser der stdlib.
-dependencies = []
+dependencies = [
+    "pyyaml>=6.0",
+]
 
 [project.optional-dependencies]
-# Standortermittlung (Geocoding, Elevation, Windzone-Lookup)
 geo = [
     "requests>=2.31.0",
 ]
-
-# Streamlit-App
 app = [
     "streamlit>=1.32.0",
     "pandas>=2.0.0",
@@ -31,8 +29,6 @@ app = [
     "streamlit-folium>=0.18.0",
     "requests>=2.31.0",
 ]
-
-# Alles zusammen
 all = [
     "requests>=2.31.0",
     "streamlit>=1.32.0",
@@ -41,7 +37,7 @@ all = [
     "streamlit-folium>=0.18.0",
 ]
 
-# Entwicklung / Tests
+[dependency-groups]
 dev = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
@@ -50,14 +46,12 @@ dev = [
 ]
 
 [project.scripts]
-# CLI-Einstieg fuer Headless-Nutzung / CI
 spittelmeister-windlast = "spittelmeister_windlast.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/spittelmeister_windlast"]
 
 [tool.hatch.build.targets.wheel.force-include]
-# JSON-Datentabellen mitverpacken
 "src/spittelmeister_windlast/daten" = "spittelmeister_windlast/daten"
 "assets" = "spittelmeister_windlast/assets"
 
@@ -74,13 +68,8 @@ line-length = 100
 target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "B", "UP", "N"]
-ignore = [
-    "E501",  # line length (handled by formatter)
-    "N802",  # non-lowercase function names (Hk, Mk etc. folgen DIN-Notation)
-    "N803",  # non-lowercase arguments
-    "N806",  # non-lowercase variable names
-]
+select = ["E", "F", "W", "B"]
+ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.10"
