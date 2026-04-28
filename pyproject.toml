@@ -64,6 +64,7 @@ packages = ["src/spittelmeister_windlast"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
+pythonpath = ["src"]
 markers = [
     "network: marks tests that require network access (deselect with '-m \"not network\"')",
 ]

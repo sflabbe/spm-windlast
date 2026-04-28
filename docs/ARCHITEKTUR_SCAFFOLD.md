@@ -11,6 +11,7 @@ vorbereitet, damit die eigentliche Migration in kleinen Schritten erfolgen kann.
 - `src/spittelmeister_windlast/transfer/*`
 - `src/spittelmeister_windlast/verankerung/*`
 - `src/spittelmeister_windlast/projectio/*`
+- `src/spittelmeister_windlast/api.py`
 - `src/spittelmeister_windlast/ui/*`
 - `src/spittelmeister_windlast/report/base.py`
 - `src/spittelmeister_windlast/report/protokoll_windlast.py`
@@ -24,10 +25,14 @@ vorbereitet, damit die eigentliche Migration in kleinen Schritten erfolgen kann.
 ## Leitidee
 
 1. `core` bleibt der reine EC1-Rechenkern.
-2. `transfer` übernimmt die Ableitung von Anschlusslasten aus Wind-Ergebnissen.
-3. `verankerung` kapselt Dokumentation, Vorprüfung und spätere Hersteller-/EN-1992-4-Logik.
-4. `report` wird in modulare Berichtsteile zerlegt.
-5. `projectio` und `ui` schaffen Projektzustand, YAML/JSON-Persistenz und eine spätere Multipage-App.
+2. `api` stellt den stabilen Minimalvertrag fuer externe Automatisierung bereit:
+   `spittelmeister_windlast.api.calculate_balcony_wind(...)` liefert `qw`,
+   `wch_S`, `wch_F`, `AW_yz`, `AW_xz`, `Hx_d_ges`, `Hy_d_ges` und `gamma_w`
+   ohne Streamlit-, CLI- oder Report-Abhaengigkeit.
+3. `transfer` übernimmt die Ableitung von Anschlusslasten aus Wind-Ergebnissen.
+4. `verankerung` kapselt Dokumentation, Vorprüfung und spätere Hersteller-/EN-1992-4-Logik.
+5. `report` wird in modulare Berichtsteile zerlegt.
+6. `projectio` und `ui` schaffen Projektzustand, YAML/JSON-Persistenz und eine spätere Multipage-App.
 
 ## Empfohlene nächste Commit-Reihenfolge
 

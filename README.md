@@ -134,6 +134,35 @@ Damit funktioniert auch eine portable Windows-Installation ohne globale PATH-Aen
 
 ## Verwendung als Bibliothek
 
+### Stabile Minimal-API fuer Automatisierung
+
+Fuer `balkon-automation` und andere schlanke Integrationen gibt es eine
+kleine, stabile API ohne Streamlit-, CLI- oder Report-Abhaengigkeit:
+
+```python
+from spittelmeister_windlast.api import calculate_balcony_wind
+
+result = calculate_balcony_wind(
+    geometry={
+        "B1": 3.94,
+        "T": 1.94,
+        "HW_Seite": 1.10,
+        "HW_Front": 1.10,
+    },
+    qw=0.8,
+    cpe_parallel=0.5,
+    cpe_normal=0.7,
+    gamma_w=1.5,
+)
+
+print(result.Hx_d_ges, result.Hy_d_ges)
+```
+
+Der Rueckgabewert ist eine Dataclass mit den stabilen Feldern `qw`,
+`wch_S`, `wch_F`, `AW_yz`, `AW_xz`, `Hx_d_ges`, `Hy_d_ges` und `gamma_w`.
+Der Legacy-Alias `calculate_wind(...)` bleibt fuer bestehende Adapter
+verfuegbar; neue Integrationen sollen `calculate_balcony_wind(...)` nutzen.
+
 ### Vollstaendige API (Rechenkern)
 
 ```python

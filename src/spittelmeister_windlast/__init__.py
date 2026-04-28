@@ -7,6 +7,7 @@ from __future__ import annotations
 
 __version__ = "2.3.0"
 
+from .api import BalconyWindResult, calculate_balcony_wind, calculate_wind
 from .core import (
     Ergebnisse,
     Geometrie,
@@ -34,6 +35,9 @@ from .verankerung import AnchorageAssessment, AnchorageInput, CheckItem, assess_
 
 __all__ = [
     "__version__",
+    "BalconyWindResult",
+    "calculate_balcony_wind",
+    "calculate_wind",
     "Projekt",
     "Standort",
     "Geometrie",
