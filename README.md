@@ -83,63 +83,156 @@ spittelmeister-windlast/
 
 ---
 
-## Development setup
+## Installation und Entwicklung: `uv` und `pip`
 
-`uv` ist die Quelle für lokale Umgebung, Extras und Lockfile. Es gibt kein
-`requirements.txt` als Dependency-Quelle.
+### Zielbild
 
-### Voraussetzungen
+Diese Repo soll mit zwei sauberen Installationspfaden funktionieren:
 
-- Python ≥ 3.10
-- `uv`
-- TeX Live nur für PDF-Export:
+1. **`uv` als Standard fuer Entwicklung und reproduzierbare lokale Umgebungen.**
+   `uv.lock` bleibt der Lockfile-Pfad fuer Entwickler, Tests und CI.
+2. **`pip` als Kompatibilitaetspfad fuer klassische Python-Umgebungen.**
+   `pip` installiert direkt aus `pyproject.toml`; ein handgepflegtes
+   `requirements.txt` ist nicht die Quelle der Wahrheit.
+
+Aktueller Stand der Repo:
+
+| Thema | Status | Konsequenz |
+|-------|--------|------------|
+| Paketlayout | `src/`-Layout mit `pyproject.toml` | kompatibel mit `uv` und `pip` |
+| Build-Backend | `hatchling` | `pip install .` baut ueber PEP-517/518 |
+| Runtime-Core | `pyyaml>=6.0` | `pip install -e .` reicht fuer Headless-Core |
+| Optionale Extras | `geo`, `app`, `all` | `uv --extra ...` und `pip .[extra]` moeglich |
+| Dev-Tools | `[dependency-groups].dev` | `uv sync --dev`; mit modernem `pip` auch `--group dev` |
+| Lockfile | `uv.lock` | nur `uv`; `pip` nutzt keine `uv.lock`-Aufloesung |
+
+**Regel:** Neue Abhaengigkeiten werden zuerst in `pyproject.toml` gepflegt.
+`uv.lock` wird daraus aktualisiert. Falls ein altes Deployment zwingend ein
+`requirements.txt` braucht, wird es aus `uv.lock` exportiert und nicht manuell
+editiert.
+
+### Plan de trabajo / Arbeitsplan fuer echte Doppelkompatibilitaet
+
+1. **Quelle der Wahrheit fixieren.**
+   `pyproject.toml` bleibt die einzige gepflegte Dependency-Quelle:
+   `project.dependencies` fuer Core, `project.optional-dependencies` fuer
+   optionale Features, `[dependency-groups].dev` fuer Entwicklung.
+2. **`uv`-Pfad prueffaehig halten.**
+   CI und lokale Standardbefehle laufen mit `uv sync --all-extras --dev --frozen`,
+   `uv lock --check`, `uv run pytest ...` und `uv run ruff ...`.
+3. **`pip`-Pfad prueffaehig halten.**
+   Mindestens pro Release einmal testen:
+   `python -m pip install -e .`, `python -m pip install -e ".[all]"` und,
+   falls `pip>=25.1` verfuegbar ist, `python -m pip install --group dev`.
+4. **OS-Matrix absichern.**
+   Die gleichen Smoke-Checks unter Linux, Windows und macOS dokumentieren:
+   Import, CLI, Headless-Beispiel, Streamlit-Start.
+5. **Keine verdeckte Vermischung.**
+   `uv.lock` ist fuer `uv`; `pip` bekommt entweder direkte `pyproject.toml`-
+   Installation oder einen bewusst exportierten Requirements-Snapshot.
+6. **Release-Artefakte optional bauen.**
+   Fuer externe Weitergabe lieber Wheel bauen und installieren, statt die Repo
+   roh zu kopieren.
+
+---
+
+## Voraussetzungen
+
+### Alle Systeme
+
+- Python `>=3.10`
+- Git oder entpackte Repo
+- Fuer PDF-Export: eine funktionierende LaTeX-Installation mit `pdflatex`
+
+Empfohlene Schnellpruefung:
 
 ```bash
+python --version
+```
+
+Unter Windows ist oft der Python Launcher verfuegbar:
+
+```powershell
+py --version
+```
+
+### Linux
+
+Systempakete fuer PDF-Export, Beispiel Debian/Ubuntu:
+
+```bash
+sudo apt update
 sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended
 ```
 
-`uv` installieren:
+### macOS
+
+Python kann z. B. ueber den offiziellen Installer, Homebrew oder `uv python`
+bereitgestellt werden. Fuer PDF-Export wird eine TeX-Distribution benoetigt,
+z. B. MacTeX oder BasicTeX plus fehlende Pakete.
+
+### Windows
+
+Python aus dem offiziellen Installer oder ueber `winget` installieren. Fuer
+PDF-Export wird z. B. MiKTeX oder TeX Live benoetigt. Falls `pdflatex` nicht im
+`PATH` liegt, funktionieren die PDF-Tests und der PDF-Export nicht, der
+Rechenkern aber schon.
+
+---
+
+## Setup mit `uv` empfohlen
+
+### `uv` installieren
+
+Linux/macOS:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Standard-Setup
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Alternativ gehen auch Paketmanager wie Homebrew, WinGet oder Scoop.
+
+### Linux/macOS: komplette Entwicklungsumgebung
 
 ```bash
+cd spm-windlast
 uv sync --all-extras --dev
 uv run pytest -q -m "not network"
 uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
-```
-
-Alternativ über `make`:
-
-```bash
-make sync
-make test
-make lint
-# make typecheck bleibt manual review required; siehe docs/audits/uv_migration_report.md
-```
-
-### Als Bibliothek für lokale Nachbar-Repos
-
-```bash
-uv sync --all-extras --dev
 uv run python scripts/example_headless.py
 ```
 
-Ein Legacy-`pip install -e .` Pfad ist nicht mehr der dokumentierte Standard.
-Falls ein Altsystem pip erzwingt, muss der Pip-Export ausdrücklich aus dem
-Lockfile abgeleitet und als Kompatibilitätsartefakt behandelt werden.
+### Windows PowerShell: komplette Entwicklungsumgebung
 
-### Streamlit-App starten
+```powershell
+cd spm-windlast
+uv sync --all-extras --dev
+uv run pytest -q -m "not network"
+uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+uv run python scripts/example_headless.py
+```
+
+### Nur Core ohne App-Extras
+
+```bash
+uv sync
+uv run python scripts/example_headless.py
+```
+
+### Mit Streamlit-App
 
 ```bash
 uv sync --extra app --dev
 uv run streamlit run apps/streamlit_app/app.py
 ```
 
-### Lockfile und Dependencies
+### Lockfile pflegen
 
 ```bash
 uv lock
@@ -147,6 +240,168 @@ uv lock --check
 uv add requests --optional geo
 uv add --dev pytest
 ```
+
+### Makefile-Kurzbefehle Linux/macOS
+
+```bash
+make sync
+make test
+make lint
+make smoke
+```
+
+Unter Windows funktionieren die direkten `uv`-Befehle oben am robustesten.
+`make` nur verwenden, wenn eine passende Make-Umgebung installiert ist.
+
+---
+
+## Setup mit `pip` Kompatibilitaetspfad
+
+Der `pip`-Pfad ist fuer klassische virtuelle Umgebungen, IDEs, alte CI-Jobs
+oder Systeme ohne `uv`. Er ist bewusst einfach gehalten.
+
+### Linux/macOS: virtuelle Umgebung
+
+```bash
+cd spm-windlast
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+### Windows PowerShell: virtuelle Umgebung
+
+```powershell
+cd spm-windlast
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install --upgrade pip
+```
+
+Falls PowerShell die Aktivierung blockiert, fuer diese Shell erlauben:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+```
+
+### Core installieren
+
+Linux/macOS:
+
+```bash
+python -m pip install -e .
+python scripts/example_headless.py
+```
+
+Windows PowerShell:
+
+```powershell
+py -m pip install -e .
+py scripts\example_headless.py
+```
+
+### Mit optionalen Features installieren
+
+Geo-Lookup:
+
+```bash
+python -m pip install -e ".[geo]"
+```
+
+Streamlit-App:
+
+```bash
+python -m pip install -e ".[app]"
+streamlit run apps/streamlit_app/app.py
+```
+
+Alles zusammen:
+
+```bash
+python -m pip install -e ".[all]"
+```
+
+Windows PowerShell analog:
+
+```powershell
+py -m pip install -e ".[all]"
+py -m streamlit run apps/streamlit_app/app.py
+```
+
+### Dev-Tools mit modernem `pip`
+
+Ab `pip>=25.1` koennen Dependency-Groups aus `pyproject.toml` installiert
+werden:
+
+```bash
+python -m pip install --group dev
+python -m pytest -q -m "not network"
+python -m ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+```
+
+Windows PowerShell:
+
+```powershell
+py -m pip install --group dev
+py -m pytest -q -m "not network"
+py -m ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+```
+
+### Dev-Tools mit altem `pip` Fallback
+
+Falls `pip --group` nicht verfuegbar ist:
+
+```bash
+python -m pip install "pytest>=8.0" "pytest-cov>=5.0" "mypy>=1.10" "ruff>=0.5"
+```
+
+Windows PowerShell:
+
+```powershell
+py -m pip install "pytest>=8.0" "pytest-cov>=5.0" "mypy>=1.10" "ruff>=0.5"
+```
+
+### Requirements-Snapshot nur falls noetig
+
+Nur fuer Altsysteme, die zwingend `requirements.txt` brauchen:
+
+```bash
+uv export --format requirements.txt --all-extras --dev -o requirements.lock.txt
+python -m pip install -r requirements.lock.txt
+python -m pip install -e . --no-deps
+```
+
+`requirements.lock.txt` ist dann ein exportiertes Kompatibilitaetsartefakt,
+nicht die primaere Dependency-Quelle.
+
+---
+
+## Pruef- und Smoke-Befehle
+
+```bash
+# uv, reproduzierbarer Standard
+uv sync --all-extras --dev --frozen
+uv lock --check
+uv run pytest -q -m "not network"
+uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
+uv run python scripts/example_headless.py
+
+# pip, Kompatibilitaetspfad
+python -m pip install -e ".[all]"
+python -m pip install --group dev  # falls pip >= 25.1
+python -m pytest -q -m "not network"
+python scripts/example_headless.py
+```
+
+`mypy` ist weiterhin **manual review required** und aktuell nicht als gruenes
+Pflichtgate dokumentiert:
+
+```bash
+uv run mypy src/spittelmeister_windlast
+```
+
+---
 
 ## Verwendung als Bibliothek
 
@@ -252,19 +507,24 @@ spittelmeister-windlast calc \
 
 ## Entwicklung
 
-Die Entwicklungsbefehle laufen über `uv`:
+Der prueffaehige Standardpfad ist oben unter **Installation und Entwicklung: `uv` und `pip`** dokumentiert.
+
+Kurzfassung:
 
 ```bash
+# Standard: uv
 uv sync --all-extras --dev
+uv lock --check
 uv run pytest -q -m "not network"
 uv run ruff check src/spittelmeister_windlast --select=E,F,W,B --ignore=E501
-uv lock --check
 
-# Optional/manual: aktuell nicht gruen ohne Type-Fixes
-uv run mypy src/spittelmeister_windlast
+# Kompatibilitaet: pip
+python -m pip install -e ".[all]"
+python -m pip install --group dev  # falls pip >= 25.1
+python -m pytest -q -m "not network"
 ```
 
-`requirements.txt` existiert in dieser Repo nicht als Quelle der Wahrheit.
+`requirements.txt` existiert in dieser Repo nicht als Quelle der Wahrheit. Falls noetig, wird ein Requirements-Snapshot aus `uv.lock` exportiert.
 
 ---
 
