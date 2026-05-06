@@ -175,11 +175,11 @@ A_{{w,Front}} &= B \cdot h_w = {geo.s_verankerung:.2f} \cdot {geo.h_abschluss:.2
 \begin{{center}}
 \begin{{tabular}}{{lccc}}
 \toprule
-Lastfall & $w_e$ [kN/m$^2$] & $q$ [kN/m] & Bemerkung \\
+Lastfall & $w_e$ [kN/m$^2$] & $q$ [kN/m] \\
 \midrule
-Seite Druck (D) & {ergebnisse.we_side_pressure:.2f} & {ergebnisse.q_side_pressure:.2f} & \\
-Seite Sog (E) & {ergebnisse.we_side_suction:.2f} & {ergebnisse.q_side_suction:.2f} & \\
-Front Sog (A) & {ergebnisse.we_front_suction:.2f} & {ergebnisse.q_front_suction:.2f} & pruefen \\
+Seite Druck (D) & {ergebnisse.we_side_pressure:.2f} & {ergebnisse.q_side_pressure:.2f} \\
+Seite Sog (E) & {ergebnisse.we_side_suction:.2f} & {ergebnisse.q_side_suction:.2f} \\
+Front Sog (A) & {ergebnisse.we_front_suction:.2f} & {ergebnisse.q_front_suction:.2f}  \\
 \bottomrule
 \end{{tabular}}
 \end{{center}}
