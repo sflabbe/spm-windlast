@@ -72,16 +72,8 @@ def export_pdf(
         )
 
     latex_assets = [
-        "building_geometry_zoning.tex",
-        "building_geometry_cases.tex",
-        "balcony_system.tex",
-        "load_scheme.tex",
-        "reaction_scheme.tex",
         "wind_geb.pdf",
-        "building_geometry_cases.pdf",
         "balcony_system.pdf",
-        "load_scheme.pdf",
-        "reaction_scheme.pdf",
         "balcony_system_lasten.pdf",
         "balcony_system_reaktionen.pdf"
     ]

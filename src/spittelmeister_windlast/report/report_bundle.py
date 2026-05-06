@@ -19,7 +19,6 @@ FIGURE_FILENAMES = [
 
 LEGACY_PDF_FILENAMES = [
     "wind_geb.pdf",
-    "building_geometry_cases.pdf",
     "balcony_system.pdf",
     "load_scheme.pdf",
     "reaction_scheme.pdf",
@@ -27,11 +26,7 @@ LEGACY_PDF_FILENAMES = [
 ]
 
 LATEX_ASSET_FILENAMES = [
-    "building_geometry_zoning.tex",
-    "building_geometry_cases.tex",
     "balcony_system.tex",
-    "load_scheme.tex",
-    "reaction_scheme.tex",
 ]
 
 

@@ -99,23 +99,16 @@ def _section_2_figures(asset_subdir: str) -> str:
         + "\n"
         + _asset_figure_block(
             asset_subdir=asset_subdir,
-            tex_name="building_geometry_zoning.tex",
+            tex_name="",
             pdf_name="wind_geb.pdf",
             caption=r"Zonierung und Parameterzuordnung $h,d,b,e$.",
-        )
-        + "\n"
-        + _asset_figure_block(
-            asset_subdir=asset_subdir,
-            tex_name="building_geometry_cases.tex",
-            pdf_name="building_geometry_cases.pdf",
-            caption=r"Geometrie-Fallunterscheidung fuer den vereinfachten Windlastansatz.",
         )
         + "\n"
         + r"\subsection*{2.2 \quad Geometrie des Balkonsystems}"
         + "\n"
         + _asset_figure_block(
             asset_subdir=asset_subdir,
-            tex_name="balcony_system.tex",
+            tex_name="",
             pdf_name="balcony_system.pdf",
             caption=r"Draufsicht mit Balkonbreite $B$, Balkontiefe $T$, Randabstand $a$ sowie Festlager/Gleitlager in $x$.",
         )
@@ -166,7 +159,7 @@ def _section_5_loads(geo: Geometrie, ergebnisse: Ergebnisse, asset_subdir: str) 
     figure_block = _asset_figure_block(
         asset_subdir=asset_subdir,
         tex_name="",
-        pdf_name="load_scheme.pdf",
+        pdf_name="balcony_system_lasten.pdf",
         caption=r"Ansatz der Linienlasten $q_{seite,1}$, $q_{seite,2}$ und $q_{vorne}$.",
     )
     return rf"""
@@ -226,7 +219,7 @@ def _section_7_reactions(geo: Geometrie, ergebnisse: Ergebnisse, actions: Connec
     figure_block = _asset_figure_block(
         asset_subdir=asset_subdir,
         tex_name="",
-        pdf_name="reaction_scheme.pdf",
+        pdf_name="balcony_system_reaktionen.pdf",
         caption=r"Linienlasten und Reaktionen $H_x$, $H_{y,1}$, $H_{y,2}$ mit Lagerannahme.",
     )
     return rf"""
