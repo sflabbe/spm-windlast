@@ -18,7 +18,7 @@ def _title_block(projekt: Projekt, standort: Standort) -> str:
 \begin{{center}}
 {{\color{{SPAccent}}\rule{{\linewidth}}{{2pt}}}}\\[4pt]
 {{\Large\bfseries\color{{SPAccent}} Windlastermittlung}}\\[2pt]
-{{\large Balkonabschluss / Fassadenabschluss}}\\[2pt]
+{{\large Balkonanschluss}}\\[2pt]
 {{\normalsize DIN EN 1991-1-4 / NA:2010-12}}\\[4pt]
 {{\color{{SPAccent}}\rule{{\linewidth}}{{2pt}}}}
 \end{{center}}
